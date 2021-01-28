@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: cadetblue;
+    background-image: url(./pexels-fauxels-3228706\ \(1\).jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9) ), url('./pexels-fauxels-3228706\ \(1\).jpg');
+    background-color: yellow;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+}
+header{
+    background-color: yellowgreen;
+    margin-top: 10%;
+}
+h1{
+    text-align: center;
+    margin-top: 2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    font-size: 3.5em;
+    color: rgb(128, 122, 122);
+}
+h2{
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 5em;
+    color: whitesmoke;
+    letter-spacing: 2px;
+}
+
+section{
+    text-align: center;
+    margin-top: 20%;
+    
+}
+h4{
+    color: red;
+}
+p{
+    color: whitesmoke;
+    margin: 5px;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+footer{
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
