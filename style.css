@@ -1,6 +1,18 @@
+/* --Imporing the font family's-- */
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
+/* -- Setting some variables to color and fonts ,enz-- */
+
+
+:root{
+    --PrimaryColor : rgb(233, 12, 12);
+}
+
+/* START STYLING */
+
+/*--Small Reset--*/
 *{
     margin:0;
     padding:0;
@@ -33,7 +45,7 @@ h2{
     text-align: center;
     font-family: 'Indie Flower', cursive;
     font-size: 5em;
-    color: whitesmoke;
+    color: var(--PrimaryColor);
     letter-spacing: 2px;
 }
 
