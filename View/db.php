@@ -1,10 +1,7 @@
 <?php require 'includes/header.php'?>
-
-<!-- Main Container -->
-    <div class="container">
-        <h3>Create Your BeConnect Profile </h3>
-        <h4><i class="fas fa-user"></i> Lets get some information to make your profile stand out </h4>
-
-
-    </div>
+<section>
+<h4>Hello john</h4>
+    <p><a href="index.php">To index special page</a></p>
+    <p>Put your special  content here.</p>
+</section>
 <?php require 'includes/footer.php'?>

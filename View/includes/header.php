@@ -10,11 +10,6 @@
     <title>Becode - Boiler plate MVC</title>
 </head>
 <body>
-
-
-
-
-
     <header>
         <h1>Welcome to C.A.P</h1>
         <h2> Connecting Awesome People</h2>

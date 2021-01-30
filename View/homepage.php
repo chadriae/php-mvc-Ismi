@@ -2,11 +2,12 @@
 <!-- this is the view, try to put only simple if's and loops here.
 Anything complex should be calculated in the model -->
 <section>
-    <h4>Hello <?php echo $user->getName()?>,</h4>
+<h4>Hello <?php echo $user->getName()?>,</h4>
 
     <p><a href="index.php?page=info">To info page</a></p>
-
-    <a href="db.php">To dashboard? </a>
+    <p><a href="index.php?page=db">To db page</a></p>
+    
+    
 
     <p>Put your content here.</p>
 </section>
