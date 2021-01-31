@@ -1,5 +1,15 @@
     <footer>
-        &copy; BeCode <?php echo date('Y')?>
+        <div class="container2">
+            <p>
+                &copy; BeCode <?php echo date('Y')?>
+            </p>
+        </div>
+
     </footer>
-</body>
-</html>
+    </section>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="./zoo.js"></script>
+    </body>
+    
+
+    </html>
