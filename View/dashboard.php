@@ -3,14 +3,14 @@
 <section>
     <!-- REAL START ABOVE ARE A LINK AND USELESS INFO  -->
 
-    <div class="container">
+    <div class="container3">
 
         <p><a href="index.php">To index page</a></p>
         <h1>Create Your Beconnect Profile </h1>
         <p><i class="fas fa-user"></i> Let's get some information to make your profile stand out</p>
         <small>* = required field</small>
 
-        <form method="POST" action="succes.php">
+        <form method="POST" action="">
             <small>Give us your full name first</small><br>
             <input type="text" id="first-name" name="first-name" placeholder="First Name"></input>
             <input type="text" id="last-name" name="last-name" placeholder="Last Name"></input><br>

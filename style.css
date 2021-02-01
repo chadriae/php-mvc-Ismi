@@ -128,7 +128,7 @@ nav div.left_nav ul li a:hover {
 
 
 .container h1{
-  text-align: center;
+  
   font-family: var(--PrimaryFont);
   font-size: 2.5rem;
   font-weight: 900;
@@ -219,7 +219,7 @@ body{
 .svg{
   position:absolute;
   z-index: -1;
-  top:120px;
+  top:20%;
 }
 
 h2{

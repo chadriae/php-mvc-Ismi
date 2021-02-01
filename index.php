@@ -11,6 +11,10 @@ require 'Controller/DashboardController.php';
 require 'Controller/LoginController.php';
 require 'Controller/RegisterController.php';
 require 'Controller/BecodersController.php';
+require 'Controller/SuccesController.php';
+require 'Controller/BlogController.php';
+require 'Controller/AddexperienceController.php';
+require 'Controller/AddeducationController.php';
 
 // Database connections
 require_once 'Controller/DatabaseManager.php';
@@ -35,6 +39,13 @@ if (isset($_GET['page']) && $_GET['page'] === 'info') {
     $controller = new RegisterController();
 } else if (isset($_GET['page']) && $_GET['page'] === 'becoders') {
     $controller = new BecodersController($databaseManager);
+} else if (isset($_GET['page']) && $_GET['page'] === 'succes') {
+    $controller = new SuccesController($databaseManager);
+} else if (isset($_GET['page']) && $_GET['page'] === 'addexperience') {
+    $controller = new AddexperienceController($databaseManager);
+} else if (isset($_GET['page']) && $_GET['page'] === 'addeducation') {
+    $controller = new AddeducationController($databaseManager);
+} else if (isset($_GET['page']) && $_GET['page'] === 'blog') {
+    $controller = new BlogController($databaseManager);
 }
-
 $controller->render($_GET, $_POST);

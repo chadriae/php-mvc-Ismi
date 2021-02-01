@@ -1,5 +1,5 @@
 <?php require 'includes/header.php'?>
-<div class="container">
+<div class="container3">
 <h1>BECODERS PERSONAL INFO PAGE </h1>
 <p>this pae should display personal profile page </p>
     <p><a href="index.php">To index  page</a></p>

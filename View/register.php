@@ -1,7 +1,7 @@
 <?php require 'includes/header.php'?>
 
 
-<div class="container">
+<div class="container3">
     <p><a href="index.php">Back to homepage</a></p>
     <h1>Sign up </h1>
     <p><i class="fas fa-user"></i> Create your Beconnect Account here </p>
