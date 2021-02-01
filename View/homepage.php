@@ -15,7 +15,7 @@ Anything complex should be calculated in the model -->
         <p><a href="index.php?page=dashboard">To dashboard page</a></p>
         <p><a href="index.php?page=info">To info page</a></p>
         <p><a href="index.php?page=becoders">To becoders page</a></p>
-        <h1>Beconnect</h1>
+        <h1>BeConnect</h1>
         <div id="app"></div>
 
 
