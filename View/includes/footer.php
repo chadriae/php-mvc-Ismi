@@ -1,6 +1,10 @@
     <footer>
         <div class="container2">
+<<<<<<< HEAD
             <p>
+=======
+            <p class="ismi">
+>>>>>>> origin/ismi2
                 &copy; BeCode <?php echo date('Y')?>
             </p>
         </div>

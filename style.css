@@ -78,9 +78,19 @@ a{
 }
 i{
   margin-right: 5px;
-  color: rgba(230, 217, 217, 0.918);
+  color:var(--SecondaryColor);
+  
   
 }
+
+.ismi{
+  color:var(--SecondaryColor);
+}
+
+nav div.left_nav ul li a:hover {
+	color: #c5d2e5;
+}
+
 
 /* Start Homepage --*/ 
 
@@ -88,19 +98,22 @@ i{
 .container{
   width:80%;
   margin: 0 auto;
-  background-color: rgba(224, 217, 207, 0.158);
+  /*background-color: rgba(224, 217, 207, 0.158);*/
    /*background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./bg.jpg');*/
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;  
+   text-align: left;
   height: 80vh;
-  text-align: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 
 }
+
+
+.test{
+  flex:1;
+  margin-top:100px;
+
+
+}
+
 
 .container h1{
   text-align: center;
@@ -116,12 +129,15 @@ footer{
   align-items: center;  
   display: flex;
  
+
+ 
 }
 .container2{ 
-  background-color: rgba(224, 217, 207, 0.158);
   width: 90%;
   margin: 0 auto;
   text-align: center;
+  border-top: 1px solid var(--SecondaryColor);
+  padding-top:1rem;
 
 }
 .info{
@@ -182,4 +198,111 @@ a{
 border: 1px solid black;
 margin: 1rem;
 display: inline-block;
+}
+
+body{
+  position: relative;
+
+}
+
+.svg{
+  position:absolute;
+  z-index: -1;
+  top:120px;
+}
+
+h2{
+  font-family: var(--PrimaryFont);
+}
+
+/* svg animation */
+
+#big-plant {
+  animation: big-plant 6s infinite ease-in-out;
+  transform-origin: 35% 81%;
+}
+
+@keyframes big-plant {
+  0%, 100% {
+    transform: skew(0) rotateZ(0) rotateX(0);
+  }
+  50% {
+    transform: skew(7deg, 4deg) rotateZ(12deg) rotateX(10deg);
+  }
+}
+
+/* Tie animation */
+#tie {
+  animation: tie 2s infinite ease-in-out;
+  transform-origin: 50% 62%;
+}
+@keyframes tie {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: skew(-12deg) rotate(-6deg);
+  }
+}
+
+/* Plant footer animation */
+#plant1, #plant2 {
+  animation: plants 2s infinite ease-in-out;
+  transform-origin: 18% 91%;
+}
+#plant2 {
+  animation-delay: .5s;
+}
+@keyframes plants {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-8deg);
+  }
+}
+
+#leaf, #leaf_2 {
+  animation: fall 10s 1 forwards ease-in-out;
+}
+
+#leaf {
+  animation-duration: 8s;
+}
+
+#leaf_2 {
+  transform: translateX(-1%) translateY(5%);
+  animation-delay: 1s;
+}
+
+@keyframes fall {
+  0% {
+    transform: rotate(0) translateX(-1%) translateY(5%);
+    transform-origin: 75% 9%;
+    filter: drop-shadow(0 35px 8px rgba(0, 0, 0, 0));
+  }
+  25% {
+    transform: rotate(20deg) translateX(16%) translateY(5%);
+    transform-origin: 80% 13%;
+  }
+  50% {
+    transform: rotate(15deg) translateX(5%) translateY(35%);
+    transform-origin: 65% 33%;
+    filter: drop-shadow(0 35px 8px rgba(0, 0, 0, 0));
+  }
+  75% {
+    transform: rotate(20deg) translateX(24%) translateY(65%);
+    transform-origin: 93% 66%;
+    filter: drop-shadow(-10px 25px 3px rgba(0, 0, 0, 0));
+  }
+  100% {
+    transform: rotate(20deg) translateX(1%) translateY(73%);
+    transform-origin: 65% 85%;
+    filter: drop-shadow(0 3px 0 rgba(0, 0, 0, .15));
+  }
+    }
+    
+    svg {
+        width: 570px;
+        max-width: 100%;
 }

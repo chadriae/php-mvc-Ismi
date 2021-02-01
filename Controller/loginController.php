@@ -1,8 +1,14 @@
 <?php
+<<<<<<< HEAD
 
 declare(strict_types=1);
 
 class LoginController
+=======
+declare(strict_types = 1);
+
+class loginController
+>>>>>>> origin/ismi2
 {
     //render function with both $_GET and $_POST vars available if it would be needed.
     public function render(array $GET, array $POST)
@@ -12,5 +18,11 @@ class LoginController
 
         //load the view
         require 'View/login.php';
+<<<<<<< HEAD
     }
 }
+=======
+        
+    }
+}
+>>>>>>> origin/ismi2

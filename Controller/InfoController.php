@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 declare(strict_types=1);
 
@@ -6,6 +7,12 @@ class InfoController
 {
     private $databaseManager;
 
+=======
+declare(strict_types = 1);
+
+class InfoController
+{
+>>>>>>> origin/ismi2
     //render function with both $_GET and $_POST vars available if it would be needed.
     public function render(array $GET, array $POST)
     {
@@ -14,6 +21,7 @@ class InfoController
 
         //load the view
         require 'View/info.php';
+<<<<<<< HEAD
     }
 
     public function __construct(DatabaseManager $databaseManager)
@@ -28,3 +36,8 @@ class InfoController
         return $test;
     }
 }
+=======
+        
+    }
+}
+>>>>>>> origin/ismi2

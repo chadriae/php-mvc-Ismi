@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 //TODO: form validation, show fields that are not filled in correctly
 //TODO: check if valid email address
 
@@ -8,6 +9,12 @@ class DashboardController
 {
     private $databaseManager;
 
+=======
+declare(strict_types = 1);
+
+class dashboardController
+{
+>>>>>>> origin/ismi2
     //render function with both $_GET and $_POST vars available if it would be needed.
     public function render(array $GET, array $POST)
     {
@@ -16,6 +23,7 @@ class DashboardController
 
         //load the view
         require 'View/dashboard.php';
+<<<<<<< HEAD
     }
 
     public function __construct(DatabaseManager $databaseManager)
@@ -49,3 +57,8 @@ class DashboardController
 
     }
 }
+=======
+        
+    }
+}
+>>>>>>> origin/ismi2

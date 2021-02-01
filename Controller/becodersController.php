@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 declare(strict_types=1);
 
@@ -6,6 +7,12 @@ class BecodersController
 {
     private $databaseManager;
 
+=======
+declare(strict_types = 1);
+
+class becodersController
+{
+>>>>>>> origin/ismi2
     //render function with both $_GET and $_POST vars available if it would be needed.
     public function render(array $GET, array $POST)
     {
@@ -14,6 +21,7 @@ class BecodersController
 
         //load the view
         require 'View/becoders.php';
+<<<<<<< HEAD
     }
 
     public function __construct(DatabaseManager $databaseManager)
@@ -21,3 +29,8 @@ class BecodersController
         $this->databaseManager = $databaseManager;
     }
 }
+=======
+        
+    }
+}
+>>>>>>> origin/ismi2

@@ -16,6 +16,7 @@
     <section>
         <header>
             <nav>
+<<<<<<< HEAD
                 <div class="left-nav">
                     <li><i class="fas fa-code" aria-hidden="true"></i><a href="index.php">BeConnect</a> </li>
                 </div>
@@ -24,6 +25,16 @@
                         <li><a href="index.php?page=info">Developers(info as renderpage?)</a></li>
                         <li><a href="index.php?page=register">Register </a></li>
                         <li><a href="index.php?page=login" >Login</a></li>
+=======
+                <div class="left-nav ">
+                    <li><i class="fab fa-behance" aria-hidden="true"></i><a class="ismi" href="index.php">Connect</a> </li>
+                </div>
+                <div class="right-nav">
+                    <ul class =nav-list>
+                        <li><a class="ismi" href="index.php?page=info">Profiles</a></li>
+                        <li><a class="ismi" href="index.php?page=register">Register </a></li>
+                        <li><a class="ismi" href="index.php?page=login" >Login</a></li>
+>>>>>>> origin/ismi2
                         <div id="myDIV">
                             <li><a href="index.php"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a>
                             </li>
