@@ -1,7 +1,8 @@
 <?php
-declare(strict_types = 1);
 
-class dashboardController
+declare(strict_types=1);
+
+class DashboardController
 {
     //render function with both $_GET and $_POST vars available if it would be needed.
     public function render(array $GET, array $POST)
@@ -11,6 +12,5 @@ class dashboardController
 
         //load the view
         require 'View/dashboard.php';
-        
     }
 }
