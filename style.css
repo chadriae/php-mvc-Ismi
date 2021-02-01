@@ -219,7 +219,7 @@ body{
 .svg{
   position:absolute;
   z-index: -1;
-  top:20%;
+  top:10%;
 }
 
 h2{
@@ -314,6 +314,6 @@ h2{
     }
     
     svg {
-        width: 570px;
+        width: 1070px;
         max-width: 100%;
 }

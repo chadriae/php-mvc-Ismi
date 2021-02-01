@@ -188,4 +188,5 @@ Anything complex should be calculated in the model -->
         </defs>
     </svg>
 </div>
+
 <?php require 'includes/footer.php' ?>
