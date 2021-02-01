@@ -32,7 +32,7 @@ html {
   ol, ul {
     list-style: none;
   } 
-  img {
+  .profile {
     max-width: 200px;
     height: auto;
   }
@@ -99,7 +99,7 @@ i{
   color:var(--SecondaryColor);
 }
 
-nav div.left_nav ul li a:hover {
+nav .left_nav ul li a:hover {
 	color: #c5d2e5;
 }
 
@@ -111,7 +111,7 @@ nav div.left_nav ul li a:hover {
   width:80%;
   margin: 0 auto;
   /*background-color: rgba(224, 217, 207, 0.158);*/
-   /*background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./bg.jpg');*/
+  
    text-align: left;
   height: 80vh;
   display: flex;
@@ -121,7 +121,7 @@ nav div.left_nav ul li a:hover {
 
 .test{
   flex:1;
-  margin-top:100px;
+  margin-top:80px;
 
 
 }
@@ -184,17 +184,7 @@ span{
   font-weight: 300;
   font-family: var(--PrimaryFont);
 }
-.btn-primary{
-  
-color: rgb(233, 217, 217);
-font-size: 1.3rem;
-font-family: var(--PrimaryFont);
-background-color: rgb(25, 41, 112);
-padding:0.8rem ;
-}
-.text-primary{
-  margin: .8rem;
-}
+
 
 /*--- TEsting some stuff ---*/
 .home{
@@ -219,7 +209,8 @@ body{
 .svg{
   position:absolute;
   z-index: -1;
-  top:120px;
+  top:140px;
+  
 }
 
 h2{

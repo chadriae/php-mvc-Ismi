@@ -1,9 +1,7 @@
 <?php require 'includes/header.php'?>
 
 
-<div class="container">
-    <p><a href="index.php">Back to homepage</a></p>
-    <h1>Sign up </h1>
+<div class="box">
     <p><i class="fas fa-user"></i> Create your Beconnect Account here </p>
     <form action="">
         <input type="text" placeholder="Name" name="name" minlength="2" required="" value=""><br>
@@ -14,7 +12,5 @@
         <input type="submit" value="Register">
     </form>
     <p>Already have an account? <a href="index.php?page=login">LOGIN (to be done)</a></p>
-
-
 </div>
 <?php require 'includes/footer.php'?>
