@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-class InfoController
+class loginController
 {
     //render function with both $_GET and $_POST vars available if it would be needed.
     public function render(array $GET, array $POST)
@@ -10,7 +10,7 @@ class InfoController
         // then the view will actually display them.
 
         //load the view
-        require 'View/info.php';
+        require 'View/login.php';
         
     }
 }
