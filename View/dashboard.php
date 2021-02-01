@@ -10,7 +10,7 @@
         <p><i class="fas fa-user"></i> Let's get some information to make your profile stand out</p>
         <small>* = required field</small>
 
-        <form method="POST">
+        <form method="POST" action="succes.php">
             <small>Give us your full name first</small><br>
             <input type="text" id="first-name" name="first-name" placeholder="First Name"></input>
             <input type="text" id="last-name" name="last-name" placeholder="Last Name"></input><br>
