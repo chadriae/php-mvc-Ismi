@@ -7,10 +7,10 @@
             <div class="info">
                 <img src="./assets/img/nelson.png" alt="">
                 <div>
-                    <h2><?= $user['first_name'] ?> - <?= $user['last_name'] ?></h2>
+                    <h2><?= $user['first_name'] ?> <?= $user['last_name'] ?></h2>
                     <p><?= $user['current_job'] ?><span> at <?= $user['current_company'] ?></span></p>
                     <p><?= $user['current_location'] ?></p>
-                    <a href="index.php?page=becoders" class="btn btn-primary">view Profile</a>
+                    <a href="index.php?page=becoders" class="btn btn-primary">View profile</a>
                     <button> <i class="fas fa-heart" aria-hidden="true"></i><span> 3</span></button>
                 </div>
                 <ul>

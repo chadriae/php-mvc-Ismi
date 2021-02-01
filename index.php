@@ -27,7 +27,8 @@ if (isset($_GET['page']) && $_GET['page'] === 'info') {
     $students = $controller->get();
     require 'View/info.php';
 } else if (isset($_GET['page']) && $_GET['page'] === 'dashboard') {
-    $controller = new DashboardController();
+    $controller = new DashboardController($databaseManager);
+    $addUser = $controller->createUser();
 } else if (isset($_GET['page']) && $_GET['page'] === 'login') {
     $controller = new LoginController();
 } else if (isset($_GET['page']) && $_GET['page'] === 'register') {
