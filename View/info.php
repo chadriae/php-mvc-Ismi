@@ -1,10 +1,10 @@
-<?php require 'includes/header.php'?>
+<?php require 'includes/header.php' ?>
 <div class="container2">
     <h4>Info page2222</h4>
     <p><a href="index.php">Back to homepage</a></p>
     <div class="infoContainer">
         <div class="info">
-            <img src="./monkey.jpg" alt="">
+            <img src="./assets/img/monkey.jpg" alt="">
             <div>
                 <h2>Some Dude</h2>
                 <p>Developer<span> at Someplace</span></p>
@@ -20,7 +20,7 @@
             </ul>
         </div>
         <div class="info">
-            <img src="./nelson.png" alt="">
+            <img src="./assets/img/nelson.png" alt="">
             <div>
                 <h2>Some other Dude</h2>
                 <p>Developer<span> at Some otherplace</span></p>
@@ -36,7 +36,7 @@
             </ul>
         </div>
         <div class="info">
-            <img src="./monkey.jpg" alt="">
+            <img src="./assets/img/monkey.jpg" alt="">
             <div>
                 <h2>Some Dude</h2>
                 <p>Developer<span> at Someplace</span></p>
@@ -52,7 +52,7 @@
             </ul>
         </div>
         <div class="info">
-            <img src="./monkey.jpg" alt="">
+            <img src="./assets/img/monkey.jpg" alt="">
             <div>
                 <h2>Some Dude</h2>
                 <p>Developer<span> at Someplace</span></p>
@@ -68,7 +68,7 @@
             </ul>
         </div>
         <div class="info">
-            <img src="./nelson.png" alt="">
+            <img src="./assets/img/nelson.png" alt="">
             <div>
                 <h2>Some other Dude</h2>
                 <p>Developer<span> at Some otherplace</span></p>
@@ -76,7 +76,7 @@
                 <a href="index.php?page=becoders" class="btn btn-primary">view Profile</a>
                 <button> <i class="fas fa-heart" aria-hidden="true"></i><span> 3</span></button>
             </div>
-            <ul class ="skills">
+            <ul class="skills">
                 <li class="text-primary"><i class="fas fa-check" aria-hidden="true"></i> Node</li>
                 <li class="text-primary"><i class="fas fa-check" aria-hidden="true"></i> Express</li>
                 <li class="text-primary"><i class="fas fa-check" aria-hidden="true"></i> React</li>
@@ -85,4 +85,4 @@
         </div>
     </div>
 </div>
-<?php require 'includes/footer.php'?>
+<?php require 'includes/footer.php' ?>

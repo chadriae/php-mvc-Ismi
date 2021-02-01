@@ -34,7 +34,7 @@ html {
 /* -- Start Styling -- */
 section{
   background-color: var(--PrimaryColor);
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./bg.jpg');
+  /* background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./assets/img/bg.jpg'); */
 background-position: center center;
 background-repeat: no-repeat;
 background-size: cover;
