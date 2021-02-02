@@ -15,6 +15,10 @@ Anything complex should be calculated in the model -->
         <p><a href="index.php?page=dashboard">To dashboard page</a></p>
         <p><a href="index.php?page=info">To info page</a></p>
         <p><a href="index.php?page=becoders">To becoders page</a></p>
+        <p><a href="index.php?page=succes">To succes page</a></p>
+        <p><a href="index.php?page=addexperience">To exp page</a></p>
+        <p><a href="index.php?page=addeducation">To education page</a></p>
+        <p><a href="index.php?page=blog">To Blog page</a></p>
         <h1>BeConnect</h1>
         <div id="app"></div>
 
@@ -184,4 +188,5 @@ Anything complex should be calculated in the model -->
         </defs>
     </svg>
 </div>
+
 <?php require 'includes/footer.php' ?>

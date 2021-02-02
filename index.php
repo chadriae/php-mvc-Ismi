@@ -15,6 +15,10 @@ require 'Controller/DashboardController.php';
 require 'Controller/LoginController.php';
 require 'Controller/RegisterController.php';
 require 'Controller/BecodersController.php';
+require 'Controller/SuccesController.php';
+require 'Controller/BlogController.php';
+require 'Controller/AddexperienceController.php';
+require 'Controller/AddeducationController.php';
 
 // Database connections
 require_once 'Controller/DatabaseManager.php';
@@ -23,7 +27,6 @@ $databaseManager = new DatabaseManager($config['host'], $config['name'], $config
 $databaseManager->connect();
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
-//this file should never be more than 20 lines of code!
 
 $controller = new HomepageController();
 if (isset($_GET['page']) && $_GET['page'] === 'info') {
@@ -40,10 +43,12 @@ if (isset($_GET['page']) && $_GET['page'] === 'info') {
 } else if (isset($_GET['page']) && $_GET['page'] === 'becoders') {
     $controller = new BecodersController($databaseManager);
 } else if (isset($_GET['page']) && $_GET['page'] === 'succes.register') {
-    $controller = new RegisterController($databaseManager);
-} else if (isset($_GET['page']) && $_GET['page'] === 'succes.login') {
-    $controller = new LoginController($databaseManager);
+    $controller = new SuccesController($databaseManager);
+} else if (isset($_GET['page']) && $_GET['page'] === 'addexperience') {
+    $controller = new AddexperienceController($databaseManager);
+} else if (isset($_GET['page']) && $_GET['page'] === 'addeducation') {
+    $controller = new AddeducationController($databaseManager);
+} else if (isset($_GET['page']) && $_GET['page'] === 'blog') {
+    $controller = new BlogController($databaseManager);
 }
-
-
 $controller->render($_GET, $_POST);

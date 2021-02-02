@@ -3,15 +3,20 @@
 
 declare(strict_types=1);
 
+ini_set('display_errors', "1");
+ini_set('display_startup_errors', "1");
+error_reporting(E_ALL);
+
 class RegisterController
 {
     private $databaseManager;
 
-    public function render(array $GET, array $POST)
+    public function render()
     {
-        if ($_GET['page'] === 'register') {
+        if ($_GET['page'] == 'register') {
             require 'View/register.php';
-        } elseif (isset($_POST['submit'])) {
+        }
+        if (isset($_POST['submit'])) {
             $this->newAdditionFirstName = $_POST['first-name'];
             $this->newAdditionUserName = $_POST['username'];
             $this->newAdditionEmail = $_POST['email'];
@@ -21,6 +26,7 @@ class RegisterController
             $this->hashedPwd = password_hash($this->newAdditionPwd, PASSWORD_DEFAULT);
 
             $this->registerSucces();
+            $this->createUser();
         }
     }
 
@@ -32,10 +38,6 @@ class RegisterController
 
     public function registerSucces()
     {
-        // Not needed, working with required in HTML code
-        // if ($this->emptyInputSignup($this->newAdditionFirstName, $this->newAdditionUserName, $this->newAdditionEmail, $this->newAdditionPwd, $this->newAdditionPwdRepeat) !== false) {
-        //     header("location: index.php?page=register&error=emptyinput");
-        //     exit();
         if ($this->invalidUsername($this->newAdditionUserName) !== false) {
             header("location: index.php?page=register&error=invalidusername");
             exit();
@@ -46,11 +48,10 @@ class RegisterController
             header("location: index.php?page=register&error=passwordsdontmatch");
             exit();
             // } elseif ($this->usernameExists($this->newAdditionUserName, $this->newAdditionEmail) !== false) {
-            //     header("location: ../includes/regiser.php?error=usernametaken");
+            //     header("location: ../includes/register.php?error=usernametaken");
             //     exit();
         } else {
-            $this->createUser();
-            require 'View/succes.register.php';
+            header("location: index.php?page=succes.register");
         }
     }
 
@@ -66,14 +67,6 @@ class RegisterController
         }
     }
 
-    // public function emptyInputSignup($firstName, $userName, $email, $pwd, $pwdRepeat)
-    // {
-    //     if (empty($firstName) || empty($userName) || empty($email) || empty($pwd) || empty($pwdRepeat)) {
-    //         return true;
-    //     } else {
-    //         return false;
-    //     }
-    // }
 
     public function invalidUsername($username)
     {

@@ -111,7 +111,7 @@ i{
   /*background-color: rgba(224, 217, 207, 0.158);*/
   
    text-align: left;
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
 
 }
@@ -126,7 +126,7 @@ i{
 
 
 .container h1{
-  text-align: center;
+  
   font-family: var(--PrimaryFont);
   font-size: 2.5rem;
   font-weight: 900;
@@ -210,8 +210,7 @@ body{
 .svg{
   position:absolute;
   z-index: -1;
-  top:140px;
-  
+  top:10%;
 }
 
 h2{
@@ -306,7 +305,7 @@ h2{
     }
     
     svg {
-        width: 570px;
+        width: 1070px;
         max-width: 100%;
         margin-left: 5rem;
 }

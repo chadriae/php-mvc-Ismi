@@ -1,5 +1,13 @@
 <?php require 'includes/header.php' ?>
 
+<div class="container3">
+    <p><a href="index.php">Back to homepage</a></p>
+    <h1>Sign In </h1>
+    <p><i class="fas fa-user"></i> Sign in to your account </p>
+    <form action="">
+        <input type="email" placeholder="Email Address" name="email" required="" value=""><br>
+        <small>Enter a valid Email adress</small><br>
+        <input type="password" placeholder="Password" name="password" minlength="6" required="" value=""><br>
 
 <div class="wrapper">
 
