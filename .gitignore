@@ -354,3 +354,4 @@ MigrationBackup/
 
 # Hide config file for link to database
 config.php
+.vscode
