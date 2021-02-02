@@ -5,7 +5,7 @@
     <p><a href="index.php">Back to homepage</a></p>
     <h1>Sign up </h1>
 <div class="register">
-    <p><i class="fas fa-user"></i> Create your Beconnect Account here </p>
+    <p ><i class="fas fa-user"></i> Create your Beconnect Account here </p>
     <form action="">
         <input type="text" placeholder="Name" name="name" minlength="2" required="" value=""><br>
         <input type="email" placeholder="Email Address" name="email" required="" value=""><br>
