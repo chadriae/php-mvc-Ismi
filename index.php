@@ -31,8 +31,6 @@ $databaseManager->connect();
 $controller = new HomepageController();
 if (isset($_GET['page']) && $_GET['page'] === 'info') {
     $controller = new InfoController($databaseManager);
-    $students = $controller->get();
-    require 'View/info.php';
 } else if (isset($_GET['page']) && $_GET['page'] === 'dashboard') {
     $controller = new DashboardController($databaseManager);
     $addUser = $controller->createUser();
@@ -42,7 +40,7 @@ if (isset($_GET['page']) && $_GET['page'] === 'info') {
     $controller = new RegisterController($databaseManager);
 } else if (isset($_GET['page']) && $_GET['page'] === 'becoders') {
     $controller = new BecodersController($databaseManager);
-} else if (isset($_GET['page']) && $_GET['page'] === 'succes.register') {
+} else if (isset($_GET['page']) && $_GET['page'] === 'succes') {
     $controller = new SuccesController($databaseManager);
 } else if (isset($_GET['page']) && $_GET['page'] === 'addexperience') {
     $controller = new AddexperienceController($databaseManager);

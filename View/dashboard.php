@@ -20,10 +20,10 @@
                 <option value="juniordeveloper">Junior Developer</option>
                 <option value="seniordeveloper">Senior Developer</option>
                 <option value="manager">Manager</option>
-                <option value="studentorLearning">Student or Learning</option>
-                <option value="InstructororTeacher ">Instructor or Teacher</option>
+                <option value="student">Student</option>
+                <option value="teacher ">Teacher</option>
                 <option value="intern">Intern</option>
-                <option value="Other">Other</option>
+                <option value="other">Other</option>
             </select>
             <br>
             <small>Where are you working or studying now?</small><br>

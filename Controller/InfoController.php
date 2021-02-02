@@ -12,6 +12,7 @@ class InfoController
         //you should not echo anything inside your controller - only assign vars here
         // then the view will actually display them.
 
+        // $this->get();
         //load the view
         require 'View/info.php';
     }
@@ -24,7 +25,6 @@ class InfoController
     public function get()
     {
         $test = $this->databaseManager->dbconnection->query("SELECT * FROM student");
-
         return $test;
     }
 }

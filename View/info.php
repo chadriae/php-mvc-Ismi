@@ -1,3 +1,7 @@
+<?php
+$students = $this->get();
+?>
+
 <?php require 'includes/header.php' ?>
 <div class="container2">
     <h4>Info page</h4>
