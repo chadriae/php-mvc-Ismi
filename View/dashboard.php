@@ -3,7 +3,7 @@
 <section>
     <!-- REAL START ABOVE ARE A LINK AND USELESS INFO  -->
 
-    <div class="container">
+    <div class="container3">
 
         <p><a href="index.php">To index page</a></p>
         <h1>Create Your Beconnect Profile </h1>
