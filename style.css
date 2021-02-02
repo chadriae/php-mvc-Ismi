@@ -317,3 +317,7 @@ h2{
  font-weight:900;
  font-size:2rem;
 }
+ .errorMessage {
+  text-align: center;
+  color: red;
+}

@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -12,6 +17,7 @@
     <link rel="stylesheet" href="dashboard.css">
     <title>Becode - ISMI</title>
 </head>
+
 <body>
     <section>
         <header>

@@ -1,13 +1,17 @@
-<?php require 'includes/header.php'
+<?php
+require 'includes/header.php';
 ?>
 <section>
     <!-- REAL START ABOVE ARE A LINK AND USELESS INFO  -->
 
     <div class="container4">
         <h1 class="text-form" >Create Your Beconnect Profile </h1>
+    <div class="container3">
+
+        <h1>Create Your Beconnect Profile </h1>
         <p><i class="fas fa-user"></i> Let's get some information to make your profile stand out</p>
         <small>* = required field</small>
-
+        <h2>Hello <?= $_SESSION["username"] ?> aka <?= $_SESSION["first-name"] ?></h2>
         <form method="POST" action="">
             <small>Give us your full name first</small><br>
             <input class="log" type="text" id="first-name" name="first-name" placeholder="First Name"></input>
@@ -18,10 +22,10 @@
                 <option value="juniordeveloper">Junior Developer</option>
                 <option value="seniordeveloper">Senior Developer</option>
                 <option value="manager">Manager</option>
-                <option value="studentorLearning">Student or Learning</option>
-                <option value="InstructororTeacher ">Instructor or Teacher</option>
+                <option value="student">Student</option>
+                <option value="teacher ">Teacher</option>
                 <option value="intern">Intern</option>
-                <option value="Other">Other</option>
+                <option value="other">Other</option>
             </select>
             <br>
             <small>Where are you working or studying now?</small><br>

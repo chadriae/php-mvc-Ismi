@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+
 ini_set('display_errors', "1");
 ini_set('display_startup_errors', "1");
 error_reporting(E_ALL);
@@ -27,20 +28,16 @@ $databaseManager = new DatabaseManager($config['host'], $config['name'], $config
 $databaseManager->connect();
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
-//this file should never be more than 20 lines of code!
 
 $controller = new HomepageController();
 if (isset($_GET['page']) && $_GET['page'] === 'info') {
     $controller = new InfoController($databaseManager);
-    $students = $controller->get();
-    require 'View/info.php';
 } else if (isset($_GET['page']) && $_GET['page'] === 'dashboard') {
     $controller = new DashboardController($databaseManager);
-    $addUser = $controller->createUser();
 } else if (isset($_GET['page']) && $_GET['page'] === 'login') {
-    $controller = new LoginController();
+    $controller = new LoginController($databaseManager);
 } else if (isset($_GET['page']) && $_GET['page'] === 'register') {
-    $controller = new RegisterController();
+    $controller = new RegisterController($databaseManager);
 } else if (isset($_GET['page']) && $_GET['page'] === 'becoders') {
     $controller = new BecodersController($databaseManager);
 } else if (isset($_GET['page']) && $_GET['page'] === 'succes') {
