@@ -21,10 +21,10 @@
                     <ul class=nav-list>
                         <li><a class="ismi" href="index.php">Home</a></li>
                         <li><a class="ismi" href="index.php?page=info">Profiles</a></li>
-                        <li><a class="ismi" href="index.php?page=register">SignUp </a></li>
+                        <li><a class="ismi" href="index.php?page=register">Register </a></li>
                         <li><a class="ismi" href="index.php?page=login">Login</a></li>
                         <div id="myDIV">
-                            <li><a href="index.php"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a>
+                            <li><a class="ismi" href="index.php"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a>
                             </li>
                         </div>
 

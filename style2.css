@@ -13,6 +13,7 @@
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
+    height: 80vh;
 
    
 }
@@ -43,6 +44,7 @@ img .photo{
     margin-left:10rem ;
 
 
+
 }
 
 .log-text{
@@ -71,6 +73,10 @@ img .photo{
     background-color:var(--PrimaryColor);
 }
 
+/* Register form */
+.register{
+    text-align: center;
+}
 
 
 

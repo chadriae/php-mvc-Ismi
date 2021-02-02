@@ -1,7 +1,7 @@
 <?php require 'includes/header.php'?>
 
 
-<div class="box">
+<div class="register">
     <p><i class="fas fa-user"></i> Create your Beconnect Account here </p>
     <form action="">
         <input type="text" placeholder="Name" name="name" minlength="2" required="" value=""><br>

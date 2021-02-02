@@ -8,12 +8,12 @@
     <form action="">
         <input  class="log" type="email"  placeholder="Email Address" name="email" required="" value=""><br>
         <input  class="log" type="password" class="login" placeholder="Password" name="password" required="" value=""><br>
-        <button type="button"><input type="submit" class="btn btn-primary" value="Sign In"></button>
+        <button type="button"><input type="submit" class="btn btn-primary" value="Log in"></button>
     </form>
     <p>Don't have an account? <a href="index.php?page=register">SIGN UP (to be done)</a></p>
 </div>
 <div class="image">
-    <img class="photo" src="./assets/img/login.png" alt="Girl in a jacket">
+    <img class="photo" src="./assets/img/login.png"  alt="Girl in a jacket">
 </div>
 </div>
 
