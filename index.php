@@ -33,7 +33,6 @@ if (isset($_GET['page']) && $_GET['page'] === 'info') {
     $controller = new InfoController($databaseManager);
 } else if (isset($_GET['page']) && $_GET['page'] === 'dashboard') {
     $controller = new DashboardController($databaseManager);
-    $addUser = $controller->createUser();
 } else if (isset($_GET['page']) && $_GET['page'] === 'login') {
     $controller = new LoginController($databaseManager);
 } else if (isset($_GET['page']) && $_GET['page'] === 'register') {
