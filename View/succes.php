@@ -1,7 +1,8 @@
 <?php require 'includes/header.php'?>
 
-<section class="container3">
-    <h1>Dashboard</h1>
+<section>
+ <div class="container4">
+    <h1 class="text-form">Dashboard</h1>
     <p>
         <i class="fas fa-user" aria-hidden="true"></i>
          <strong>Welcome zoo, you can edit your profile or
@@ -35,7 +36,9 @@
         </thead>
         <tbody></tbody>
     </table>
-    <div><button><i class="fas fa-user-minus" aria-hidden="true"></i> Delete
+    <div><button class="btn btn-primary" ><i class="fas fa-user-minus" aria-hidden="true"></i> Delete
             my Account</button></div>
+
+</div>
 </section>
 <?php require 'includes/footer.php'?>

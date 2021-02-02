@@ -1,11 +1,8 @@
 <?php require 'includes/header.php'?>
 
 
-
-
-
-<div class="container3">
-<h1>Posts</h1>
+<div class="container4">
+<h1 class="text-form" >Posts</h1>
 <p><i class="fas fa-user" aria-hidden="true"></i> Welcome to the community!</p>
 
     <div>
@@ -14,7 +11,7 @@
             <form>
                 <textarea name="text" cols="30" rows="5" placeholder="Create a post" required="">
                 </textarea>
-                <input type="submit" value="Submit">
+                <input class="btn btn-primary" type="submit" value="Submit">
             </form>
         </div>
     </div>  

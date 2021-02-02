@@ -8,13 +8,13 @@ var typewriter = new Typewriter(app, {
 typewriter 
 
   .pauseFor(500)
-  .typeString('<h2 style="color:#357EC7" font-family: "Roboto Mono" > Welcome!</h2> <br>')
+  .typeString('<h1 style="color:#357EC7" font-family: "Roboto Mono" > Welcome!</h1> <br>')
   .pauseFor(300)
-  .typeString('<h2 style="color:#357EC7">Create your Beconnect Profile</h2><br>')
+  .typeString('<h2 style="color:#357EC7">Create your BeConnect Profile</h2><br>')
   .pauseFor(300)
   .typeString('<h2 style="color:#357EC7">Share posts and get help from other developers</h2>')
   .deleteChars(11)
-  .typeString('<h1>Beconnect Code Monkeys</h1> ') 
+  .typeString('<h2 class="dirk" style="color:#357EC7">BeConnect Code Monkeys</h2> <br>') 
   .pauseFor(1000)
   .start();
   

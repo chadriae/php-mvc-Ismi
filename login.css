@@ -1,38 +1,24 @@
-.container3{
-    width: 80%;
-    margin: 0 auto;
-    background-color: burlywood;
-    min-height: 80vh;
-}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;600;700;900&display=swap');
 /* -- Setting some variables to color and fonts ,enz-- */
 :root{
     --PrimaryColor :rgb(72, 136, 161);
     --SecondaryColor :rgb(43, 84, 126);
+    --ThreeColor:rgb(108, 192, 255);
     --PrimaryFont : 'Roboto Mono', monospace;
-    
+
 }
 
 /* Login form */
-
-.wrapper{
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
+.container3{
+    width: 80%;
+    margin: 0 auto;
     height: 80vh;
-
-   
+    display: flex;
 }
 
-.login{
-    align-items: center;
-    margin-left: 10rem;
-    width: 70%;
-
-}
 
 .log {
-    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -42,22 +28,27 @@
     font-family: var(--PrimaryFont);
   }
 
+  .logtext{
+      width:70%;
+  }
+
   
 
-img .photo{
-    width: 40rem;
+img.photo{
+    width:30rem;
     filter: grayscale(30%);
-    margin-left:10rem ;
+   
 
 
 
 }
 
-.log-text{
-    font-size:1.5rem;
+.text-login{
+    font-size:1rem;
     color:var(--SecondaryColor);
     font-family: var(--PrimaryFont);
     letter-spacing: 0.5;
+    border:none;
 }
 
 .btn-primary{
@@ -68,10 +59,11 @@ img .photo{
     background-color:var(--SecondaryColor);
     padding:0.5rem ;
     cursor: pointer;
+  
    
     }
     
-    .text-primary{
+.text-primary{
       margin: .8rem;
     }
 
@@ -79,10 +71,6 @@ img .photo{
     background-color:var(--PrimaryColor);
 }
 
-/* Register form */
-.register{
-    text-align: center;
-}
 
 
 

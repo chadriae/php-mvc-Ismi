@@ -3,19 +3,17 @@
 <section>
     <!-- REAL START ABOVE ARE A LINK AND USELESS INFO  -->
 
-    <div class="container3">
-
-        <p><a href="index.php">To index page</a></p>
-        <h1>Create Your Beconnect Profile </h1>
+    <div class="container4">
+        <h1 class="text-form" >Create Your Beconnect Profile </h1>
         <p><i class="fas fa-user"></i> Let's get some information to make your profile stand out</p>
         <small>* = required field</small>
 
         <form method="POST" action="">
             <small>Give us your full name first</small><br>
-            <input type="text" id="first-name" name="first-name" placeholder="First Name"></input>
-            <input type="text" id="last-name" name="last-name" placeholder="Last Name"></input><br>
+            <input class="log" type="text" id="first-name" name="first-name" placeholder="First Name"></input>
+            <input class="log" type="text" id="last-name" name="last-name" placeholder="Last Name"></input><br>
             <small>Give us an idea on where you are in your career </small><br>
-            <select name="career" id="career">
+            <select class="log"  name="career" id="career">
                 <option value="developer">Developer</option>
                 <option value="juniordeveloper">Junior Developer</option>
                 <option value="seniordeveloper">Senior Developer</option>
@@ -27,22 +25,22 @@
             </select>
             <br>
             <small>Where are you working or studying now?</small><br>
-            <input type="text" id="company" name="company" placeholder="Company"></input><br>
+            <input class="log" type="text" id="company" name="company" placeholder="Company"></input><br>
             <small>Could be your own company or one you work for</small><br>
-            <input type="text" id="website" name="website" placeholder="Website"></input><br>
+            <input class="log" type="text" id="website" name="website" placeholder="Website"></input><br>
             <small>City & state suggested (eg. Gent , O-VL)</small><br>
-            <input type="text" id="location" name="location" placeholder="Location"></input><br>
+            <input class="log" type="text" id="location" name="location" placeholder="Location"></input><br>
             <small>Please use comma separated values</small><br>
-            <input type="text" id="skills" name="skills" placeholder="(eg. HTML, CSS, JavaScript, PHP)"></input><br>
+            <input class="log"  type="text" id="skills" name="skills" placeholder="(eg. HTML, CSS, JavaScript, PHP)"></input><br>
             <small>GitHub username</small><br>
-            <input type="text" id="github" name="github" placeholder="Github Username"></input><br>
+            <input class="log"  type="text" id="github" name="github" placeholder="Github Username"></input><br>
             <small>Tell us a little bit about yourself </small><br>
             <textarea name="bio" id="textarea" cols="30" rows="10" placeholder="A short Bio about yourself"></textarea><br>
             <small>Upload your profile pic (100mb for now i think )</small><br>
-            <input type="file" name="fileupload" accept="image/*" value=" file"></input><br><br>
+            <input class="log" type="file" name="fileupload" accept="image/*" value=" file"></input><br><br>
             <!--Submit form button -->
-            <input type="submit" name="submit" value="Submit">
-            <input type="reset" name="reset" value="Reset" />
+            <input class="log"  type="submit" name="submit" value="Submit">
+            <input class="log" type="reset" name="reset" value="Reset" />
         </form>
     </div>
 </section>

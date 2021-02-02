@@ -1,0 +1,25 @@
+/* --Imporing the font family's-- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;600;700;900&display=swap');
+/* -- Setting some variables to color and fonts ,enz-- */
+:root{
+    --PrimaryColor :rgb(72, 136, 161);
+    --SecondaryColor :rgb(43, 84, 126);
+    --PrimaryFont : 'Roboto Mono', monospace;
+      
+}
+
+.text-form{
+    font-family: var(--PrimaryFont);
+    color:var(--PrimaryColor);
+    font-size:3rem;
+}
+
+.photo1{
+    width: 37rem;
+
+
+}
+
+
+

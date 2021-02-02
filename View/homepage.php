@@ -11,24 +11,16 @@ Anything complex should be calculated in the model -->
 
     </div>
     <div class="test">
-
-        <p><a href="index.php?page=dashboard">To dashboard page</a></p>
-        <p><a href="index.php?page=info">To info page</a></p>
-        <p><a href="index.php?page=becoders">To becoders page</a></p>
-        <p><a href="index.php?page=succes">To succes page</a></p>
-        <p><a href="index.php?page=addexperience">To exp page</a></p>
-        <p><a href="index.php?page=addeducation">To education page</a></p>
-        <p><a href="index.php?page=blog">To Blog page</a></p>
-        <h1>BeConnect</h1>
-        <div id="app"></div>
-
-
-        <button class="home" type="submit"><a href="index.php?page=register">Sign Up</a> </button>
-        <button class="home" type="submit"><a href="index.php?page=login">Login</a></button>
+     <div id="app"></div>
+    
     </div>
-
-
+      
 </div>
+    
+<p class="btn-hp">
+    <button class="home btn-primary" type="submit"><a href="index.php?page=register">SIGN UP</a> </button>
+    <button class="home btn-primary" type="submit"><a href="index.php?page=login">LOGIN</a></button>
+ </p>
 <div class="svg">
     <svg viewBox="0 0 320 266" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="vip-contact-client">
