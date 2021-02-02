@@ -310,3 +310,8 @@ h2{
         max-width: 100%;
         margin-left: 5rem;
 }
+
+.errorMessage {
+  text-align: center;
+  color: red;
+}

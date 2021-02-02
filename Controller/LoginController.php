@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 class LoginController
 {
+    private $databaseManager;
+
     //render function with both $_GET and $_POST vars available if it would be needed.
     public function render(array $GET, array $POST)
     {
@@ -11,6 +13,15 @@ class LoginController
         // then the view will actually display them.
 
         //load the view
-        require 'View/login.php';
+        if ($_GET['page'] === 'login') {
+            require 'View/login.php';
+        } elseif (isset($_POST['submit'])) {
+            require 'View/succes.login.php';
+        }
+    }
+
+    public function __construct(DatabaseManager $databaseManager)
+    {
+        $this->databaseManager = $databaseManager;
     }
 }

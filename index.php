@@ -34,12 +34,16 @@ if (isset($_GET['page']) && $_GET['page'] === 'info') {
     $controller = new DashboardController($databaseManager);
     $addUser = $controller->createUser();
 } else if (isset($_GET['page']) && $_GET['page'] === 'login') {
-    $controller = new LoginController();
+    $controller = new LoginController($databaseManager);
 } else if (isset($_GET['page']) && $_GET['page'] === 'register') {
     $controller = new RegisterController($databaseManager);
-    $createUser = $controller->createUser();
 } else if (isset($_GET['page']) && $_GET['page'] === 'becoders') {
     $controller = new BecodersController($databaseManager);
+} else if (isset($_GET['page']) && $_GET['page'] === 'succes.register') {
+    $controller = new RegisterController($databaseManager);
+} else if (isset($_GET['page']) && $_GET['page'] === 'succes.login') {
+    $controller = new LoginController($databaseManager);
 }
+
 
 $controller->render($_GET, $_POST);
