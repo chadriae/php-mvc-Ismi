@@ -4,8 +4,6 @@ $students = $this->get();
 
 <?php require 'includes/header.php' ?>
 <div class="container2">
-    <h4>Info page</h4>
-    <p><a href="index.php">Back to homepage</a></p>
     <?php foreach ($students as $user) : ?>
         <div class="infoContainer">
             <div class="info">
