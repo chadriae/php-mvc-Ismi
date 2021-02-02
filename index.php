@@ -32,7 +32,8 @@ if (isset($_GET['page']) && $_GET['page'] === 'info') {
 } else if (isset($_GET['page']) && $_GET['page'] === 'login') {
     $controller = new LoginController();
 } else if (isset($_GET['page']) && $_GET['page'] === 'register') {
-    $controller = new RegisterController();
+    $controller = new RegisterController($databaseManager);
+    $createUser = $controller->createUser();
 } else if (isset($_GET['page']) && $_GET['page'] === 'becoders') {
     $controller = new BecodersController($databaseManager);
 }
