@@ -24,13 +24,13 @@ error_reporting(E_ALL);
             <form method="post">
                 <input class="log logtext" type="text" placeholder="Email Address or username" name="name" required="" value=""><br>
                 <input class="log logtext" type="password" class="login" placeholder="Password" name="pwd" required="" value=""><br>
-                <input name="submit" type="submit" class="btn btn-primary" value="Log in">
+                <input name="submit" type="submit" class="btn btn-primary" value="LOGIN">
             </form>
             <br>
             <p>Don't have an account? <a href="index.php?page=register">SIGN UP</a></p>
         </div>
         <div class="image">
-            <img class="photo" src="./assets/img/login.png" alt="Girl in a jacket">
+            <img class="photo" src="./assets/img/login.png" alt="">
         </div>
     </div>
 </div>

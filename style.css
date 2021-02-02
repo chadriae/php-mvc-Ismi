@@ -5,6 +5,8 @@
 :root{
     --PrimaryColor :rgb(72, 136, 161);
     --SecondaryColor :rgb(43, 84, 126);
+    --FourColor:rgb(86, 114, 156) ;
+    --FiveColor:rgb(250, 239, 239);
     --PrimaryFont : 'Roboto Mono', monospace;
     --FontNav:400;
       
@@ -194,6 +196,7 @@ a{
 }
 .test p{
 display: inline-block;
+font-family: var(--PrimaryFont);
 }
 
 body{
@@ -310,8 +313,10 @@ h2{
   position: absolute;
   top:60%;
   left:50%;
+  
  
 }
+
 
 .dirk{
  font-weight:900;
