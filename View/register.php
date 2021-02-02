@@ -10,7 +10,7 @@ require 'includes/header.php' ?>
     <h1>Sign up </h1>
     <div class="register">
         <p><i class="fas fa-user"></i> Create your Beconnect Account here </p>
-        <form method="POST" action="index.php?page=succes.register">
+        <form method="POST">
             <input type="text" placeholder="First name" name="first-name" minlength="2" required="" value=""><br>
             <input type="text" placeholder="Username" name="username" minlength="2" required="" value=""><br>
             <input type="email" placeholder="Email Address" name="email" required="" value=""><br>
