@@ -20,8 +20,7 @@ $posts = $this->getPosts();
         <input class="btn btn-primary" type="submit" value="SUBMIT" name="submit">
     </form>
     <?php foreach ($posts as $post) : ?>
-        <p><?= $post['post'] ?> (written by <?= $post['first_name'] ?>)
-        </p>
+        <p class="small"><?= $post['post'] ?> (written by <?= $post['first_name'] ?>)</p>
     <?php endforeach; ?>
 </div>
 
