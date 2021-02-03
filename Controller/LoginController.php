@@ -1,11 +1,10 @@
 <?php
 
 declare(strict_types=1);
-
-
 ini_set('display_errors', "1");
 ini_set('display_startup_errors', "1");
 error_reporting(E_ALL);
+
 class LoginController
 {
     private $databaseManager;
@@ -34,16 +33,6 @@ class LoginController
 
             $query = "SELECT * FROM login WHERE username = :username";
             $statement = $this->databaseManager->dbconnection->prepare($query);
-            // $statement->bindValue(":username", $userName, PDO::PARAM_INT);
-
-            // $statement->execute(
-            //     array(
-            //         'username'     =>    $userName,
-            //         'pwd'          =>    $pwd
-            //     )
-            // );
-            // $count = $statement->rowCount();
-            // if ($count > 0) {
             $statement->execute(array('username' => $userName));
             $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
             $count = count($rows);
@@ -52,6 +41,7 @@ class LoginController
                 if (password_verify($pwd, $row['pwd'])) {
                     $_SESSION["username"] = $_POST["name"];
                     $_SESSION["first-name"] = $rows[0]['first_name'];
+                    $_SESSION["student-id"] = $rows[0]['student_id'];
                     header("location: index.php?page=dashboard");
                 } else {
                     header("location: index.php?page=login&error=invalidpassword");

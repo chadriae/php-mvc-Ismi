@@ -343,6 +343,13 @@ h2{
  font-size:2rem;
 }
  .errorMessage {
-  text-align: center;
+  text-align: left;
   color: red;
+  font-family: "Roboto Mono";
+}
+
+.successMessage {
+  /* text-align: left; */
+  color: green;
+  font-family: "Roboto Mono";
 }

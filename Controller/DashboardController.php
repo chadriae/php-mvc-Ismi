@@ -13,7 +13,7 @@ class DashboardController
         require 'View/dashboard.php';
 
         if (isset($_POST['submit'])) {
-            $this->createUser();
+            $this->updateUser();
         }
     }
 
@@ -22,20 +22,26 @@ class DashboardController
         $this->databaseManager = $databaseManager;
     }
 
-    public function createUser()
+    public function updateUser()
     {
         if (!empty($_POST['first-name']) || !empty($_POST['last-name']) || !empty($_POST['career']) || !empty($_POST['company']) || !empty($_POST['website']) || !empty($_POST['location']) || !empty($_POST['skills']) || !empty($_POST['github']) || !empty($_POST['bio'])) {
-            $this->newAdditionFirstName = $_POST['first-name'];
-            $this->newAdditionLastName = $_POST['last-name'];
+            $this->newAdditionFirstName = ucfirst($_POST['first-name']);
+            $this->newAdditionLastName = ucfirst($_POST['last-name']);
             $this->newAdditionCareer = $_POST['career'];
-            $this->newAdditionCompany = $_POST['company'];
+            $this->newAdditionCompany = ucfirst($_POST['company']);
             $this->newAdditionWebsite = $_POST['website'];
-            $this->newAdditionLocation = $_POST['location'];
+            $this->newAdditionLocation = ucfirst($_POST['location']);
             $this->newAdditionSkills = $_POST['skills'];
             $this->newAdditionGitHub = $_POST['github'];
             $this->newAdditionBio = $_POST['bio'];
 
-            $addNewAddition = $this->databaseManager->dbconnection->query("INSERT INTO student (first_name, last_name, current_job, current_company, website, current_location, skills, github, bio) VALUES ('$this->newAdditionFirstName', '$this->newAdditionLastName', '$this->newAdditionCareer', '$this->newAdditionCompany', '$this->newAdditionWebsite', '$this->newAdditionLocation', '$this->newAdditionSkills', '$this->newAdditionGitHub', '$this->newAdditionBio')");
+            $this->newAdditionID = $_SESSION['student-id'];
+
+            // $addNewAddition = $this->databaseManager->dbconnection->query("INSERT INTO student (student_id, first_name, last_name, current_job, current_company, website, current_location, skills, github, bio) VALUES ('$this->newAdditionID', '$this->newAdditionFirstName', '$this->newAdditionLastName', '$this->newAdditionCareer', '$this->newAdditionCompany', '$this->newAdditionWebsite', '$this->newAdditionLocation', '$this->newAdditionSkills', '$this->newAdditionGitHub', '$this->newAdditionBio')");
+
+            $addNewAddition = $this->databaseManager->dbconnection->query("UPDATE student SET first_name = '$this->newAdditionFirstName', last_name = '$this->newAdditionLastName', current_job = '$this->newAdditionCareer', current_company = '$this->newAdditionCompany', website = '$this->newAdditionWebsite', current_location = '$this->newAdditionLocation', skills = '$this->newAdditionSkills', github = '$this->newAdditionGitHub', bio = '$this->newAdditionBio' WHERE student_id = '$this->newAdditionID';");
+
+            header("location: index.php?page=dashboard&error=none");
 
             if (!$addNewAddition) {
                 var_dump($this->databaseManager->dbconnection->error);
