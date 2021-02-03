@@ -16,7 +16,9 @@
 }
 
 .photo1{
-    width: 37rem;
+  /*  width: 100%; */
+    height: auto;
+    max-width: 37rem;
 
 
 }
