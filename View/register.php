@@ -4,15 +4,31 @@
     <div class="test1 test">
         <h1 class="text-form">SIGN UP </h1>
         <p class="text-login"><i class="fas fa-user"></i> Create your Beconnect Account here </p>
-        <form method="post">
+        <form method="POST">
             <input class="log logtext" type="text" placeholder="First Name" name="first-name" minlength="2" required="" value=""><br>
             <input class="log logtext" type="text" placeholder="Username" name="username" minlength="2" required="" value=""><br>
             <input class="log logtext" type="email" placeholder="Email Address" name="email" required="" value=""><br>
             <input class="log logtext" type="password" placeholder="Password" name="pwd" minlength="6" required="" value=""><br>
             <input class="log logtext" type="password" placeholder="Confirm Password" name="pwdrepeat" minlength="6" required="" value=""><br>
-            <input class="btn btn-primary" type="submit" value="REGISTER">
+            <input class="btn btn-primary" name="submit" type="submit" value="REGISTER">
         </form>
-        <p>Already have an account? <a href="index.php?page=login">LOGIN (to be done)</a></p>
+        <br>
+        <p>Already have an account? <a href="index.php?page=login">LOGIN</a></p><br>
+        <?php
+        if (isset($_GET['error'])) {
+            if ($_GET['error'] ==  "invalidusername") {
+                echo '<p class="errorMessage">Choose a proper username. No special characters allowed.<p>';
+            }
+            if ($_GET['error'] ==  "invalidemail") {
+                echo '<p class="errorMessage">Choose a proper e-mail address.<p>';
+            }
+            if ($_GET['error'] ==  "passwordsdontmatch") {
+                echo '<p class="errorMessage">Passwords do not match.<p>';
+            }
+        }
+
+        ?>
+
     </div>
     <div class="test">
         <div class="image">
@@ -22,23 +38,8 @@
 </div>
 
 
-<?php require 'includes/footer.php' ?>
-<?php
+<?php require 'includes/footer.php';
 ini_set('display_errors', "1");
 ini_set('display_startup_errors', "1");
 error_reporting(E_ALL);
-
-
-
-if (isset($_GET['error'])) {
-    if ($_GET['error'] ==  "invalidusername") {
-        echo '<p class="errorMessage">Choose a proper username. No special characters allowed.<p>';
-    }
-    if ($_GET['error'] ==  "invalidemail") {
-        echo '<p class="errorMessage">Choose a proper e-mail address.<p>';
-    }
-    if ($_GET['error'] ==  "passwordsdontmatch") {
-        echo '<p class="errorMessage">Passwords do not match.<p>';
-    }
-}
 ?>
