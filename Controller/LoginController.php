@@ -34,16 +34,6 @@ class LoginController
 
             $query = "SELECT * FROM login WHERE username = :username";
             $statement = $this->databaseManager->dbconnection->prepare($query);
-            // $statement->bindValue(":username", $userName, PDO::PARAM_INT);
-
-            // $statement->execute(
-            //     array(
-            //         'username'     =>    $userName,
-            //         'pwd'          =>    $pwd
-            //     )
-            // );
-            // $count = $statement->rowCount();
-            // if ($count > 0) {
             $statement->execute(array('username' => $userName));
             $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
             $count = count($rows);
