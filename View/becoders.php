@@ -1,6 +1,7 @@
 <?php require 'includes/header.php';
 // print_r($_SESSION);
 $jobs = $this->getExperience($_SESSION['student-id']);
+$schools = $this->getEducation($_SESSION['student-id']);
 ?>
 <section>
     <div class="container5">
@@ -63,20 +64,15 @@ $jobs = $this->getExperience($_SESSION['student-id']);
 
                 <div class="info-right">
                     <h2 class="">Education</h2>
-                    <div>
-                        <h3>IR </h3>
-                        <p><time datetime="1273449600000">May 2010</time> - Now</p>
-                        <p><span><strong>Degree: </strong>Basic education</span></p>
-                        <p><span><strong>Field Of Study: </strong>Elementary </span></p>
-                        <p><span><strong>Description: </strong> basic school</span></p>
-                    </div>
-                    <div>
-                        <h3>Gent Kortrijk</h3>
-                        <p><time datetime="1452380400000">Jan 2016</time> - Now</p>
-                        <p><span><strong>Degree: </strong>Industrial design</span></p>
-                        <p><span><strong>Field Of Study: </strong>Design</span></p>
-                        <p></p>
-                    </div>
+                    <?php foreach ($schools as $school) : ?>
+                        <div>
+                            <h3><?= $school['school'] ?></h3>
+                            <p><time><?= $school['from_date'] ?> - <?= $school['to_date'] ?></time></p>
+                            <p><span><strong>Degree: </strong><?= $school['degree'] ?></span></p>
+                            <p><span><strong>Field Of Study: </strong><?= $school['degree'] ?></span></p>
+                            <p><span><strong>Description: </strong> <?= $school['education_description'] ?></span></p>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
 
             </div>

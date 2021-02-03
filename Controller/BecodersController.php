@@ -45,4 +45,10 @@ class BecodersController
         $jobs = $this->databaseManager->dbconnection->query("SELECT * FROM experience WHERE student_id = $id");
         return $jobs;
     }
+
+    public function getEducation($id)
+    {
+        $jobs = $this->databaseManager->dbconnection->query("SELECT * FROM education WHERE student_id = $id");
+        return $jobs;
+    }
 }
