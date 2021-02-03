@@ -33,7 +33,7 @@
   }  
 
 img.photo{
-    width: 30rem;
+    width: 40rem;
     height: auto;
     filter: grayscale(30%);
 }
