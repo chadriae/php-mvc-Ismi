@@ -8,7 +8,6 @@
     --PrimaryFont : 'Roboto Mono', monospace;
 
 }
-
 /* Login form */
 .container3{
     width: 80%;
@@ -16,7 +15,6 @@
     height: 80vh;
     display: flex;
 }
-
 
 .log {
     padding: 12px 20px;
@@ -28,19 +26,14 @@
     font-family: var(--PrimaryFont);
   }
 
-  .logtext{
+.logtext{
       width:70%;
-  }
-
-  
+  }  
 
 img.photo{
-    width:30rem;
+    width: 30rem;
+    height: auto;
     filter: grayscale(30%);
-   
-
-
-
 }
 
 .text-login{
@@ -51,16 +44,13 @@ img.photo{
     border:none;
 }
 
-.btn-primary{
-  
+.btn-primary{  
     color: rgb(233, 217, 217);
     font-size: 1rem;
     font-family: var(--PrimaryFont);
     background-color:var(--SecondaryColor);
     padding:0.5rem ;
-    cursor: pointer;
-  
-   
+    cursor: pointer;   
     }
     
 .text-primary{

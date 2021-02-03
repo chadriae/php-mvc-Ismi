@@ -15,6 +15,7 @@ session_start();
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="register.css">
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="becoders.css">
     <title>Becode - ISMI</title>
 </head>
 

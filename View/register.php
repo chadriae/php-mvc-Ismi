@@ -26,24 +26,9 @@
 ini_set('display_errors', "1");
 ini_set('display_startup_errors', "1");
 error_reporting(E_ALL);
-require 'includes/header.php' ?>
 
-<div class="container3">
-    <div class="register">
-        <p><i class="fas fa-user"></i> Create your Beconnect Account here </p>
-        <form method="POST">
-            <input type="text" placeholder="First name" name="first-name" minlength="2" required="" value=""><br>
-            <input type="text" placeholder="Username" name="username" minlength="2" required="" value=""><br>
-            <input type="email" placeholder="Email Address" name="email" required="" value=""><br>
-            <input type="password" placeholder="Password" name="pwd" minlength="6" required="" value=""><br>
-            <input type="password" placeholder="Repeat Password" name="pwdrepeat" minlength="6" required="" value=""><br>
-            <input name="submit" type="submit" value="Sign up">
-        </form>
-        <p>Already have an account? <a href="index.php?page=login">LOGIN</a></p>
-    </div>
-</div>
 
-<?php
+
 if (isset($_GET['error'])) {
     if ($_GET['error'] ==  "invalidusername") {
         echo '<p class="errorMessage">Choose a proper username. No special characters allowed.<p>';
@@ -56,4 +41,4 @@ if (isset($_GET['error'])) {
     }
 }
 ?>
-<?php require 'includes/footer.php' ?>
+
