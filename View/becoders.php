@@ -1,5 +1,5 @@
 <?php require 'includes/header.php';
-print_r($_SESSION);
+// print_r($_SESSION);
 $jobs = $this->getExperience($_SESSION['student-id']);
 ?>
 
