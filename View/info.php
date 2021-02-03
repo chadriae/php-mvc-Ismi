@@ -13,7 +13,7 @@ $students = $this->get();
                     <p><?= $user['current_job'] ?><span> at <?= $user['current_company'] ?></span></p>
                     <p><?= $user['current_location'] ?></p>
                     <a href="index.php?page=becoders" class="btn btn-primary">View profile</a>
-                    <button> <i class="fas fa-heart" aria-hidden="true"></i><span> 3</span></button>
+                    
                 </div>
                 <ul>
                     <?php
