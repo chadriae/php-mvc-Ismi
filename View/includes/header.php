@@ -1,5 +1,6 @@
 <?php
 session_start();
+print_r($_SESSION);
 ?>
 
 
@@ -29,11 +30,11 @@ session_start();
                 <div class="right-nav">
                     <ul class=nav-list>
                         <li><a class="ismi" href="index.php?page=info">Developers</a></li>
-                   <!--     <li><a class="ismi" href="index.php?page=info">Profiles</a></li>  -->
+                        <!--     <li><a class="ismi" href="index.php?page=info">Profiles</a></li>  -->
                         <li><a class="ismi" href="index.php?page=register">Register </a></li>
                         <li><a class="ismi" href="index.php?page=login">Login</a></li>
                         <div id="myDIV">
-                     <!--       <li><a class="ismi" href="index.php"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a>
+                            <!--       <li><a class="ismi" href="index.php"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a>
                             </li> -->
                         </div>
 
