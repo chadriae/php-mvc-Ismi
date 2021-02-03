@@ -327,3 +327,9 @@ h2{
   color: red;
   font-family: "Roboto Mono";
 }
+
+.successMessage {
+  /* text-align: left; */
+  color: green;
+  font-family: "Roboto Mono";
+}

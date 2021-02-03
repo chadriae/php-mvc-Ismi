@@ -1,11 +1,10 @@
 <?php
 
 declare(strict_types=1);
-
-
 ini_set('display_errors', "1");
 ini_set('display_startup_errors', "1");
 error_reporting(E_ALL);
+
 class LoginController
 {
     private $databaseManager;
@@ -42,6 +41,7 @@ class LoginController
                 if (password_verify($pwd, $row['pwd'])) {
                     $_SESSION["username"] = $_POST["name"];
                     $_SESSION["first-name"] = $rows[0]['first_name'];
+                    $_SESSION["student-id"] = $rows[0]['student_id'];
                     header("location: index.php?page=dashboard");
                 } else {
                     header("location: index.php?page=login&error=invalidpassword");
