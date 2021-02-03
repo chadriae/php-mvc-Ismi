@@ -1,7 +1,5 @@
 <?php
-//TODO: form validation, show fields that are not filled in correctly
-//TODO: check if valid email address
-
+//TODO: error header information
 declare(strict_types=1);
 
 class DashboardController
