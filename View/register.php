@@ -9,9 +9,9 @@
         <input class="log logtext" type="email" placeholder="Email Address" name="email" required="" value=""><br>
         <input class="log logtext" type="password" placeholder="Password" name="password" minlength="6" required="" value=""><br>
         <input class="log logtext" type="password" placeholder="Confirm Password" name="password" minlength="6" required="" value=""><br>
-        <input class="btn btn-primary"  type="submit" value="REGISTER">
+        <button class="btn btn-primary"  type="submit" value="REGISTER"><a href="index.php?page=dashboard">SIGNUP </button>
     </form>
-    <p >Already have an account? <a href="index.php?page=login">LOGIN (to be done)</a></p>
+    <p >Already have an account? <a href="index.php?page=login">LOGIN</a></p>
     </div>  
     <div class="test">
         <div class="image">

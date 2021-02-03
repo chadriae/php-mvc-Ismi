@@ -2,8 +2,8 @@
 $students = $this->get();
 ?>
 
-<?php require 'includes/header.php' ?>
-<div class="container2">
+<?php require 'includes/header-logged-in.php' ?>
+<div class="container4">
     <?php foreach ($students as $user) : ?>
         <div class="infoContainer">
             <div class="info">

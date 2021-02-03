@@ -1,15 +1,16 @@
 <?php
-require 'includes/header.php';
+require 'includes/header-logged-in.php';
 ?>
 <section>
     <!-- REAL START ABOVE ARE A LINK AND USELESS INFO  -->
 
     <div class="container4">
-        <h1 class="text-form" >Create Your Beconnect Profile </h1>
-    <div class="container3">
-
+        <h1 class="text-form" >Create Your Beconnect Profile </h1>   
         <h1>Create Your Beconnect Profile </h1>
-        <p><i class="fas fa-user"></i> Let's get some information to make your profile stand out</p>
+        <p>
+            <i class="fas fa-user"></i>
+             Let's get some information to make your profile stand out
+            </p>
         <small>* = required field</small>
         <h2>Hello <?= $_SESSION["username"] ?> aka <?= $_SESSION["first-name"] ?></h2>
         <form method="POST" action="">
