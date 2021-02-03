@@ -4,10 +4,8 @@ if (empty($_SESSION)) {
 } else {
     require 'includes/header.php';
 } // print_r($_SESSION);
-$profile = $_GET['profile'];
-$jobs = $this->getExperience($profile);
-$schools = $this->getEducation($profile);
-$users = $this->getInfo($profile);
+$jobs = $this->getExperience($_SESSION['student-id']);
+$schools = $this->getEducation($_SESSION['student-id']);
 ?>
 <section>
     <div class="container5">
@@ -15,8 +13,8 @@ $users = $this->getInfo($profile);
         <div class="">
             <div class="">
                 <img class="info-img" src="" alt="">
-                <h1 class="info-name"><?= $users[0]['first_name'] ?> <?= $users[0]['last_name'] ?></h1><br>
-                <p class="info-job"><?= $users[0]['current_job'] ?> at<span><?= $users[0]['current_company'] ?></span></p><br>
+                <h1 class="info-name"><?= $_SESSION['first-name'] ?> <?= $_SESSION['last-name'] ?></h1><br>
+                <p class="info-job"><?= $_SESSION['job'] ?> at<span><?= $_SESSION['company'] ?></span></p><br>
                 <p><span><?= $_SESSION['location'] ?></span></p><br>
                 <div class="">
                     <a href="" target="_blank" rel="noopener noreferrer">
@@ -38,12 +36,12 @@ $users = $this->getInfo($profile);
                     About myself
                 </h2><br>
                 <p>
-                    <?= $users[0]['bio'] ?>
+                    <?= $_SESSION['bio'] ?>
                 </p>
                 <h2 class="">Skill Set</h2>
                 <div class="skills">
                     <?php
-                    $userSkills = $users[0]["skills"];
+                    $userSkills = $_SESSION["skills"];
                     $userSkills = preg_replace('/\.$/', '', $userSkills);
                     $userSkillsArray = explode(', ', $userSkills);
                     ?>

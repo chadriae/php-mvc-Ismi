@@ -1,6 +1,10 @@
 <?php
 session_start();
 print_r($_SESSION);
+
+if (isset($_POST['signout'])) {
+    session_destroy();
+}
 ?>
 
 
@@ -34,11 +38,12 @@ print_r($_SESSION);
                         <!--     <li><a class="ismi" href="index.php?page=info">Profiles</a></li>  -->
                         <li><a class="ismi" href="index.php?page=blog">Posts </a></li>
                         <li><a class="ismi" href="index.php?page=dashboard"><i class="fas fa-user" aria-hidden="true"></i>dashboard</a></li>
-                        <div id="myDIV">
-                            <li><a class="ismi" href="index.php"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a>
-                            </li>
-                        </div>
-
+                        <form method="post" action="index.php">
+                            <div id="myDIV">
+                                <li><a class="ismi" href="index.php" type="submit" name="signout"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a>
+                                </li>
+                            </div>
+                        </form>
                     </ul>
                 </div>
 

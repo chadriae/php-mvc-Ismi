@@ -1,5 +1,9 @@
 <?php
-require 'includes/header-logged-in.php';
+if (!isset($_SESSION)) {
+    require 'includes/header-logged-in.php';
+} else {
+    require 'includes/header.php';
+}
 $jobs = $this->getExperience($_SESSION['student-id']);
 $schools = $this->getEducation($_SESSION['student-id']);
 ?>
@@ -50,7 +54,7 @@ $schools = $this->getEducation($_SESSION['student-id']);
                         <td><?= $school['school'] ?></td>
                         <td><?= $school['fieldofstudy'] ?></td>
                         <td><?= $school['degree'] ?></td>
-                        <td><?= $school['from_date'] ?> - <?= $job['to_date'] ?></td>
+                        <td><?= $school['from_date'] ?> - <?= $school['to_date'] ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
