@@ -4,7 +4,7 @@
 :root{
     --PrimaryColor :rgb(72, 136, 161);
     --SecondaryColor :rgb(43, 84, 126);
-    --ThreeColor:rgb(108, 192, 255);
+    --ThreeColor:rgb(0, 94, 128);
     --PrimaryFont : 'Roboto Mono', monospace;
 
 }
@@ -53,12 +53,16 @@ img.photo{
 
 .btn-primary{
   
-    color: rgb(233, 217, 217);
+    color: rgb(250, 239, 239);
     font-size: 1rem;
     font-family: var(--PrimaryFont);
-    background-color:var(--SecondaryColor);
+    background-color:var(--ThreeColor);
     padding:0.5rem ;
-    cursor: pointer;
+    border-radius: 5px;
+    top: 60vh;
+    margin: auto;
+    transition: .3s;
+    border: 1px solid #427F99;
   
    
     }
@@ -68,7 +72,13 @@ img.photo{
     }
 
 .btn-primary:hover{
-    background-color:var(--PrimaryColor);
+  border: 2px solid #5f6d6e;
+  background-color: rgba(365,365,365,0.5);
+  cursor: pointer;
+  color: #6ca6ac;
+  opacity: .8;
+  transition: .3s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 

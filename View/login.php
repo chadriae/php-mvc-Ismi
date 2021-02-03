@@ -26,12 +26,11 @@ error_reporting(E_ALL);
                 }
             }
             ?>
-
             <br>
             <p>Don't have an account? <a href="index.php?page=register">SIGN UP</a></p>
         </div>
         <div class="image">
-            <img class="photo" src="./assets/img/login.png" alt="Girl in a jacket">
+            <img class="photo" src="./assets/img/login.png" alt="">
         </div>
     </div>
 </div>

@@ -11,7 +11,7 @@
             <form>
                 <textarea name="text" cols="30" rows="5" placeholder="Create a post" required="">
                 </textarea>
-                <input class="btn btn-primary" type="submit" value="Submit">
+                <input class="btn btn-primary" type="submit" value="SUBMIT">
             </form>
         </div>
     </div>  
