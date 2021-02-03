@@ -36,7 +36,8 @@ html {
     list-style: none;
   } 
   .profile {
-    max-width: 200px;
+    max-width:200px;
+    width: 100%;
     height: auto;
   }
 
@@ -352,4 +353,16 @@ h2{
   /* text-align: left; */
   color: green;
   font-family: "Roboto Mono";
+}
+
+.xp{
+  margin-top:1rem;
+  margin-right:1rem;
+}
+
+
+.info-photo{
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
 }

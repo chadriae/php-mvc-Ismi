@@ -6,10 +6,9 @@ require 'includes/header.php';
 
     <div class="container4">
         <h1  class="text-form">Create Your Beconnect Profile </h1>
-        <h1 class="text-login">Create Your Beconnect Profile </h1>
-        <p class='text-login'><i class="fas fa-user"></i> Let's get some information to make your profile stand out</p>
-        <small class="small">* = required field</small>
-        <h2 class="small">Hello <?= $_SESSION["username"] ?></h2>
+        <p class='text-login'><i class="fas fa-user"></i> Let's get some information to make your profile stand out</p><br>
+        <small class="small">* = required field</small><br>
+        <h2 class="small">Hello <?= $_SESSION["username"] ?></h2><br>
         <?php
         if (isset($_GET['error'])) {
             if ($_GET['error'] == "none") {
@@ -40,10 +39,10 @@ require 'includes/header.php';
             <input class="log" type="text" id="location" name="location" placeholder="Location"></input><br>
             <small class="small" >Please use comma separated values</small><br>
             <input class="log" type="text" id="skills" name="skills" placeholder="(eg. HTML, CSS, JavaScript, PHP)"></input><br>
-            <small>GitHub username</small><br>
+            <small class="small"  >GitHub username</small><br>
             <input class="log" type="text" id="github" name="github" placeholder="Github Username"></input><br>
-            <small>Tell us a little bit about yourself </small><br>
-            <textarea name="bio" id="textarea" cols="30" rows="10" placeholder="A short Bio about yourself"></textarea><br>
+            <small class="small"  >Tell us a little bit about yourself </small><br>
+            <textarea  class="small"  name="bio" id="textarea" cols="30" rows="10" placeholder="A short Bio about yourself"></textarea><br>
             <small class="small" >Upload your profile pic (100mb for now i think )</small><br>
             <input class="log" type="file" name="fileupload" accept="image/*" value=" file"></input><br><br>
             <!--Submit form button -->

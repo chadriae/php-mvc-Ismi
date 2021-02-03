@@ -28,31 +28,28 @@ span{
     
     justify-content: center;
 }
-.info-bio-skill{
-    
-}
+
 .container6{
     width: 80%;
     margin: 0 auto;
-    
     margin-top: 1rem;
 }
 .info-container{
-   
-    display: flex;
     column-gap: 1rem;
+    display:flex;
 }
 .info-left{
-    border: 1px solid grey;   
- flex: 1;
+    border: 1px solid rgb(75, 103, 139);   
+    flex:1
 }
 .info-right{
-    border: 1px solid grey; 
-flex: 1;
+    border: 1px solid rgb(75, 103, 139);   
+    flex:1
+    
 }
 .info-repos{
-    background-color: thistle;
-    border: 1px solid grey; 
+
+    border: 1px solid rgb(75, 103, 139);   
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
