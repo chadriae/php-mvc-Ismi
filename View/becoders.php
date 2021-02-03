@@ -2,7 +2,6 @@
 // print_r($_SESSION);
 $jobs = $this->getExperience($_SESSION['student-id']);
 ?>
-
 <section>
     <div class="container5">
         <a href="">Back To Profiles</a>
