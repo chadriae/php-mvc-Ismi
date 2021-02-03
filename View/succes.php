@@ -1,4 +1,8 @@
-<?php require 'includes/header-logged-in.php' ?>
+<?php
+require 'includes/header-logged-in.php';
+$jobs = $this->getExperience($_SESSION['student-id']);
+$schools = $this->getEducation($_SESSION['student-id']);
+?>
 
 <section>
     <div class="container4">
@@ -13,25 +17,43 @@
         <table>
             <thead>
                 <tr>
-                    <th class="small">Company</th>
-                    <th class="small">Title</th>
-                    <th class="small">Years</th>
-                    <th class="small"></th>
+                    <td class="small">Company</td>
+                    <td class="small">Title</td>
+                    <td class="small">Years</td>
+                    <td class="small">Location</td>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+                <?php foreach ($jobs as $job) : ?>
+                    <tr>
+                        <td><?= $job['company'] ?></td>
+                        <td><?= $job['job_title'] ?></td>
+                        <td><?= $job['from_date'] ?> - <?= $job['to_date'] ?></td>
+                        <td><?= $job['job_location'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
         </table>
         <h3 class="small">Education credentials</h3>
         <table>
             <thead>
                 <tr>
-                    <th class="small">School</th>
-                    <th class="small">Degree</th>
-                    <th class="small">Years</th>
-                    <th></th>
+                    <td class="small">School</td>
+                    <td class="small">Field of study</td>
+                    <td class="small">Degree</td>
+                    <td class="small">Years</td>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+                <?php foreach ($schools as $school) : ?>
+                    <tr>
+                        <td><?= $school['school'] ?></td>
+                        <td><?= $school['fieldofstudy'] ?></td>
+                        <td><?= $school['degree'] ?></td>
+                        <td><?= $school['from_date'] ?> - <?= $job['to_date'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
         </table>
         <div><button class="btn btn-primary xp"><i class="fas fa-user-minus" aria-hidden="true"></i> Delete
                 my Account</button></div>
