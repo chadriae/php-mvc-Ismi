@@ -17,6 +17,7 @@ print_r($_SESSION);
     <link rel="stylesheet" href="register.css">
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="becoders.css">
+    <link rel="stylesheet" href="sucess.css">
     <title>Becode - ISMI</title>
 </head>
 
