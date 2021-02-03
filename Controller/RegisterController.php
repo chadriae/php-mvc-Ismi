@@ -51,7 +51,7 @@ class RegisterController
             //     header("location: ../includes/register.php?error=usernametaken");
             //     exit();
         } else {
-            header("location: index.php?page=succes");
+            header("location: index.php?page=dashboard");
         }
     }
 
