@@ -24,7 +24,7 @@ class InfoController
 
     public function get()
     {
-        $test = $this->databaseManager->dbconnection->query("SELECT * FROM student");
-        return $test;
+        $students = $this->databaseManager->dbconnection->query("SELECT * FROM student");
+        return $students;
     }
 }

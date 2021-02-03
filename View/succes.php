@@ -1,4 +1,4 @@
-<?php require 'includes/header.php' ?>
+<?php require 'includes/header-logged-in.php' ?>
 
 <section>
     <div class="container4">

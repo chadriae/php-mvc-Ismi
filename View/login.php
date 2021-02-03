@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 <?= require 'includes/header.php' ?>
 
 <div class="container3">
-    <div class="wrapper">
+    <div class="test1 test">    
         <div class="login">
             <p class="log-text"><i class="fas fa-user"></i> Sign in to your account </p>
             <form method="post">
@@ -29,6 +29,8 @@ error_reporting(E_ALL);
             <br>
             <p>Don't have an account? <a href="index.php?page=register">SIGN UP</a></p>
         </div>
+    </div>
+    <div class="test">
         <div class="image">
             <img class="photo" src="./assets/img/login.png" alt="">
         </div>

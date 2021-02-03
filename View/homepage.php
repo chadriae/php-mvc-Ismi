@@ -18,8 +18,8 @@ Anything complex should be calculated in the model -->
 </div>
     
 <p class="btn-hp">
-    <button class="home btn-primary " type="submit"><a href="index.php?page=register">SIGN UP</a> </button>
-    <button class="home btn-primary " type="submit"><a href="index.php?page=login">LOGIN</a></button>
+    <button class="home main-btn " type="submit"><a href="index.php?page=register">SIGN UP</a> </button>
+    <button class="home  main-btn" type="submit"><a href="index.php?page=login">LOGIN</a></button>
  </p>
 <div class="svg">
     <svg viewBox="0 0 320 266" fill="none" xmlns="http://www.w3.org/2000/svg">

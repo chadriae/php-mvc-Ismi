@@ -1,5 +1,6 @@
 <?php require 'includes/header.php';
 print_r($_SESSION);
+$jobs = $this->getExperience($_SESSION['student-id']);
 ?>
 
 <section>
@@ -52,111 +53,104 @@ print_r($_SESSION);
         <div class="info-container">
             <div class="info-left">
                 <h2 class="">Experience</h2>
+                <?php foreach ($jobs as $job) : ?>
+                    <div>
+                        <h3><?= $job['job_title'] ?></h3>
+                        <p><time><?= $job['from_date'] ?></time> - <time><?= $job['to_date'] ?></time></p>
+                        <p><?= $job['company'] ?></p>
+                        <p><span><strong>Description: </strong><?= $job['job_description'] ?></span></p>
+                    </div>
+                <?php endforeach; ?>
+
+                <div class="info-right">
+                    <h2 class="">Education</h2>
+                    <div>
+                        <h3>IR </h3>
+                        <p><time datetime="1273449600000">May 2010</time> - Now</p>
+                        <p><span><strong>Degree: </strong>Basic education</span></p>
+                        <p><span><strong>Field Of Study: </strong>Elementary </span></p>
+                        <p><span><strong>Description: </strong> basic school</span></p>
+                    </div>
+                    <div>
+                        <h3>Gent Kortrijk</h3>
+                        <p><time datetime="1452380400000">Jan 2016</time> - Now</p>
+                        <p><span><strong>Degree: </strong>Industrial design</span></p>
+                        <p><span><strong>Field Of Study: </strong>Design</span></p>
+                        <p></p>
+                    </div>
+                </div>
+
+            </div>
+            <h2 class="">Github Repos</h2>
+            <div class="info-repos">
+
+
                 <div>
-                    <h3>creatives</h3>
-                    <p><time datetime="1483228800000">Jan 2017</time> - <time datetime="NaN">Invalid date</time></p>
-                    <p></p>
-                    <p><span><strong>Description: </strong>Offering freelance design </span></p>
+                    <h4><a href="" target="_blank" rel="noopener noreferrer">Stoffel</a></h4>
+
                 </div>
                 <div>
-                    <h3>3D Printing )</h3>
-                    <p><time datetime="1451606400000">Jan 2016</time> - Now</p>
-                    <p></p>
-                    <p><span><strong>Description: </strong> Producing 3D
-                            Printers for the local market.</span>
-                    </p>
+                    <ul>
+                        <li class="">Stars: 0</li>
+                        <li class="">Watchers: 0</li>
+                        <li class="">Forks: 0</li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="info-right">
-                <h2 class="">Education</h2>
+            <div class="info-repos">
                 <div>
-                    <h3>IR </h3>
-                    <p><time datetime="1273449600000">May 2010</time> - Now</p>
-                    <p><span><strong>Degree: </strong>Basic education</span></p>
-                    <p><span><strong>Field Of Study: </strong>Elementary </span></p>
-                    <p><span><strong>Description: </strong> basic school</span></p>
+                    <h4><a href="" target="_blank" rel="noopener noreferrer">Stoffel</a></h4>
+                    <p>Portfolilio page </p>
                 </div>
                 <div>
-                    <h3>Gent Kortrijk</h3>
-                    <p><time datetime="1452380400000">Jan 2016</time> - Now</p>
-                    <p><span><strong>Degree: </strong>Industrial design</span></p>
-                    <p><span><strong>Field Of Study: </strong>Design</span></p>
-                    <p></p>
+                    <ul>
+                        <li class="">Stars: 0</li>
+                        <li class="">Watchers: 0</li>
+                        <li class="">Forks: 0</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-repos">
+                <div>
+                    <h4><a href="" target="_blank" rel="noopener noreferrer">Beconnect</a></h4>
+                    <p>Social network for developers</p>
+                </div>
+                <div>
+                    <ul>
+                        <li class="">Stars: 0</li>
+                        <li class="">Watchers: 0</li>
+                        <li class="">Forks: 0</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-repos">
+                <div>
+                    <h4><a href="" target="_blank" rel="noopener noreferrer">curriculum</a></h4>
+                    <p>Overview of the HackYourFuture program.</p>
+                </div>
+                <div>
+                    <ul>
+                        <li class="">Stars: 1</li>
+                        <li class="">Watchers: 1</li>
+                        <li class="">Forks: 1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-repos">
+                <div>
+                    <h4><a href="" target="_blank" rel="noopener noreferrer">Fixie</a></h4>
+                    <p>logistics system. </p>
+                </div>
+                <div>
+                    <ul>
+                        <li class="">Stars: 0</li>
+                        <li class="">Watchers: 0</li>
+                        <li class="">Forks: 0</li>
+                    </ul>
                 </div>
             </div>
 
         </div>
-        <h2 class="">Github Repos</h2>
-        <div class="info-repos">
-
-
-            <div>
-                <h4><a href="" target="_blank" rel="noopener noreferrer">Stoffel</a></h4>
-
-            </div>
-            <div>
-                <ul>
-                    <li class="">Stars: 0</li>
-                    <li class="">Watchers: 0</li>
-                    <li class="">Forks: 0</li>
-                </ul>
-            </div>
-        </div>
-        <div class="info-repos">
-            <div>
-                <h4><a href="" target="_blank" rel="noopener noreferrer">Stoffel</a></h4>
-                <p>Portfolilio page </p>
-            </div>
-            <div>
-                <ul>
-                    <li class="">Stars: 0</li>
-                    <li class="">Watchers: 0</li>
-                    <li class="">Forks: 0</li>
-                </ul>
-            </div>
-        </div>
-        <div class="info-repos">
-            <div>
-                <h4><a href="" target="_blank" rel="noopener noreferrer">Beconnect</a></h4>
-                <p>Social network for developers</p>
-            </div>
-            <div>
-                <ul>
-                    <li class="">Stars: 0</li>
-                    <li class="">Watchers: 0</li>
-                    <li class="">Forks: 0</li>
-                </ul>
-            </div>
-        </div>
-        <div class="info-repos">
-            <div>
-                <h4><a href="" target="_blank" rel="noopener noreferrer">curriculum</a></h4>
-                <p>Overview of the HackYourFuture program.</p>
-            </div>
-            <div>
-                <ul>
-                    <li class="">Stars: 1</li>
-                    <li class="">Watchers: 1</li>
-                    <li class="">Forks: 1</li>
-                </ul>
-            </div>
-        </div>
-        <div class="info-repos">
-            <div>
-                <h4><a href="" target="_blank" rel="noopener noreferrer">Fixie</a></h4>
-                <p>logistics system. </p>
-            </div>
-            <div>
-                <ul>
-                    <li class="">Stars: 0</li>
-                    <li class="">Watchers: 0</li>
-                    <li class="">Forks: 0</li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
 
     </div>
 
