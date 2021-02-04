@@ -18,9 +18,9 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-     <!-- end favicon !-->
+    <!-- end favicon !-->
     <!-- animate css !-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- animate css !-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="sucess.css">
     <link rel="stylesheet" href="myprofile.css">
     <link rel="stylesheet" href="blog.css">
-    <title>Becode - ISMI</title>
+    <title>BeConnect</title>
 </head>
 
 <body>

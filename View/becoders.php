@@ -74,8 +74,9 @@ $users = $this->getInfo($profile);
                                 ?>
                             </time></p>
                         <p class="small mg"><?= $job['company'] ?></p>
-                        <p class="small mg text-login">Description :  <?= $job['job_description'] ?></p>
+                        <p class="small mg text-login">Description : <?= $job['job_description'] ?></p>
                     </div>
+                    <br>
                 <?php endforeach; ?>
             </div>
             <div class="info-right">
@@ -95,6 +96,7 @@ $users = $this->getInfo($profile);
                         <p class="small mg ">Field Of Study: </strong><?= $school['fieldofstudy'] ?></p>
                         <p class="small mg text-login">Description: <?= $school['education_description'] ?></p>
                     </div>
+                    <br>
                 <?php endforeach; ?>
             </div>
         </div>

@@ -26,9 +26,8 @@
     <link rel="stylesheet" href="sucess.css">
     <link rel="stylesheet" href="myprofile.css">
     <link rel="stylesheet" href="blog.css">
-    <title>Becode - ISMI</title>
+    <title>BeConnect</title>
 </head>
-
 <body>
     <section>
         <header>
