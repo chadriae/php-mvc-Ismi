@@ -27,7 +27,7 @@ $posts = $this->getPosts();
     
     <?php foreach ($posts as $post) : ?>
         <div class="container9 mg">
-        <p class="small smaller mg "><?= $post['post'] ?> <br> <br>(written by <?= $post['first_name'] ?> on <?= $post['date_post'] ?>)</p>
+        <p class="small smaller mg pdlft "><?= $post['post'] ?> <br> <br></p> <p class="stof">  written by <?= $post['first_name'] ?> on <?= $post['date_post'] ?> </p>
         </div>
     <?php endforeach; ?>
     

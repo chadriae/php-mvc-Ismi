@@ -10,9 +10,9 @@ if (!empty($_SESSION)) {
 
 <section>
     <div class="container4">
-        <h1 class="text-form">Add Your Education</h1>
+        <h1 class="text-form">Add education</h1>
         <p class="text-login"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Add any school, bootcamp, etc that you have
-            attended</p><br>
+            attended or are attending</p><br>
         <small class="small">* = required field</small>
         <form method="post">
             <div>
@@ -24,10 +24,10 @@ if (!empty($_SESSION)) {
                 <h4 class="small">From Date</h4><input class="log" type="date" name="from" value="" required="">
             </div>
             <div>
-                <p class="small"><input class="log" type="checkbox" name="current" value="false"> Current School or Bootcamp</p>
+                <p class="small"><input class="log" type="checkbox" name="current" value="1"> Current school or bootcamp</p>
             </div>
             <div>
-                <h4 class="small">To Date</h4><input class="log" type="date" name="to" value="">
+                <h4 class="small">To Date</h4><input class="log" type="date" name="to" value="2020-02-02">
             </div>
             <div><textarea class="small" name="description" cols="30" rows="5" placeholder="Program Description"></textarea></div><input class="home  main-btn" name="submit" type="submit"><a href="/dashboard">Go Back</a>
         </form>

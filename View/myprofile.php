@@ -11,7 +11,7 @@ $users = $this->getInfo($_SESSION['student-id']);
 ?>
 <section>
     <div class="container5">
-        <a href="index.php?page=succes">Back To my Dashboard</a>
+        <a href="index.php?page=succes">Back to my dashboard</a>
         <div class="">
             <div class="">
                 <img class="info-img" src="./assets/images/<?= $this->getImages($_SESSION['student-id']); ?>" alt="">
