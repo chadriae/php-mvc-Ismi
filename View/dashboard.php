@@ -57,7 +57,6 @@ if (!empty($_SESSION)) {
             <button class="log home  main-btn" type="reset" name="reset" value="Reset"> Reset</button>
             <button class="home  main-btn"><a href="index.php?page=succes">Back to dashboard</a></button>
 
-            <button class="home  main-btn" type="submit">Add Social Media </a></button>
 
             <ul>
                 <li><i class="fab fa-github fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
@@ -68,6 +67,8 @@ if (!empty($_SESSION)) {
 
                 <li><i class="fab fa-facebook fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
             </ul>
+            <button class="home  main-btn" type="submit">Add Social Media </a></button>
+
     </div>
     </form>
 </section>

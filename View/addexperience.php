@@ -32,7 +32,7 @@ if (!empty($_SESSION)) {
                 <h4 class="small">To date</h4><input class="log" type="date" name="to" value="2020-02-02">
             </div>
             <div><textarea class="small" name="description" cols="30" rows="5" placeholder="Job Description"></textarea></div>
-            <button class=" home  main-btn " name="submit" class="btn btn-primary xp" type="submit">Submit</button><a href="index.php?page=becoders">Go Back</a>
+            <button class=" home  main-btn " name="submit" class="btn btn-primary xp" type="submit">Submit</button><a href="index.php?page=succes">Go Back</a>
         </form>
         <?php
         if (isset($_GET['error'])) {
