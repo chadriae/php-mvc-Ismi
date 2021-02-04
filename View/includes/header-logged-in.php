@@ -42,8 +42,24 @@ print_r($_SESSION);
                         <li><a class="ismi" href="index.php?page=succes"><i class="fas fa-user" aria-hidden="true"></i><?= $_SESSION['username'] ?>'s dashboard</a></li>
                         <form method="post" action="index.php">
                             <div id="myDIV">
-                                <input type="submit" name="signout" action="index.php"></input>
-                                <li type="submit" name="signout" action="index.php"><a class="ismi" href="index.php"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a></li>
+
+
+                             <!-- FIX SIGN OUT BUTTON -->
+                       <!--         <input type="submit" name="signout" action="index.php"></input> -->
+                               
+                               
+                               
+                               
+                                <li type="submit" name="signout" action="index.php">
+                                    <a class="ismi" href="index.php">
+                                     <i class="fas fa-sign-out-alt" aria-hidden="true">
+                                  <button   class = " btn main-btn"type="submit" name="signout" action="index.php"></button>
+                                        </i>
+                                    </a>
+                                </li>
+
+
+
                             </div>
                         </form>
                     </ul>
