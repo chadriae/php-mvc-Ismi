@@ -401,3 +401,13 @@ button a:hover{
   justify-content: center;
   align-items: center;
 }
+
+#signout {
+  border: none;
+  cursor: pointer;
+  background-color: rgba(242,249,250,255);
+  font-family: var(--PrimaryFont);
+  font-weight: var(--FontNav);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
