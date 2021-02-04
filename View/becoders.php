@@ -11,7 +11,7 @@ $users = $this->getInfo($profile);
 ?>
 <section>
     <div class="container5">
-        <a href="index.php?page=info">Back to profiles</a>
+        <a  class="text-login" href="index.php?page=info">Back to profiles</a>
         <div class="">
             <div class="">
                 <img class="info-img" src="./assets/images/<?= $this->getImages($profile); ?>" alt="">
@@ -63,14 +63,8 @@ $users = $this->getInfo($profile);
                 <h2 class="text-form mg">Experience</h2>
                 <?php foreach ($jobs as $job) : ?>
                     <div>
-<<<<<<< HEAD
-                        <h3 class="small mg text-login "><?= $job['job_title'] ?></h3>
-                        <p class="small mg"><time><?= $job['from_date'] ?></time> - <time><?= $job['to_date'] ?></time></p>
-                        <p class="small mg"><?= $job['company'] ?></p>
-                        <p class="small mg">Description: <?= $job['job_description'] ?></span></p>
-=======
-                        <h3 class="small"><?= $job['job_title'] ?></h3>
-                        <p class="small"><time><?= $job['from_date'] ?></time> - <time>
+                        <h3 class="small mg "><?= $job['job_title'] ?></h3>
+                        <p class="small mg"><time><?= $job['from_date'] ?></time> - <time>
                                 <?php
                                 if ($job['current_job'] == '0') {
                                     echo $job['to_date'];
@@ -79,9 +73,8 @@ $users = $this->getInfo($profile);
                                 }
                                 ?>
                             </time></p>
-                        <p class="small"><?= $job['company'] ?></p>
-                        <p class="small"><span><strong>Description: </strong><?= $job['job_description'] ?></span></p>
->>>>>>> 1d1d1f7ea5fde6ac44af7944f59f094d60087578
+                        <p class="small mg"><?= $job['company'] ?></p>
+                        <p class="small mg text-login">Description:  <?= $job['job_description'] ?></p>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -89,15 +82,8 @@ $users = $this->getInfo($profile);
                 <h2 class="small mg text-form">Education</h2>
                 <?php foreach ($schools as $school) : ?>
                     <div>
-<<<<<<< HEAD
-                        <h3 class="small mg text-login"><?= $school['school'] ?></h3>
-                        <p class="small mg"><time><?= $school['from_date'] ?> - <?= $school['to_date'] ?></time></p>
-                        <p class="small mg text-login">Degree: <?= $school['degree'] ?></span></p>
-                        <p class="small mg">Field Of Study: <?= $school['degree'] ?></p>
-                        <p class="small mg text-login ">Description:  <?= $school['education_description'] ?></p>
-=======
-                        <h3 class="small"><?= $school['school'] ?></h3>
-                        <p class="small"><time><?= $school['from_date'] ?> -
+                        <h3 class="small mg "><?= $school['school'] ?></h3>
+                        <p class="small mg  "><time><?= $school['from_date'] ?> -
                                 <?php
                                 if ($school['current_education'] == '0') {
                                     echo $school['to_date'];
@@ -105,10 +91,9 @@ $users = $this->getInfo($profile);
                                     echo 'current';
                                 }
                                 ?></time></p>
-                        <p class="small"><span><strong>Degree: </strong><?= $school['degree'] ?></span></p>
-                        <p class="small"><span><strong>Field Of Study: </strong><?= $school['degree'] ?></span></p>
-                        <p class="small"><span><strong>Description: </strong> <?= $school['education_description'] ?></span></p>
->>>>>>> 1d1d1f7ea5fde6ac44af7944f59f094d60087578
+                        <p class="small  mg text-login"> Degree: <?= $school['degree'] ?></p>
+                        <p class="small mg "><Field Of Study:> </strong><?= $school['degree'] ?></p>
+                        <p class="small mg text-login">Description:  <?= $school['education_description'] ?></p>
                     </div>
                 <?php endforeach; ?>
             </div>

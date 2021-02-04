@@ -17,7 +17,7 @@ $schools = $this->getEducation($_SESSION['student-id']);
                 chat with the Dev Community.</p><br><br>
         <div><a class="space" href="index.php?page=dashboard"><i class="fas fa-user-circle" aria-hidden="true"></i> Edit Profile</a><a class="space" href="index.php?page=addexperience"><i class="fab fa-black-tie " aria-hidden="true"></i> Add Experience</a><a class="space" href="index.php?page=addeducation"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Add Education</a><a class="space" href="index.php?page=blog"><i class="fas fa-users " aria-hidden="true"></i> Dev Community</a><br><br>
         </div>
-        <h3 class="small"> Experience credentials </h3>
+        <h3 class="small text-succes"> Experience credentials </h3>
         <table>
             <thead>
                 <tr>
@@ -30,15 +30,16 @@ $schools = $this->getEducation($_SESSION['student-id']);
             <tbody>
                 <?php foreach ($jobs as $job) : ?>
                     <tr>
-                        <td><?= $job['company'] ?></td>
-                        <td><?= $job['job_title'] ?></td>
-                        <td><?= $job['from_date'] ?> - <?= $job['to_date'] ?></td>
-                        <td><?= $job['job_location'] ?></td>
+                        <td class="small"><?= $job['company'] ?></td>
+                        <td class="small"><?= $job['job_title'] ?></td>
+                        <td class="small"><?= $job['from_date'] ?> - <?= $job['to_date'] ?></td>
+                        <td class="small"><?= $job['job_location'] ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-        <h3 class="small">Education credentials</h3>
+        <br>
+        <h3 class="small text-succes">Education credentials</h3>
         <table>
             <thead>
                 <tr>
@@ -51,16 +52,17 @@ $schools = $this->getEducation($_SESSION['student-id']);
             <tbody>
                 <?php foreach ($schools as $school) : ?>
                     <tr>
-                        <td><?= $school['school'] ?></td>
-                        <td><?= $school['fieldofstudy'] ?></td>
-                        <td><?= $school['degree'] ?></td>
-                        <td><?= $school['from_date'] ?> - <?= $school['to_date'] ?></td>
+                        <td class="small"><?= $school['school'] ?></td>
+                        <td class="small"><?= $school['fieldofstudy'] ?></td>
+                        <td class="small"><?= $school['degree'] ?></td>
+                        <td class="small"><?= $school['from_date'] ?> - <?= $school['to_date'] ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <br>
         <div>
-            <button class="home  main-btn"><i class="fas fa-user-minus" aria-hidden="true"></i> Delete
+            <button class="home"><i class="fas fa-user-minus" aria-hidden="true"></i> Delete
                 my Account</button>
 
             <button class="home  main-btn"><a href="index.php?page=myprofile">Show my profile</a></button>

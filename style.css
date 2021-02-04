@@ -379,3 +379,9 @@ button a:hover{
  word-wrap: 150px;
  margin-top: 1rem;
 }
+
+/* style for text in sucsess */
+.text-succes{
+  font-size: 25px;
+  color:var(--PrimaryColor);
+}

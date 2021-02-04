@@ -37,7 +37,7 @@ if (!empty($_SESSION)) {
     </div>
     <div class="test">
         <div class="image">
-            <img class="photo1" src="./assets/img/register.png" alt="">
+            <img class="photo1 animate__animated animate__bounce" src="./assets/img/register.png" alt="">
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
     <footer>
         <div class="container2">
-            <p class="ismi">
+            <p class="ismi small">
                 &copy; <i class="fab fa-behance"> Connect</i><?php echo date('Y') ?>
             </p>
         </div>

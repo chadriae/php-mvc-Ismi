@@ -66,7 +66,7 @@ $users = $this->getInfo($_SESSION['student-id']);
                         <h3 class=" small mg text-login"><?= $job['job_title'] ?></h3>
                         <p class="small mg"><time><?= $job['from_date'] ?></time> - <time><?= $job['to_date'] ?></time></p>
                         <p class="small mg"><?= $job['company'] ?></p>
-                        <p class="small mg"> Job description: <br> <?= $job['job_description'] ?></p>
+                        <p class="small mg text-login"> Job description: <br> <?= $job['job_description'] ?></p>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -76,7 +76,7 @@ $users = $this->getInfo($_SESSION['student-id']);
                     <div>
                         <h3 class="small mg"><?= $school['school'] ?></h3>
                         <p class="small mg"><time><?= $school['from_date'] ?> - <?= $school['to_date'] ?></time></p>
-                        <p class="small mg">Degree: <?= $school['degree'] ?></p>
+                        <p class="small mg text-login">Degree: <?= $school['degree'] ?></p>
                         <p class="small mg">Field Of Study: <?= $school['degree'] ?></p>
                         <p class="small mg">Description:  <?= $school['education_description'] ?></p>
                     </div>
