@@ -41,13 +41,6 @@ class MyProfileController
         }
     }
 
-    public function get($id)
-    {
-        $students = $this->databaseManager->dbconnection->query("SELECT * FROM student WHERE student_id = $id");
-        return $students;
-    }
-
-
     public function getExperience($id)
     {
         $jobs = $this->databaseManager->dbconnection->query("SELECT * FROM experience WHERE student_id = $id");
@@ -58,5 +51,20 @@ class MyProfileController
     {
         $jobs = $this->databaseManager->dbconnection->query("SELECT * FROM education WHERE student_id = $id");
         return $jobs;
+    }
+
+    public function getImages($id)
+    {
+        try {
+            $query = "SELECT profile_pic FROM profilepic WHERE student_id = $id;";
+            $statement = $this->databaseManager->dbconnection->prepare($query);
+            $statement->execute();
+            $images = $statement->fetch(\PDO::FETCH_ASSOC);
+            foreach ($images as $image) {
+                return $image;
+            }
+        } catch (PDOException $error) {
+            echo "Connection Error - " . $error->getMessage();
+        }
     }
 }

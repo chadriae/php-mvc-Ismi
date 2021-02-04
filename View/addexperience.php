@@ -30,7 +30,7 @@ error_reporting(E_ALL);
                 <h4 class="small">To Date</h4><input class="log" type="date" name="to" value="">
             </div>
             <div><textarea class="small" name="description" cols="30" rows="5" placeholder="Job Description"></textarea></div>
-            <input name="submit" class="btn btn-primary xp" type="submit"><a href="index.php?page=becoders">Go Back</a>
+            <button class= " home  main-btn " name="submit" class="btn btn-primary xp" type="submit">Submit</button><a href="index.php?page=becoders">Go Back</a>
         </form>
         <?php
         if (isset($_GET['error'])) {

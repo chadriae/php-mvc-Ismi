@@ -21,11 +21,16 @@ $posts = $this->getPosts();
     <form method="post">
         <textarea name="text" cols="30" rows="5" placeholder="Create a post" required="">
                 </textarea>
-        <input class="btn btn-primary" type="submit" value="SUBMIT" name="submit">
+        <input class="home  main-btn" type="submit" value="SUBMIT" name="submit">
     </form>
+
+    
     <?php foreach ($posts as $post) : ?>
-        <p class="small"><?= $post['post'] ?> (written by <?= $post['first_name'] ?> on <?= $post['date_post'] ?>)</p>
+        <div class="container9">
+        <p class="small smaller"><?= $post['post'] ?> (written by <?= $post['first_name'] ?> on <?= $post['date_post'] ?>)</p>
+        </div>
     <?php endforeach; ?>
+    
 </div>
 
 
