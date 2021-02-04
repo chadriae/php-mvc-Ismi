@@ -37,6 +37,7 @@
         <header>
             <nav>
                 <div class="left-nav ">
+                <li><img class="" src="./assets/img/logo.png" style= "width:100px" alt=""></li>
                     <li><i class="fab fa-behance" aria-hidden="true"></i><a class="ismi" href="index.php">Connect</a> </li>
                 </div>
                 <div class="right-nav">

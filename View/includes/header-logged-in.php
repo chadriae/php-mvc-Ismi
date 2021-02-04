@@ -31,11 +31,9 @@
     <section>
         <header>
             <nav>
-                <div class="left-nav ">
-                    <li><i class="fab fa-behance" aria-hidden="true"></i><a class="ismi" href="index.php">Connect</a> </li>
+                <div class="left-nav">
+                     <li><a class="ismi" href="index.php"><img class="" src="./assets/img/test.png" style= "width:100px" alt=""></a></li>
                 </div>
-
-
                 <div class="right-nav">
                     <ul class=nav-list>
                         <li><a class="ismi" href="index.php?page=info">Developers</a></li>

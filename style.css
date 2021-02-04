@@ -63,15 +63,24 @@ nav{
   width: 90%;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid var(--SecondaryColor);
+  align-items: center;
   padding-bottom: 1rem;
+
 
 }
 .nav-list{  
   display: flex; 
+
  
 
 }
+
+.left-nav{
+
+  margin-top:0.7rem;
+}
+
+
 li{
   list-style: none;
   font-weight: var(--FontNav);
@@ -138,8 +147,6 @@ footer{
   display: flex;
   font-family: var(--PrimaryFont);
  
-
-
  
 }
 .container2{ 
