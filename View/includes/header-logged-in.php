@@ -53,7 +53,8 @@ print_r($_SESSION);
         <?php
         if (isset($_POST['signout'])) {
             session_destroy();
-            $_SESSION = '';
+            $_SESSION = "";
             header("Refresh:0");
         }
+
         ?>

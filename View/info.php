@@ -4,22 +4,18 @@ if (!empty($_SESSION)) {
 } else {
     require 'includes/header.php';
 } // print_r($_SESSION);
-$students = $this->get();
+$students = $this->getInfo();
 ?>
 <div class="container4">
     <?php foreach ($students as $user) : ?>
         <div class="infoContainer">
             <div class="info">
-                <img class="profile" src="./assets/img/nelson.png" alt="">
+                <img class="profile" src="./assets/images/<?= $this->getImages($user['student_id']); ?>" alt="">
                 <div>
                     <h2><?= $user['first_name'] ?> <?= $user['last_name'] ?></h2>
                     <p><?= $user['current_job'] ?><span> at <?= $user['current_company'] ?></span></p>
                     <p><?= $user['current_location'] ?></p>
-
-
-                    
                     <a href="index.php?page=becoders&profile=<?= $user['student_id'] ?>" class="btn btn-primary">View profile</a>
-
                 </div>
                 <ul>
                     <?php

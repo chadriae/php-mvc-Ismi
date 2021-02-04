@@ -42,7 +42,7 @@ class LoginController
                     $_SESSION["username"] = $_POST["name"];
                     $_SESSION["first-name"] = $rows[0]['first_name'];
                     $_SESSION["student-id"] = $rows[0]['student_id'];
-                    header("location: index.php?page=dashboard");
+                    header("location: index.php?page=succes");
                 } else {
                     header("location: index.php?page=login&error=invalidpassword");
                     exit();

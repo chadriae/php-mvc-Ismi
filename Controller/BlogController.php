@@ -33,7 +33,8 @@ class BlogController
             $this->newPost = $_POST['text'];
             $this->postDate = date('Y-m-d H:i:s');
 
-            $addNewPost = $this->databaseManager->dbconnection->query("INSERT into posts(student_id, first_name, post, date_post) VALUES ('$this->newPostUserID', '$this->newPostAuthor', '$this->newPost', '$this->postDate');");
+            $query = "INSERT into posts(student_id, first_name, post, date_post) VALUES ('$this->newPostUserID', '$this->newPostAuthor', '$this->newPost', '$this->postDate');";
+            $addNewPost = $this->databaseManager->dbconnection->query($query);
 
             if (!$addNewPost) {
                 var_dump($this->databaseManager->dbconnection->error);

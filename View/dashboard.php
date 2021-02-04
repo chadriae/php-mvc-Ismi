@@ -3,7 +3,8 @@ if (!empty($_SESSION)) {
     require 'includes/header-logged-in.php';
 } else {
     require 'includes/header.php';
-} // print_r($_SESSION);
+}
+// print_r($_SESSION);
 ?>
 <section>
     <!-- REAL START ABOVE ARE A LINK AND USELESS INFO  -->
@@ -18,8 +19,9 @@ if (!empty($_SESSION)) {
             if ($_GET['error'] == "none") {
                 echo '<p class="successMessage">Changes successfully submitted.<p>';
             }
+            echo $this->updateUser();
         } ?>
-        <form method="POST" action="index.php?page=dashboard&error=none">
+        <form method="POST" action="index.php?page=dashboard&error=none" enctype="multipart/form-data">
             <small class="small">Give us your full name first</small><br>
             <input class="log" type="text" id="first-name" name="first-name" value="<?= $_SESSION['first-name'] ?>" placeholder="First Name"></input>
             <input class="log" type="text" id="last-name" name="last-name" placeholder="Last Name"></input><br>
@@ -48,7 +50,7 @@ if (!empty($_SESSION)) {
             <small class="small">Tell us a little bit about yourself </small><br>
             <textarea class="small" name="bio" id="textarea" cols="30" rows="10" placeholder="A short Bio about yourself"></textarea><br>
             <small class="small">Upload your profile picture</small><br>
-            <input class="log" type="file" name="fileupload" accept="image/*" value=" file"></input><br><br>
+            <input class="log" type="file" name="image" accept="image/*" value=" file"></input><br><br>
             <!--Submit form button -->
             <input class="log" type="submit" name="submit" value="Submit">
             <input class="log" type="reset" name="reset" value="Reset" />
