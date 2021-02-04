@@ -17,4 +17,10 @@ typewriter
   .typeString('<h2 class="dirk" style="color:#357EC7">BeConnect Code Monkeys</h2> <br>') 
   .pauseFor(1000)
   .start();
+
+
+  function myFunction() {
+    var x = document.getElementById("myInput").form.id;
+    document.getElementById("demo").innerHTML = x;
+  }
   

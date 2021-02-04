@@ -32,6 +32,8 @@ print_r($_SESSION);
                 <div class="left-nav ">
                     <li><i class="fab fa-behance" aria-hidden="true"></i><a class="ismi" href="index.php">Connect</a> </li>
                 </div>
+
+                
                 <div class="right-nav">
                     <ul class=nav-list>
                         <li><a class="ismi" href="index.php?page=info">Developers</a></li>
