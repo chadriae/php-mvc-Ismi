@@ -1,10 +1,5 @@
 <?php
-print_r($_SESSION);
-
-// if (isset($_POST['signout'])) {
-//     session_destroy();
-//     $_SESSION = '';
-// }
+// print_r($_SESSION);
 ?>
 
 
@@ -60,7 +55,7 @@ print_r($_SESSION);
         </header>
 
         <?php
-        if (isset($_POST['signout'])) {
+        if (isset($_POST["signout"])) {
             session_destroy();
             $_SESSION = "";
             header("Refresh:0");
