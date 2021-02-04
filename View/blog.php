@@ -10,27 +10,29 @@ error_reporting(E_ALL);
 $posts = $this->getPosts();
 ?>
 
-
 <div class="container4">
     <h1 class="text-form">Posts</h1>
-    <p class="text-login" ><i class="fas fa-user " aria-hidden="true"></i> Welcome to the community!</p>
+    <p class="text-login"><i class="fas fa-user " aria-hidden="true"></i> Welcome to the community!</p>
 
     <div>
         <h3 class="text-login">Hello, <?= $_SESSION['first-name'] ?>.<br> Say Something...</h3>
     </div>
-    <form method="post">
-        <textarea name="text" cols="30" rows="5" placeholder="Create a post" required="">
+    <br>
+    <p>
+        <form method="post">
+            <textarea name="text" cols="80" rows="10" placeholder="Create a post" required="">
                 </textarea>
-        <input class="home  main-btn" type="submit" value="SUBMIT" name="submit">
-    </form>
+            <input class="home  main-btn" type="submit" value="SUBMIT" name="submit">
+        </form>
+    </p>
 
-    
     <?php foreach ($posts as $post) : ?>
         <div class="container9 mg">
-        <p class="small smaller mg pdlft "><?= $post['post'] ?> <br> <br></p> <p class="stof">  written by <?= $post['first_name'] ?> on <?= $post['date_post'] ?> </p>
+            <p class="small smaller mg pdlft "><?= $post['post'] ?> <br> <br></p>
+            <p class="stof"> written by <?= $post['first_name'] ?> on <?= $post['date_post'] ?> </p>
         </div>
     <?php endforeach; ?>
-    
+
 </div>
 
 
