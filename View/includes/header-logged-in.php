@@ -32,7 +32,7 @@
         <header>
             <nav>
                 <div class="left-nav">
-                     <li><a class="ismi" href="index.php"><img class="" src="./assets/img/test.png" style= "width:100px" alt=""></a></li>
+                    <li><a class="ismi" href="index.php"><img class="" src="./assets/img/test.png" style="width:100px" alt=""></a></li>
                 </div>
                 <div class="right-nav">
                     <ul class=nav-list>
@@ -44,12 +44,9 @@
                             <div id="myDIV">
                                 <!-- FIX SIGN OUT BUTTON -->
                                 <!--         <input type="submit" name="signout" action="index.php"></input> -->
+                                <!--  <i class="fas fa-sign-out-alt" aria-hidden="true"></i>-->
                                 <li>
-                                    <a class="ismi" href="index.php">
-                                        <i class="fas fa-sign-out-alt" aria-hidden="true">
-                                            <input class=" btn main-btn" type="submit" name="signout" action="index.php"></input>
-                                        </i>
-                                    </a>
+                                    <input class="ismi" id="signout" type="submit" name="signout" action="index.php" value="Sign Out"></input>
                                 </li>
                             </div>
                         </form>
