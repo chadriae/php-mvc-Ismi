@@ -37,7 +37,8 @@ class AddexperienceController
             }
             $this->newAdditionID = $_SESSION['student-id'];
 
-            $addNewUser = $this->databaseManager->dbconnection->query("INSERT INTO experience (student_id, job_title, company, job_location, from_date, to_date, job_description, current_job) VALUES ('$this->newAdditionID', '$this->newAdditionTitle', '$this->newAdditionCompany', '$this->newAdditionLocation', '$this->newAdditionFromDateSQL', '$this->newAdditionToDateSQL', '$this->newAdditionDescription', '$this->newAdditionCurrentJob')");
+            $query = "INSERT INTO experience (student_id, job_title, company, job_location, from_date, to_date, job_description, current_job) VALUES ('$this->newAdditionID', '$this->newAdditionTitle', '$this->newAdditionCompany', '$this->newAdditionLocation', '$this->newAdditionFromDateSQL', '$this->newAdditionToDateSQL', '$this->newAdditionDescription', '$this->newAdditionCurrentJob');";
+            $addNewUser = $this->databaseManager->dbconnection->query($query);
 
             if (!$addNewUser) {
                 var_dump($this->databaseManager->dbconnection->error);

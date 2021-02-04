@@ -38,13 +38,15 @@ class MyProfileController
 
     public function getExperience($id)
     {
-        $jobs = $this->databaseManager->dbconnection->query("SELECT * FROM experience WHERE student_id = $id");
+        $query = "SELECT * FROM experience WHERE student_id = $id;";
+        $jobs = $this->databaseManager->dbconnection->query($query);
         return $jobs;
     }
 
     public function getEducation($id)
     {
-        $jobs = $this->databaseManager->dbconnection->query("SELECT * FROM education WHERE student_id = $id");
+        $query = "SELECT * FROM education WHERE student_id = $id;";
+        $jobs = $this->databaseManager->dbconnection->query($query);
         return $jobs;
     }
 
@@ -55,6 +57,25 @@ class MyProfileController
             $statement = $this->databaseManager->dbconnection->prepare($query);
             $statement->execute();
             $images = $statement->fetch(\PDO::FETCH_ASSOC);
+            foreach ($images as $image) {
+                return $image;
+            }
+        } catch (PDOException $error) {
+            echo "Connection Error - " . $error->getMessage();
+        }
+    }
+
+    public function getSocialMedia($id)
+    {
+        // $query = "SELECT * from social_media where student_id = $id;";
+        // $socialMedia = $this->databaseManager->dbconnection->query($query);
+        // return $socialMedia;
+
+        try {
+            $query = "SELECT * from social_media where student_id = $id;";
+            $statement = $this->databaseManager->dbconnection->prepare($query);
+            $statement->execute();
+            $images = $statement->fetchAll(\PDO::FETCH_ASSOC);
             foreach ($images as $image) {
                 return $image;
             }

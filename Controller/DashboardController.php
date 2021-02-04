@@ -8,8 +8,11 @@ class DashboardController
 
     public function render(array $GET, array $POST)
     {
-        if (isset($_POST['submit'])) {
+        if (isset($_POST['submit_1'])) {
             $this->updateUser();
+        }
+        if (isset($_POST['submit_2'])) {
+            $this->addSocialMedia();
         }
         require 'View/dashboard.php';
     }
@@ -39,7 +42,7 @@ class DashboardController
             $queryData = "UPDATE student SET first_name = '$this->newAdditionFirstName', last_name = '$this->newAdditionLastName', current_job = '$this->newAdditionCareer', current_company = '$this->newAdditionCompany', website = '$this->newAdditionWebsite', current_location = '$this->newAdditionLocation', skills = '$this->newAdditionSkills', github = '$this->newAdditionGitHub', bio = '$this->newAdditionBio' WHERE student_id = '$this->newAdditionID';";
             $addNewAddition = $this->databaseManager->dbconnection->query($queryData);
 
-
+            // adding image to db
             $target = "./assets/images/" . basename($_FILES['image']['name']);
             $queryImage = "INSERT INTO profilepic (student_id, profile_pic) VALUES ('$this->newAdditionID', '$this->newAdditionImage ');";
             $addNewPicture = $this->databaseManager->dbconnection->query("$queryImage");
@@ -54,10 +57,30 @@ class DashboardController
 
             if (!$addNewAddition || !$addNewPicture) {
                 var_dump($this->databaseManager->dbconnection->error);
-                // } else {
-                //     header("location: index.php?page=dashboard&error=none");
+            } else {
+                header("location: index.php?page=dashboard&error=nonedata");
             }
-            return $addNewAddition;
+            // return $addNewAddition;
         }
+    }
+
+    public function addSocialMedia()
+    {
+        $this->newAdditionID = $_SESSION['student-id'];
+
+        $this->twitterURL = $_POST['twitter'];
+        $this->linkedinURL = $_POST['linkedin'];
+        $this->websiteURL = $_POST['website'];
+        $this->facebookURL = $_POST['facebook'];
+
+        $queryLinks = "INSERT into social_media (student_id, twitter, linkedin, website, facebook) VALUES ('$this->newAdditionID', '$this->twitterURL', '$this->linkedinURL', '$this->websiteURL', '$this->facebookURL')";
+        $addLinks = $this->databaseManager->dbconnection->query($queryLinks);
+
+        if (!$addLinks) {
+            var_dump($this->databaseManager->dbconnection->error);
+        } else {
+            header("location: index.php?page=dashboard&error=nonelinks");
+        }
+        // return $addLinks;
     }
 }
