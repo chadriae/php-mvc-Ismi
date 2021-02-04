@@ -68,6 +68,7 @@ $socialMedia = $this->getSocialMedia($_SESSION['student-id']);
                         <p class="small mg"><?= $job['company'] ?></p>
                         <p class="small mg text-login"> Job description: <br> <?= $job['job_description'] ?></p>
                     </div>
+                    <br>
                 <?php endforeach; ?>
             </div>
             <div class="info-right">
@@ -80,6 +81,7 @@ $socialMedia = $this->getSocialMedia($_SESSION['student-id']);
                         <p class="small mg">Field Of Study: <?= $school['fieldofstudy'] ?></p>
                         <p class="small mg">Description: <?= $school['education_description'] ?></p>
                     </div>
+                    <br>
                 <?php endforeach; ?>
             </div>
         </div>
