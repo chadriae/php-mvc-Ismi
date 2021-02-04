@@ -77,7 +77,7 @@ $socialMedia = $this->getSocialMedia($_SESSION['student-id']);
                         <h3 class="small mg"><?= $school['school'] ?></h3>
                         <p class="small mg"><time><?= $school['from_date'] ?> - <?= $school['to_date'] ?></time></p>
                         <p class="small mg text-login">Degree: <?= $school['degree'] ?></p>
-                        <p class="small mg">Field Of Study: <?= $school['degree'] ?></p>
+                        <p class="small mg">Field Of Study: <?= $school['fieldofstudy'] ?></p>
                         <p class="small mg">Description: <?= $school['education_description'] ?></p>
                     </div>
                 <?php endforeach; ?>

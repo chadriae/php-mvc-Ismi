@@ -11,7 +11,7 @@ $users = $this->getInfo($profile);
 ?>
 <section>
     <div class="container5">
-        <a  class="text-login" href="index.php?page=info">Back to profiles</a>
+        <a class="text-login" href="index.php?page=info">Back to profiles</a>
         <div class="">
             <div class="">
                 <img class="info-img" src="./assets/images/<?= $this->getImages($profile); ?>" alt="">
@@ -91,9 +91,15 @@ $users = $this->getInfo($profile);
                                     echo 'current';
                                 }
                                 ?></time></p>
+<<<<<<< HEAD
                         <p class="small  mg text-login"> Degree : <?= $school['degree'] ?></p>
                         <p class="small mg "><Field Of Study:> </strong><?= $school['degree'] ?></p>
                         <p class="small mg text-login">Description :  <?= $school['education_description'] ?></p>
+=======
+                        <p class="small  mg text-login"> Degree: <?= $school['degree'] ?></p>
+                        <p class="small mg ">Field Of Study: </strong><?= $school['fieldofstudy'] ?></p>
+                        <p class="small mg text-login">Description: <?= $school['education_description'] ?></p>
+>>>>>>> 8c26c7c5354e826d937b5f094e4f58b00b716121
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -175,11 +181,5 @@ $users = $this->getInfo($profile);
 
     </div>
 </section>
-
-
-
-
-
-
 
 <?php require 'includes/footer.php' ?>
