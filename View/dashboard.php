@@ -61,7 +61,7 @@ if (!empty($_SESSION)) {
             <ul>
                 <li><i class="fab fa-github fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
 
-                <li><i class="fab fa-LinkedIn fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
+                <li><i class="fab fa-linkedin-in fa-2x"></i><input type="text" placeholder="linkedIn" name="twitter" value=""></li>
 
                 <li><i class="fas fa-globe fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
 

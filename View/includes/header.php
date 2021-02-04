@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="becoders.css">
     <link rel="stylesheet" href="sucess.css">
+    <link rel="stylesheet" href="myprofile.css">
     <title>Becode - ISMI</title>
 </head>
 

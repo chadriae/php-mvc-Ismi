@@ -19,7 +19,7 @@ if (!empty($_SESSION)) {
 </div>
 
 <p class="btn-hp">
-    <button class="home main-btn " type="submit"><a href="index.php?page=register">SIGN UP</a> </button>
+    <button class="home main-btn white " type="submit"><a href="index.php?page=register">SIGN UP</a> </button>
     <button class="home  main-btn" type="submit"><a href="index.php?page=login">LOGIN</a></button>
 
 

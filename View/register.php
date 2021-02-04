@@ -15,7 +15,7 @@ if (!empty($_SESSION)) {
             <input class="log logtext" type="email" placeholder="Email Address" name="email" required="" value=""><br>
             <input class="log logtext" type="password" placeholder="Password" name="pwd" minlength="6" required="" value=""><br>
             <input class="log logtext" type="password" placeholder="Confirm Password" name="pwdrepeat" minlength="6" required="" value=""><br>
-            <input class="btn btn-primary" name="submit" type="submit" value="REGISTER">
+            <input class="home main-btn" name="submit" type="submit" value="REGISTER">
         </form>
         <br>
         <p>Already have an account? <a href="index.php?page=login">LOGIN</a></p><br>

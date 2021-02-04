@@ -68,6 +68,11 @@ img.photo{
   transition: .3s;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+.stof{
+    color: var(--SecondaryColor);
+    margin-bottom: 10px ;
+    margin-left:1rem;
+}
 
 
 
