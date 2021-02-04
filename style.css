@@ -385,3 +385,11 @@ button a:hover{
   font-size: 25px;
   color:var(--PrimaryColor);
 }
+
+
+.blue{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
