@@ -8,11 +8,10 @@ class DashboardController
 
     public function render(array $GET, array $POST)
     {
-        require 'View/dashboard.php';
-
         if (isset($_POST['submit'])) {
             $this->updateUser();
         }
+        require 'View/dashboard.php';
     }
 
     public function __construct(DatabaseManager $databaseManager)
