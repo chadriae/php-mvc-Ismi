@@ -17,7 +17,7 @@ $users = $this->getInfo($profile);
                 <img class="info-img" src="" alt="">
                 <h1 class="info-name"><?= $users[0]['first_name'] ?> <?= $users[0]['last_name'] ?></h1><br>
                 <p class="info-job"><?= $users[0]['current_job'] ?> at<span><?= $users[0]['current_company'] ?></span></p><br>
-                <p><span><?= $_SESSION['location'] ?></span></p><br>
+                <p><span><?= $users[0]['current_location'] ?></span></p><br>
                 <div class="">
                     <a href="" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-globe fa-2x" aria-hidden="true"></i>
