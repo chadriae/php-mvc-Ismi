@@ -4,7 +4,6 @@ if (!empty($_SESSION)) {
 } else {
     require 'includes/header.php';
 } ?>
-
 <div class="container3">
     <div class="test1 test">
         <h1 class="text-form">SIGN UP </h1>
@@ -31,9 +30,7 @@ if (!empty($_SESSION)) {
                 echo '<p class="errorMessage">Passwords do not match.<p>';
             }
         }
-
         ?>
-
     </div>
     <div class="test">
         <div class="image">
@@ -41,6 +38,4 @@ if (!empty($_SESSION)) {
         </div>
     </div>
 </div>
-
-
 <?php require 'includes/footer.php' ?>

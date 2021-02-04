@@ -9,8 +9,6 @@ if (!empty($_SESSION)) {
 // ini_set('display_startup_errors', "1");
 // error_reporting(E_ALL);
 ?>
-
-
 <section>
     <div class="container4">
         <h1 class="text-form">Add a job experience</h1>
@@ -43,5 +41,4 @@ if (!empty($_SESSION)) {
         ?>
     </div>
 </section>
-
 <?php require 'includes/footer.php' ?>

@@ -4,25 +4,17 @@ if (!empty($_SESSION)) {
 } else {
     require 'includes/header.php';
 } // print_r($_SESSION);
-
 ?>
 <div class="container">
     <div class="test1 test">
-
-
     </div>
     <div class="test">
         <div id="app"></div>
-
     </div>
-
 </div>
-
 <p class="btn-hp">
     <button class="home main-btn white " type="submit"><a href="index.php?page=register">SIGN UP</a> </button>
     <button class="home  main-btn" type="submit"><a href="index.php?page=login">LOGIN</a></button>
-
-
 </p>
 <div class="svg">
     <svg viewBox="0 0 320 266" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -183,5 +175,4 @@ if (!empty($_SESSION)) {
         </defs>
     </svg>
 </div>
-
 <?php require 'includes/footer.php' ?>

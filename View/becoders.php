@@ -53,10 +53,7 @@ $users = $this->getInfo($profile);
                 </div>
             </div>
         </div>
-
     </div>
-
-
     <div class="container6">
         <div class="info-container">
             <div class="info-left">
@@ -101,7 +98,7 @@ $users = $this->getInfo($profile);
             </div>
         </div>
     </div>
-    <div class="container4">
+    <!-- <div class="container4">
         <h2 class="small text-form">Github Repos</h2>
         <div class="info-repos">
 
@@ -169,13 +166,7 @@ $users = $this->getInfo($profile);
                     <li class="small">Forks: 0</li>
                 </ul>
             </div>
-        </div>
-
-
-
-
-
+        </div> -->
     </div>
 </section>
-
 <?php require 'includes/footer.php' ?>

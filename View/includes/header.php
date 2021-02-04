@@ -1,8 +1,6 @@
 <?php
 // print_r($_SESSION);
 ?>
-
-
 <!doctype html>
 <html lang="en">
 
@@ -51,9 +49,7 @@
                             <!--       <li><a class="ismi" href="index.php"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a>
                             </li> -->
                         </div>
-
                     </ul>
                 </div>
-
             </nav>
         </header>

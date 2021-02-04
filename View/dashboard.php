@@ -7,8 +7,6 @@ if (!empty($_SESSION)) {
 // print_r($_SESSION);
 ?>
 <section>
-    <!-- REAL START ABOVE ARE A LINK AND USELESS INFO  -->
-
     <div class="container4">
         <h1 class="text-form">Create Your Beconnect Profile </h1>
         <p class='text-login'><i class="fas fa-user"></i> Let's get some information to make your profile stand out</p><br>
@@ -58,7 +56,6 @@ if (!empty($_SESSION)) {
             <button class="home  main-btn" type="reset" name="reset" value="Reset">Reset</button>
             <button class="home  main-btn"><a href="index.php?page=succes">Back to dashboard</a></button>
         </form>
-
         <form method="POST" enctype="multipart/form-data" id="form_2">
             <ul>
                 <li><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
