@@ -1,5 +1,9 @@
 <?php
-require 'includes/header.php';
+if (!empty($_SESSION)) {
+    require 'includes/header-logged-in.php';
+} else {
+    require 'includes/header.php';
+} // print_r($_SESSION);
 ?>
 <section>
     <!-- REAL START ABOVE ARE A LINK AND USELESS INFO  -->
@@ -43,7 +47,7 @@ require 'includes/header.php';
             <input class="log" type="text" id="github" name="github" placeholder="Github Username"></input><br>
             <small class="small">Tell us a little bit about yourself </small><br>
             <textarea class="small" name="bio" id="textarea" cols="30" rows="10" placeholder="A short Bio about yourself"></textarea><br>
-            <small class="small">Upload your profile pic (100mb for now i think )</small><br>
+            <small class="small">Upload your profile picture</small><br>
             <input class="log" type="file" name="fileupload" accept="image/*" value=" file"></input><br><br>
             <!--Submit form button -->
             <input class="log" type="submit" name="submit" value="Submit">

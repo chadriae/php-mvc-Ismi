@@ -1,10 +1,10 @@
 <?php
-session_start();
 print_r($_SESSION);
 
-if (isset($_POST['signout'])) {
-    session_destroy();
-}
+// if (isset($_POST['signout'])) {
+//     session_destroy();
+//     $_SESSION = '';
+// }
 ?>
 
 
@@ -34,14 +34,14 @@ if (isset($_POST['signout'])) {
                 </div>
                 <div class="right-nav">
                     <ul class=nav-list>
-                        <li><a class="ismi" href="index.php">Developers</a></li>
+                        <li><a class="ismi" href="index.php?page=info">Developers</a></li>
                         <!--     <li><a class="ismi" href="index.php?page=info">Profiles</a></li>  -->
                         <li><a class="ismi" href="index.php?page=blog">Posts </a></li>
-                        <li><a class="ismi" href="index.php?page=dashboard"><i class="fas fa-user" aria-hidden="true"></i>dashboard</a></li>
+                        <li><a class="ismi" href="index.php?page=succes"><i class="fas fa-user" aria-hidden="true"></i>dashboard</a></li>
                         <form method="post" action="index.php">
                             <div id="myDIV">
-                                <li><a class="ismi" href="index.php" type="submit" name="signout"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a>
-                                </li>
+                                <input type="submit" name="signout" action="index.php"></input>
+                                <li type="submit" name="signout"><a class="ismi" href="index.php"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a></li>
                             </div>
                         </form>
                     </ul>
@@ -49,3 +49,11 @@ if (isset($_POST['signout'])) {
 
             </nav>
         </header>
+
+        <?php
+        if (isset($_POST['signout'])) {
+            session_destroy();
+            $_SESSION = '';
+            header("Refresh:0");
+        }
+        ?>

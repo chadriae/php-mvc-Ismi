@@ -1,4 +1,9 @@
-<?php require 'includes/header.php' ?>
+<?php
+if (!empty($_SESSION)) {
+    require 'includes/header-logged-in.php';
+} else {
+    require 'includes/header.php';
+} ?>
 
 <div class="container3">
     <div class="test1 test">

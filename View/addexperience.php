@@ -1,5 +1,10 @@
-<?php require 'includes/header.php';
-// print_r($_SESSION);
+<?php
+if (!empty($_SESSION)) {
+    require 'includes/header-logged-in.php';
+} else {
+    require 'includes/header.php';
+} // print_r($_SESSION);
+
 ini_set('display_errors', "1");
 ini_set('display_startup_errors', "1");
 error_reporting(E_ALL);
@@ -16,7 +21,7 @@ error_reporting(E_ALL);
             <div><input class="log" type="text" placeholder="* Company" name="company" required="" value=""></div>
             <div><input class="log" type="text" placeholder="* Location" name="location" required="" value=""></div>
             <div>
-                <h4 class="small" >* From Date</h4><input class="log" type="date" name="from" value="" required="">
+                <h4 class="small">* From Date</h4><input class="log" type="date" name="from" value="" required="">
             </div>
             <div>
                 <p class="small"><input class="log" type="checkbox" name="current" value="false"> Current Job</p>
@@ -25,7 +30,7 @@ error_reporting(E_ALL);
                 <h4 class="small">To Date</h4><input class="log" type="date" name="to" value="">
             </div>
             <div><textarea class="small" name="description" cols="30" rows="5" placeholder="Job Description"></textarea></div>
-            <input name="submit" class="btn btn-primary xp"  type="submit"><a href="index.php?page=becoders">Go Back</a>
+            <input name="submit" class="btn btn-primary xp" type="submit"><a href="index.php?page=becoders">Go Back</a>
         </form>
         <?php
         if (isset($_GET['error'])) {

@@ -1,7 +1,11 @@
 <?php
+if (!empty($_SESSION)) {
+    require 'includes/header-logged-in.php';
+} else {
+    require 'includes/header.php';
+} // print_r($_SESSION);
 $students = $this->get();
 ?>
-<?php require 'includes/header.php' ?>
 <div class="container4">
     <?php foreach ($students as $user) : ?>
         <div class="infoContainer">

@@ -1,4 +1,10 @@
-<?php require 'includes/header-logged-in.php' ?>
+<?php
+if (!empty($_SESSION)) {
+    require 'includes/header-logged-in.php';
+} else {
+    require 'includes/header.php';
+} // print_r($_SESSION);
+?>
 
 
 

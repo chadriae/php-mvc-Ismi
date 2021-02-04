@@ -1,26 +1,27 @@
-<?php require 'includes/header.php' ?>
-<!-- this is the view, try to put only simple if's and loops here.
-Anything complex should be calculated in the model -->
-<div class="container">
+<?php
+if (!empty($_SESSION)) {
+    require 'includes/header-logged-in.php';
+} else {
+    require 'includes/header.php';
+} // print_r($_SESSION);
 
-    <!--
-<h1>Hello <?php echo $user->getName() ?>,</h1>
--->
+?>
+<div class="container">
     <div class="test1 test">
 
 
     </div>
     <div class="test">
-     <div id="app"></div>
-    
+        <div id="app"></div>
+
     </div>
-      
+
 </div>
-    
+
 <p class="btn-hp">
     <button class="home main-btn " type="submit"><a href="index.php?page=register">SIGN UP</a> </button>
     <button class="home  main-btn" type="submit"><a href="index.php?page=login">LOGIN</a></button>
- </p>
+</p>
 <div class="svg">
     <svg viewBox="0 0 320 266" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="vip-contact-client">

@@ -1,5 +1,5 @@
 <?php
-if (empty($_SESSION)) {
+if (!empty($_SESSION)) {
     require 'includes/header-logged-in.php';
 } else {
     require 'includes/header.php';

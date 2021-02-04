@@ -1,9 +1,9 @@
 <?php
-if (!isset($_SESSION)) {
+if (!empty($_SESSION)) {
     require 'includes/header-logged-in.php';
 } else {
     require 'includes/header.php';
-}
+} // print_r($_SESSION);
 $jobs = $this->getExperience($_SESSION['student-id']);
 $schools = $this->getEducation($_SESSION['student-id']);
 ?>

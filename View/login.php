@@ -1,16 +1,17 @@
 <?php
-ini_set('display_errors', "1");
-ini_set('display_startup_errors', "1");
-error_reporting(E_ALL);
+// ini_set('display_errors', "1");
+// ini_set('display_startup_errors', "1");
+// error_reporting(E_ALL);
+if (!empty($_SESSION)) {
+    require 'includes/header-logged-in.php';
+} else {
+    require 'includes/header.php';
+} // print_r($_SESSION);
 ?>
-
-
-<?= require 'includes/header.php' ?>
-
 <div class="container3">
-    <div class="test1 test">    
+    <div class="test1 test">
         <div class="login">
-        <h1 class="text-form">SIGN IN </h1>
+            <h1 class="text-form">SIGN IN </h1>
             <p class="log-text"><i class="fas fa-user"></i> Sign in to your account </p>
             <form method="post">
                 <input class="log logtext" type="text" placeholder="Email Address or username" name="name" required="" value=""><br>

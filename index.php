@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+session_start();
 
 ini_set('display_errors', "1");
 ini_set('display_startup_errors', "1");
@@ -48,5 +49,8 @@ if (isset($_GET['page']) && $_GET['page'] === 'info') {
     $controller = new AddeducationController($databaseManager);
 } else if (isset($_GET['page']) && $_GET['page'] === 'blog') {
     $controller = new BlogController($databaseManager);
+} else if (isset($_GET['page']) && $_GET['page'] === 'myprofile') {
+    $controller = new BecodersController($databaseManager);
 }
+
 $controller->render($_GET, $_POST);
