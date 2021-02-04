@@ -60,11 +60,11 @@ $schools = $this->getEducation($_SESSION['student-id']);
             </tbody>
         </table>
         <div>
-        <button class="home  main-btn"><i class="fas fa-user-minus" aria-hidden="true"></i> Delete
+            <button class="home  main-btn"><i class="fas fa-user-minus" aria-hidden="true"></i> Delete
                 my Account</button>
 
-                <button class="home  main-btn" type="submit"><a href="index.php?page=myprofile">show my  Profile</a></button>
-                </div>
+            <button class="home  main-btn"><a href="index.php?page=myprofile">Show my profile</a></button>
+        </div>
 
     </div>
 </section>

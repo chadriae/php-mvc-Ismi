@@ -54,20 +54,20 @@ if (!empty($_SESSION)) {
             <!--Submit form button -->
             <button class="log home  main-btn" type="submit" name="submit" value="Submit">Submit </button>
 
-            <button class="log home  main-btn" type="reset" name="reset" value="Reset" > Reset</button>
-            <button class="home  main-btn" type="submit"><a href="index.php?page=succes">Back to Profile</a></button>
+            <button class="log home  main-btn" type="reset" name="reset" value="Reset"> Reset</button>
+            <button class="home  main-btn"><a href="index.php?page=succes">Back to dashboard</a></button>
 
-            <button class="home  main-btn" type="submit">Add Social Media </a></button >
-       
-        <ul >
-        <li ><i class="fab fa-github fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
+            <button class="home  main-btn" type="submit">Add Social Media </a></button>
 
-        <li><i class="fab fa-LinkedIn fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
+            <ul>
+                <li><i class="fab fa-github fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
 
-        <li><i class="fas fa-globe fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
+                <li><i class="fab fa-LinkedIn fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
 
-        <li><i class="fab fa-facebook fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
-        </ul>
+                <li><i class="fas fa-globe fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
+
+                <li><i class="fab fa-facebook fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
+            </ul>
     </div>
     </form>
 </section>
