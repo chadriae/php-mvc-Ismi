@@ -42,7 +42,7 @@
                                 <li>
                                     <a class="ismi" href="index.php">
                                         <i class="fas fa-sign-out-alt" aria-hidden="true">
-                                            <input class=" btn main-btn" value="" type="submit" name="signout" action="index.php">
+                                            <input class=" btn main-btn" type="submit" name="signout" action="index.php"></input>
                                         </i>
                                     </a>
                                 </li>
