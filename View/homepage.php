@@ -21,13 +21,9 @@ if (!empty($_SESSION)) {
 <p class="btn-hp">
     <button class="home main-btn " type="submit"><a href="index.php?page=register">SIGN UP</a> </button>
     <button class="home  main-btn" type="submit"><a href="index.php?page=login">LOGIN</a></button>
-<<<<<<< Updated upstream
-</p>
-=======
 
   
  </p>
->>>>>>> Stashed changes
 <div class="svg">
     <svg viewBox="0 0 320 266" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="vip-contact-client">
