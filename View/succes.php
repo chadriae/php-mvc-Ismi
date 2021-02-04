@@ -11,10 +11,10 @@ $schools = $this->getEducation($_SESSION['student-id']);
 <section>
     <div class="container4">
         <h1 class="text-form">Dashboard</h1>
-        <p class="text-login">
+        <p class="text-login" >
             <i class="fas fa-user" aria-hidden="true"></i>
-            <strong>Welcome <?= $_SESSION['username'] ?>, you can edit your profile or
-                chat with the Dev Community.</strong></p><br><br>
+            Welcome <?= $_SESSION['username'] ?>, you can edit your profile or
+                chat with the Dev Community.</p><br><br>
         <div><a class="space" href="index.php?page=dashboard"><i class="fas fa-user-circle" aria-hidden="true"></i> Edit Profile</a><a class="space" href="index.php?page=addexperience"><i class="fab fa-black-tie " aria-hidden="true"></i> Add Experience</a><a class="space" href="index.php?page=addeducation"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Add Education</a><a class="space" href="index.php?page=blog"><i class="fas fa-users " aria-hidden="true"></i> Dev Community</a><br><br>
         </div>
         <h3 class="small"> Experience credentials </h3>

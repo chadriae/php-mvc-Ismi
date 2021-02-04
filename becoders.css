@@ -1,9 +1,9 @@
 
 .container5{
-    background-color:rgba(31, 116, 226, 0.281);
+    background-color:var(--FourColor);
     width: 80%;
     margin: 0 auto;
-  
+    border: 1px solid rgb(75, 103, 139);
     text-align: center;
 }
 .info-img{

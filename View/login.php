@@ -16,7 +16,7 @@ if (!empty($_SESSION)) {
             <form method="post">
                 <input class="log logtext" type="text" placeholder="Email Address or username" name="name" required="" value=""><br>
                 <input class="log logtext" type="password" class="login" placeholder="Password" name="pwd" required="" value=""><br>
-                <input name="submit" type="submit" class="btn btn-primary" value="Log in">
+                <input name="submit" type="submit" class=" home main-btn" value="Log in">
             </form>
             <?php
             if (isset($_GET['error'])) {

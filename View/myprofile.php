@@ -15,7 +15,7 @@ $users = $this->getInfo($_SESSION['student-id']);
         <div class="">
             <div class="">
                 <img class="info-img" src="./assets/images/<?= $this->getImages($_SESSION['student-id']); ?>" alt="">
-                <h1 class="info-name"><?= $_SESSION['first-name'] ?> <?= $_SESSION['last-name'] ?></h1><br>
+                <h1 class="info-name "><?= $_SESSION['first-name'] ?> <?= $_SESSION['last-name'] ?></h1><br>
                 <p class="info-job"><?= $_SESSION['job'] ?> at<span><?= $_SESSION['company'] ?></span></p><br>
                 <p><span><?= $_SESSION['location'] ?></span></p><br>
                 <div class="">
@@ -60,37 +60,37 @@ $users = $this->getInfo($_SESSION['student-id']);
     <div class="container6">
         <div class="info-container">
             <div class="info-left">
-                <h2 class="">Experience</h2>
+                <h2 class="mg text-form">Experience</h2>
                 <?php foreach ($jobs as $job) : ?>
                     <div>
-                        <h3 class="small"><?= $job['job_title'] ?></h3>
-                        <p class="small"><time><?= $job['from_date'] ?></time> - <time><?= $job['to_date'] ?></time></p>
-                        <p class="small"><?= $job['company'] ?></p>
-                        <p class="small"><span><strong>Description: </strong><?= $job['job_description'] ?></span></p>
+                        <h3 class=" small mg text-login"><?= $job['job_title'] ?></h3>
+                        <p class="small mg"><time><?= $job['from_date'] ?></time> - <time><?= $job['to_date'] ?></time></p>
+                        <p class="small mg"><?= $job['company'] ?></p>
+                        <p class="small mg"> Job description: <br> <?= $job['job_description'] ?></p>
                     </div>
                 <?php endforeach; ?>
             </div>
             <div class="info-right">
-                <h2 class="small">Education</h2>
+                <h2 class="small mg text-form">Education</h2>
                 <?php foreach ($schools as $school) : ?>
                     <div>
-                        <h3 class="small"><?= $school['school'] ?></h3>
-                        <p class="small"><time><?= $school['from_date'] ?> - <?= $school['to_date'] ?></time></p>
-                        <p class="small"><span><strong>Degree: </strong><?= $school['degree'] ?></span></p>
-                        <p class="small"><span><strong>Field Of Study: </strong><?= $school['degree'] ?></span></p>
-                        <p class="small"><span><strong>Description: </strong> <?= $school['education_description'] ?></span></p>
+                        <h3 class="small mg"><?= $school['school'] ?></h3>
+                        <p class="small mg"><time><?= $school['from_date'] ?> - <?= $school['to_date'] ?></time></p>
+                        <p class="small mg">Degree: <?= $school['degree'] ?></p>
+                        <p class="small mg">Field Of Study: <?= $school['degree'] ?></p>
+                        <p class="small mg">Description:  <?= $school['education_description'] ?></p>
                     </div>
                 <?php endforeach; ?>
             </div>
         </div>
     </div>
     <div class="container4">
-        <h2 class="small">Github Repos</h2>
+        <h2 class="small text-form">Github Repos</h2>
         <div class="info-repos">
 
 
             <div>
-                <h4 class="small"><a href="" target="_blank" rel="noopener noreferrer">Stoffel</a></h4>
+                <h4 class="small mg"><a href="" target="_blank" rel="noopener noreferrer">Stoffel</a></h4>
 
             </div>
             <div>
@@ -103,8 +103,8 @@ $users = $this->getInfo($_SESSION['student-id']);
         </div>
         <div class="info-repos">
             <div>
-                <h4 class="small"><a href="" target="_blank" rel="noopener noreferrer">Stoffel</a></h4>
-                <p class="small">Portfolilio page </p>
+                <h4 class="small mg"><a href="" target="_blank" rel="noopener noreferrer">Stoffel</a></h4>
+                <p class="small mg">Portfolilio page </p>
             </div>
             <div>
                 <ul>
@@ -116,12 +116,12 @@ $users = $this->getInfo($_SESSION['student-id']);
         </div>
         <div class="info-repos">
             <div>
-                <h4 class="small"><a href="" target="_blank" rel="noopener noreferrer">Beconnect</a></h4>
-                <p class="small">Social network for developers</p>
+                <h4 class="small mg"><a href="" target="_blank" rel="noopener noreferrer">Beconnect</a></h4>
+                <p class="small mg">Social network for developers</p>
             </div>
             <div>
                 <ul>
-                    <li class="small">Stars: 0</li>
+                    <li class="small ">Stars: 0</li>
                     <li class="small">Watchers: 0</li>
                     <li class="small">Forks: 0</li>
                 </ul>
@@ -129,8 +129,8 @@ $users = $this->getInfo($_SESSION['student-id']);
         </div>
         <div class="info-repos">
             <div>
-                <h4 class="small"><a href="" target="_blank" rel="noopener noreferrer">curriculum</a></h4>
-                <p class="small">Overview of the HackYourFuture program.</p>
+                <h4 class="small mg"><a href="" target="_blank" rel="noopener noreferrer">curriculum</a></h4>
+                <p class="small mg">Overview of the HackYourFuture program.</p>
             </div>
             <div>
                 <ul>
@@ -142,8 +142,8 @@ $users = $this->getInfo($_SESSION['student-id']);
         </div>
         <div class="info-repos">
             <div>
-                <h4 class="small"><a href="" target="_blank" rel="noopener noreferrer">Fixie</a></h4>
-                <p class="small">logistics system. </p>
+                <h4 class="small mg"><a href="" target="_blank" rel="noopener noreferrer">Fixie</a></h4>
+                <p class="small mg">logistics system. </p>
             </div>
             <div>
                 <ul>

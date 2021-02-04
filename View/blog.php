@@ -13,10 +13,10 @@ $posts = $this->getPosts();
 
 <div class="container4">
     <h1 class="text-form">Posts</h1>
-    <p><i class="fas fa-user" aria-hidden="true"></i> Welcome to the community!</p>
+    <p class="text-login" ><i class="fas fa-user " aria-hidden="true"></i> Welcome to the community!</p>
 
     <div>
-        <h3>Hello, <?= $_SESSION['first-name'] ?>.<br> Say Something...</h3>
+        <h3 class="text-login">Hello, <?= $_SESSION['first-name'] ?>.<br> Say Something...</h3>
     </div>
     <form method="post">
         <textarea name="text" cols="30" rows="5" placeholder="Create a post" required="">
@@ -26,8 +26,8 @@ $posts = $this->getPosts();
 
     
     <?php foreach ($posts as $post) : ?>
-        <div class="container9">
-        <p class="small smaller"><?= $post['post'] ?> (written by <?= $post['first_name'] ?> on <?= $post['date_post'] ?>)</p>
+        <div class="container9 mg">
+        <p class="small smaller mg "><?= $post['post'] ?> <br> <br>(written by <?= $post['first_name'] ?> on <?= $post['date_post'] ?>)</p>
         </div>
     <?php endforeach; ?>
     
