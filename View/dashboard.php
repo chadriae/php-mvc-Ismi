@@ -19,7 +19,7 @@ if (!empty($_SESSION)) {
                 echo '<p class="successMessage">Changes successfully submitted.<p>';
             }
         } ?>
-        <form method="POST">
+        <form method="POST" action="index.php?page=dashboard&error=none">
             <small class="small">Give us your full name first</small><br>
             <input class="log" type="text" id="first-name" name="first-name" value="<?= $_SESSION['first-name'] ?>" placeholder="First Name"></input>
             <input class="log" type="text" id="last-name" name="last-name" placeholder="Last Name"></input><br>

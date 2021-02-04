@@ -39,10 +39,11 @@ class DashboardController
 
             $addNewAddition = $this->databaseManager->dbconnection->query("UPDATE student SET first_name = '$this->newAdditionFirstName', last_name = '$this->newAdditionLastName', current_job = '$this->newAdditionCareer', current_company = '$this->newAdditionCompany', website = '$this->newAdditionWebsite', current_location = '$this->newAdditionLocation', skills = '$this->newAdditionSkills', github = '$this->newAdditionGitHub', bio = '$this->newAdditionBio' WHERE student_id = '$this->newAdditionID';");
 
-            header("location: index.php?page=dashboard&error=none");
 
             if (!$addNewAddition) {
                 var_dump($this->databaseManager->dbconnection->error);
+                // } else {
+                //     header("location: index.php?page=dashboard&error=none");
             }
             return $addNewAddition;
         }

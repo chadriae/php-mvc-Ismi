@@ -21,6 +21,7 @@ require 'Controller/SuccesController.php';
 require 'Controller/BlogController.php';
 require 'Controller/AddexperienceController.php';
 require 'Controller/AddeducationController.php';
+require 'Controller/MyProfileController.php';
 
 // Database connections
 require_once 'Controller/DatabaseManager.php';
@@ -50,7 +51,7 @@ if (isset($_GET['page']) && $_GET['page'] === 'info') {
 } else if (isset($_GET['page']) && $_GET['page'] === 'blog') {
     $controller = new BlogController($databaseManager);
 } else if (isset($_GET['page']) && $_GET['page'] === 'myprofile') {
-    $controller = new BecodersController($databaseManager);
+    $controller = new MyProfileController($databaseManager);
 }
 
 $controller->render($_GET, $_POST);

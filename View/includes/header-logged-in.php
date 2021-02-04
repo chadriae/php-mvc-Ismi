@@ -37,11 +37,11 @@ print_r($_SESSION);
                         <li><a class="ismi" href="index.php?page=info">Developers</a></li>
                         <!--     <li><a class="ismi" href="index.php?page=info">Profiles</a></li>  -->
                         <li><a class="ismi" href="index.php?page=blog">Posts </a></li>
-                        <li><a class="ismi" href="index.php?page=succes"><i class="fas fa-user" aria-hidden="true"></i>dashboard</a></li>
+                        <li><a class="ismi" href="index.php?page=succes"><i class="fas fa-user" aria-hidden="true"></i><?= $_SESSION['username'] ?>'s dashboard</a></li>
                         <form method="post" action="index.php">
                             <div id="myDIV">
                                 <input type="submit" name="signout" action="index.php"></input>
-                                <li type="submit" name="signout"><a class="ismi" href="index.php"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a></li>
+                                <li type="submit" name="signout" action="index.php"><a class="ismi" href="index.php"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a></li>
                             </div>
                         </form>
                     </ul>
