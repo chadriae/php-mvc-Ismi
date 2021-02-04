@@ -1,8 +1,6 @@
 <?php
 // print_r($_SESSION);
 ?>
-
-
 <!doctype html>
 <html lang="en">
 
@@ -28,6 +26,7 @@
     <link rel="stylesheet" href="blog.css">
     <title>BeConnect</title>
 </head>
+
 <body>
     <section>
         <header>
@@ -61,12 +60,10 @@
 
             </nav>
         </header>
-
         <?php
         if (isset($_POST["signout"])) {
             session_destroy();
             $_SESSION = "";
             header("Refresh:0");
         }
-
         ?>

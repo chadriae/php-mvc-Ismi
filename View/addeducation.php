@@ -5,9 +5,6 @@ if (!empty($_SESSION)) {
     require 'includes/header.php';
 } // print_r($_SESSION);
 ?>
-
-
-
 <section>
     <div class="container4">
         <h1 class="text-form">Add education</h1>

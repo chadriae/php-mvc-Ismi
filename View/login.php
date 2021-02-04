@@ -38,7 +38,4 @@ if (!empty($_SESSION)) {
         </div>
     </div>
 </div>
-
-
-
 <?php require 'includes/footer.php' ?>

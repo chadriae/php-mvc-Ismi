@@ -53,10 +53,7 @@ $socialMedia = $this->getSocialMedia($_SESSION['student-id']);
                 </div>
             </div>
         </div>
-
     </div>
-
-
     <div class="container6">
         <div class="info-container">
             <div class="info-left">
@@ -86,7 +83,7 @@ $socialMedia = $this->getSocialMedia($_SESSION['student-id']);
             </div>
         </div>
     </div>
-    <div class="container4">
+    <!-- <div class="container4">
         <h2 class="small text-form">Github Repos</h2>
         <div class="info-repos">
 
@@ -154,19 +151,7 @@ $socialMedia = $this->getSocialMedia($_SESSION['student-id']);
                     <li class="small">Forks: 0</li>
                 </ul>
             </div>
-        </div>
-
-
-
-
-
+        </div> -->
     </div>
 </section>
-
-
-
-
-
-
-
 <?php require 'includes/footer.php' ?>
