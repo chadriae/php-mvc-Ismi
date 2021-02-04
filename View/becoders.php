@@ -11,7 +11,7 @@ $users = $this->getInfo($profile);
 ?>
 <section>
     <div class="container5">
-        <a href="index.php?page=info">Back To Profiles</a>
+        <a href="index.php?page=info">Back to profiles</a>
         <div class="">
             <div class="">
                 <img class="info-img" src="./assets/images/<?= $this->getImages($profile); ?>" alt="">
