@@ -91,15 +91,9 @@ $users = $this->getInfo($profile);
                                     echo 'current';
                                 }
                                 ?></time></p>
-<<<<<<< HEAD
-                        <p class="small  mg text-login"> Degree : <?= $school['degree'] ?></p>
-                        <p class="small mg "><Field Of Study:> </strong><?= $school['degree'] ?></p>
-                        <p class="small mg text-login">Description :  <?= $school['education_description'] ?></p>
-=======
                         <p class="small  mg text-login"> Degree: <?= $school['degree'] ?></p>
                         <p class="small mg ">Field Of Study: </strong><?= $school['fieldofstudy'] ?></p>
                         <p class="small mg text-login">Description: <?= $school['education_description'] ?></p>
->>>>>>> 8c26c7c5354e826d937b5f094e4f58b00b716121
                     </div>
                 <?php endforeach; ?>
             </div>

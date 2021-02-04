@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="becoders.css">
     <link rel="stylesheet" href="sucess.css">
     <link rel="stylesheet" href="myprofile.css">
+    <link rel="stylesheet" href="blog.css">
     <title>Becode - ISMI</title>
 </head>
 
