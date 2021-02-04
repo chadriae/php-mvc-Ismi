@@ -15,7 +15,7 @@ $students = $this->getInfo();
                     <h2><?= $user['first_name'] ?> <?= $user['last_name'] ?></h2>
                     <p><?= $user['current_job'] ?><span> at <?= $user['current_company'] ?></span></p>
                     <p><?= $user['current_location'] ?></p>
-                    <a href="index.php?page=becoders&profile=<?= $user['student_id'] ?>" class="home  main-btn">VIEW PROFILE</a>
+                    <a href="index.php?page=becoders&profile=<?= $user['student_id'] ?>" class="home  main-btn white small">VIEW PROFILE</a>
                 </div>
                 <ul>
                     <?php

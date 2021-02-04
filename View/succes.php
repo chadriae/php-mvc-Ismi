@@ -29,10 +29,10 @@ $schools = $this->getEducation($_SESSION['student-id']);
             <tbody>
                 <?php foreach ($jobs as $job) : ?>
                     <tr>
-                        <td class="small center"><?= $job['company'] ?></td>
-                        <td class="small center"><?= $job['job_title'] ?></td>
-                        <td class="small center"><?= $job['from_date'] ?> - <?= $job['to_date'] ?></td>
-                        <td class="small center"><?= $job['job_location'] ?></td>
+                        <td class="small center "><?= $job['company'] ?></td>
+                        <td class="small center "><?= $job['job_title'] ?></td>
+                        <td class="small center "><?= $job['from_date'] ?> - <?= $job['to_date'] ?></td>
+                        <td class="small center "><?= $job['job_location'] ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -43,9 +43,9 @@ $schools = $this->getEducation($_SESSION['student-id']);
             <thead>
                 <tr>
                     <td class="small center ">School</td>
-                    <td class="small center">Field of study</td>
-                    <td class="small center">Degree</td>
-                    <td class="small center">Years</td>
+                    <td class="small center ">Field of study</td>
+                    <td class="small center ">Degree</td>
+                    <td class="small center ">Years</td>
                 </tr>
             </thead>
             <tbody>
@@ -61,10 +61,9 @@ $schools = $this->getEducation($_SESSION['student-id']);
         </table>
         <br>
         <div>
-            <button class="home"><i class="fas fa-user-minus" aria-hidden="true"></i> Delete
-                my Account</button>
+            <button class="home red"><i class="fas fa-user-minus" aria-hidden="true"></i> DELETE MY ACCOUNT</button>
 
-            <button class="home  main-btn"><a href="index.php?page=myprofile">Show my profile</a></button>
+            <button class="home  main-btn white "><a href="index.php?page=myprofile">SHOW MY PROFILE</a></button>
         </div>
     </div>
 </section>

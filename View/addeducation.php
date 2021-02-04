@@ -26,7 +26,7 @@ if (!empty($_SESSION)) {
             <div>
                 <h4 class="small">To Date</h4><input class="log" type="date" name="to" value="2020-02-02">
             </div>
-            <div><textarea class="small" name="description" cols="30" rows="5" placeholder="Program Description"></textarea></div><input class="home  main-btn" name="submit" type="submit"><a href="index.php?page=succes">Go Back</a>
+            <div><textarea class="small" name="description" cols="30" rows="5" placeholder="Program Description"></textarea></div><input class="home  main-btn small white" name="submit" type="submit" value="SUBMIT"><a class="mg" href="index.php?page=succes">Go Back</a>
         </form>
         <?php
         if (isset($_GET['error'])) {

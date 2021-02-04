@@ -8,3 +8,34 @@
     display:block;
     width: 10%;
 }
+
+.black:hover{
+    color:var(--SecondaryColor);
+
+}
+
+.red{
+    background-color:firebrick;
+    border:1px solid firebrick;
+    outline: none;
+    border-radius: 5px;
+    font-family: var(--PrimaryFont);
+    font-size:1rem;
+    color:white;
+}
+
+.red:hover{
+    border:2px solid black;
+}
+
+.fa-user-minus{
+    color:white;
+}
+
+.white{
+    color:white;
+}
+
+.white:hover{
+    color:var(--SecondaryColor);
+}

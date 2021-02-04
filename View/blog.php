@@ -24,7 +24,7 @@ $posts = $this->getPosts();
         </form>
 
     </p>
-    <input class="home main-btn z" type="submit" value="SUBMIT" name="submit">
+    <input class="home main-btn z white small" type="submit" value="SUBMIT" name="submit">
     <div class="box-post">
         <?php foreach ($posts as $post) : ?>
             <div class="container9 mg">
