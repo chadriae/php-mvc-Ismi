@@ -316,11 +316,12 @@ h2{
 /* Button in Homepage  --*/ 
 
 .btn-hp{
-  margin:0 auto;
+  margin:2rem 0 0 0;
   text-align: center;
   position: absolute;
   top:60%;
   left:50%;
+
   
  
 }
