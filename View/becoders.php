@@ -64,7 +64,15 @@ $users = $this->getInfo($profile);
                 <?php foreach ($jobs as $job) : ?>
                     <div>
                         <h3 class="small"><?= $job['job_title'] ?></h3>
-                        <p class="small"><time><?= $job['from_date'] ?></time> - <time><?= $job['to_date'] ?></time></p>
+                        <p class="small"><time><?= $job['from_date'] ?></time> - <time>
+                                <?php
+                                if ($job['current_job'] == '0') {
+                                    echo $job['to_date'];
+                                } else {
+                                    echo 'current';
+                                }
+                                ?>
+                            </time></p>
                         <p class="small"><?= $job['company'] ?></p>
                         <p class="small"><span><strong>Description: </strong><?= $job['job_description'] ?></span></p>
                     </div>

@@ -37,7 +37,6 @@ class AddeducationController
             $this->newAdditionToDate = $_POST['to'];
             $this->newAdditionToDateSQL = date("Y-m-d", strtotime($this->newAdditionToDate));
             $this->newAdditionDescription = ucfirst($_POST['description']);
-
             if (isset($_POST['current'])) {
                 $this->newAdditionCurrentEducation = $_POST['current'];
             } else {

@@ -26,10 +26,10 @@ error_reporting(E_ALL);
                 <h4 class="small">* From date</h4><input class="log" type="date" name="from" value="" required="">
             </div>
             <div>
-                <p class="small"><input class="log" type="checkbox" name="current" value="false"> Current job</p>
+                <p class="small"><input class="log" type="checkbox" name="current" value="1"> Current job</p>
             </div>
             <div>
-                <h4 class="small">To date</h4><input class="log" type="date" name="to" value="">
+                <h4 class="small">To date</h4><input class="log" type="date" name="to" value="2020-02-02">
             </div>
             <div><textarea class="small" name="description" cols="30" rows="5" placeholder="Job Description"></textarea></div>
             <button class=" home  main-btn " name="submit" class="btn btn-primary xp" type="submit">Submit</button><a href="index.php?page=becoders">Go Back</a>
