@@ -7,7 +7,7 @@ if (!empty($_SESSION)) {
 $jobs = $this->getExperience($_SESSION['student-id']);
 $schools = $this->getEducation($_SESSION['student-id']);
 $users = $this->getInfo($_SESSION['student-id']);
-
+$socialMedia = $this->getSocialMedia($_SESSION['student-id']);
 ?>
 <section>
     <div class="container5">
@@ -19,16 +19,16 @@ $users = $this->getInfo($_SESSION['student-id']);
                 <p class="info-job"><?= $_SESSION['job'] ?> at<span><?= $_SESSION['company'] ?></span></p><br>
                 <p><span><?= $_SESSION['location'] ?></span></p><br>
                 <div class="">
-                    <a href="" target="_blank" rel="noopener noreferrer">
+                    <a href="<?php echo $socialMedia['website'] ?>" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-globe fa-2x" aria-hidden="true"></i>
                     </a>
-                    <a href="" target="_blank" rel="noopener noreferrer">
+                    <a href="<?php echo $socialMedia['twitter'] ?>" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
                     </a>
-                    <a href="" target="_blank" rel="noopener noreferrer">
+                    <a href="<?php echo $socialMedia['facebook'] ?>" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-facebook fa-2x" aria-hidden="true"></i>
                     </a>
-                    <a href="" target="_blank" rel="noopener noreferrer">
+                    <a href="<?php echo $socialMedia['linkedin'] ?>" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
                     </a>
                 </div><br>
@@ -78,7 +78,7 @@ $users = $this->getInfo($_SESSION['student-id']);
                         <p class="small mg"><time><?= $school['from_date'] ?> - <?= $school['to_date'] ?></time></p>
                         <p class="small mg text-login">Degree: <?= $school['degree'] ?></p>
                         <p class="small mg">Field Of Study: <?= $school['degree'] ?></p>
-                        <p class="small mg">Description:  <?= $school['education_description'] ?></p>
+                        <p class="small mg">Description: <?= $school['education_description'] ?></p>
                     </div>
                 <?php endforeach; ?>
             </div>

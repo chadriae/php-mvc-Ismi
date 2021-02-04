@@ -13,15 +13,17 @@ if (!empty($_SESSION)) {
         <h1 class="text-form">Create Your Beconnect Profile </h1>
         <p class='text-login'><i class="fas fa-user"></i> Let's get some information to make your profile stand out</p><br>
         <small class="small">* = required field</small><br>
-        <h2 class="small">Hello <?= $_SESSION["username"] ?></h2><br>
         <?php
         if (isset($_GET['error'])) {
-            if ($_GET['error'] == "none") {
+            if ($_GET['error'] == "nonedata") {
                 echo '<p class="successMessage">Changes successfully submitted.<p>';
             }
-            echo $this->updateUser();
+            if ($_GET['error'] == "nonelinks") {
+                echo '<p class="successMessage">Social Media links successfully submitted.<p>';
+            }
         } ?>
-        <form method="POST" action="index.php?page=dashboard&error=none" enctype="multipart/form-data">
+        <h2 class="small">Hello <?= $_SESSION["username"] ?></h2><br>
+        <form method="POST" enctype="multipart/form-data" id="form_1">
             <small class="small">Give us your full name first</small><br>
             <input class="log" type="text" id="first-name" name="first-name" value="<?= $_SESSION['first-name'] ?>" placeholder="First Name"></input>
             <input class="log" type="text" id="last-name" name="last-name" placeholder="Last Name"></input><br>
@@ -51,25 +53,24 @@ if (!empty($_SESSION)) {
             <textarea class="small" name="bio" id="textarea" cols="30" rows="10" placeholder="A short Bio about yourself"></textarea><br>
             <small class="small">Upload your profile picture</small><br>
             <input class="log" type="file" name="image" accept="image/*" value=" file"></input><br><br>
-            <!--Submit form button -->
-            <button class="log home  main-btn" type="submit" name="submit" value="Submit">Submit </button>
-
-            <button class="log home  main-btn" type="reset" name="reset" value="Reset"> Reset</button>
+            <!-- //buttons -->
+            <button class="home  main-btn" type="submit" name="submit_1" value="Submit">Submit</button>
+            <button class="home  main-btn" type="reset" name="reset" value="Reset">Reset</button>
             <button class="home  main-btn"><a href="index.php?page=succes">Back to dashboard</a></button>
+        </form>
 
-
+        <form method="POST" enctype="multipart/form-data" id="form_2">
             <ul>
-                <li><i class="fab fa-github fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
+                <li><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
 
-                <li><i class="fab fa-linkedin-in fa-2x"></i><input type="text" placeholder="linkedIn" name="twitter" value=""></li>
+                <li><i class="fab fa-linkedin-in fa-2x"></i><input type="text" placeholder="Linkedin URL" name="linkedin" value=""></li>
 
-                <li><i class="fas fa-globe fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
+                <li><i class="fas fa-globe fa-2x" aria-hidden="true"></i><input type="text" placeholder="Website URL" name="website" value=""></li>
 
-                <li><i class="fab fa-facebook fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
+                <li><i class="fab fa-facebook fa-2x" aria-hidden="true"></i><input type="text" placeholder="Facebook URL" name="facebook" value=""></li>
             </ul>
-            <button class="home  main-btn" type="submit">Add Social Media </a></button>
-
+            <button class="home  main-btn" name="submit_2" type="submit">Add Social Media Links</a></button>
+        </form>
     </div>
-    </form>
 </section>
 <?php require 'includes/footer.php' ?>
