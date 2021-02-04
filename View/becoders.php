@@ -74,7 +74,7 @@ $users = $this->getInfo($profile);
                                 ?>
                             </time></p>
                         <p class="small mg"><?= $job['company'] ?></p>
-                        <p class="small mg text-login">Description:  <?= $job['job_description'] ?></p>
+                        <p class="small mg text-login">Description :  <?= $job['job_description'] ?></p>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -91,9 +91,9 @@ $users = $this->getInfo($profile);
                                     echo 'current';
                                 }
                                 ?></time></p>
-                        <p class="small  mg text-login"> Degree: <?= $school['degree'] ?></p>
+                        <p class="small  mg text-login"> Degree : <?= $school['degree'] ?></p>
                         <p class="small mg "><Field Of Study:> </strong><?= $school['degree'] ?></p>
-                        <p class="small mg text-login">Description:  <?= $school['education_description'] ?></p>
+                        <p class="small mg text-login">Description :  <?= $school['education_description'] ?></p>
                     </div>
                 <?php endforeach; ?>
             </div>
