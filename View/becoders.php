@@ -75,7 +75,14 @@ $users = $this->getInfo($profile);
                 <?php foreach ($schools as $school) : ?>
                     <div>
                         <h3 class="small"><?= $school['school'] ?></h3>
-                        <p class="small"><time><?= $school['from_date'] ?> - <?= $school['to_date'] ?></time></p>
+                        <p class="small"><time><?= $school['from_date'] ?> -
+                                <?php
+                                if ($school['current_education'] == '0') {
+                                    echo $school['to_date'];
+                                } else {
+                                    echo 'current';
+                                }
+                                ?></time></p>
                         <p class="small"><span><strong>Degree: </strong><?= $school['degree'] ?></span></p>
                         <p class="small"><span><strong>Field Of Study: </strong><?= $school['degree'] ?></span></p>
                         <p class="small"><span><strong>Description: </strong> <?= $school['education_description'] ?></span></p>

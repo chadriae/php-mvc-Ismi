@@ -17,6 +17,7 @@ class AddeducationController
 
         if (isset($_POST['submit'])) {
             $this->addEducation();
+            print_r($this->newAdditionToDate);
         }
     }
 
@@ -37,9 +38,14 @@ class AddeducationController
             $this->newAdditionToDateSQL = date("Y-m-d", strtotime($this->newAdditionToDate));
             $this->newAdditionDescription = ucfirst($_POST['description']);
 
+            if (isset($_POST['current'])) {
+                $this->newAdditionCurrentEducation = $_POST['current'];
+            } else {
+                $this->newAdditionCurrentEducation = '0';
+            }
             $this->newAdditionID = $_SESSION['student-id'];
 
-            $addNewUser = $this->databaseManager->dbconnection->query("INSERT INTO education (student_id, school, degree, fieldofstudy, from_date, to_date, education_description) VALUES ('$this->newAdditionID', '$this->newAdditionSchool', '$this->newAdditionDegree', '$this->newAdditionFieldofstudy', '$this->newAdditionFromDateSQL', '$this->newAdditionToDateSQL', '$this->newAdditionDescription')");
+            $addNewUser = $this->databaseManager->dbconnection->query("INSERT INTO education (student_id, school, degree, fieldofstudy, from_date, to_date, education_description, current_education) VALUES ('$this->newAdditionID', '$this->newAdditionSchool', '$this->newAdditionDegree', '$this->newAdditionFieldofstudy', '$this->newAdditionFromDateSQL', '$this->newAdditionToDateSQL', '$this->newAdditionDescription', '$this->newAdditionCurrentEducation')");
 
             if (!$addNewUser) {
                 var_dump($this->databaseManager->dbconnection->error);

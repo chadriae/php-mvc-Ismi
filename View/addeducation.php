@@ -24,10 +24,10 @@ if (!empty($_SESSION)) {
                 <h4 class="small">From Date</h4><input class="log" type="date" name="from" value="" required="">
             </div>
             <div>
-                <p class="small"><input class="log" type="checkbox" name="current" value="false"> Current school or bootcamp</p>
+                <p class="small"><input class="log" type="checkbox" name="current" value="1"> Current school or bootcamp</p>
             </div>
             <div>
-                <h4 class="small">To Date</h4><input class="log" type="date" name="to" value="">
+                <h4 class="small">To Date</h4><input class="log" type="date" name="to" value="2020-02-02">
             </div>
             <div><textarea class="small" name="description" cols="30" rows="5" placeholder="Program Description"></textarea></div><input class="home  main-btn" name="submit" type="submit"><a href="/dashboard">Go Back</a>
         </form>
