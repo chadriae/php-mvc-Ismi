@@ -15,7 +15,7 @@ $posts = $this->getPosts();
     <p class="text-login"><i class="fas fa-user " aria-hidden="true"></i> Welcome to the community!</p>
 
     <div>
-        <h3 class="text-login">Hello, <?= $_SESSION['first-name'] ?>.<br> Say Something...</h3>
+        <h3 class="text-login">Hello, <?= $_SESSION['first-name'] ?>. Start sharing something &#128512.</h3>
     </div>
     <br>
     <p>
