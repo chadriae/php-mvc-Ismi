@@ -8,7 +8,7 @@ class BecodersController
 
     public function render(array $GET, array $POST)
     {
-        $this->getInfo($_SESSION['student-id']);
+        // $this->getInfo($_SESSION['student-id']);
         require 'View/becoders.php';
     }
 

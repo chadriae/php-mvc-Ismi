@@ -2,8 +2,7 @@
 $config = [
     'host' => "localhost",
     'name' => "root",
-    'password' => "",
+    'password' => "root",
     'dbname' => "beconnect",
     'port' => 3306
 ];
-
