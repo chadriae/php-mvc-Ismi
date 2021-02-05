@@ -29,6 +29,8 @@ These are the parts that we didnt manage to finish, but would like to:
 - sync with GitHub API and show repo's per profile
 - a more interactive blog page
 
+Some smaller parts that still need some attention have been added to the Issues page of this repository.
+
 ## Tools used :hammer_and_wrench:
 
 We were offered a MVC boilerplate to start. Then we could link all the different pages and classes where needed.
