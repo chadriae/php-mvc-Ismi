@@ -59,12 +59,10 @@ if (!empty($_SESSION)) {
         <form method="POST" enctype="multipart/form-data" id="form_2">
             <ul>
                 <li><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
-
                 <li><i class="fab fa-linkedin-in fa-2x"></i><input type="text" placeholder="Linkedin URL" name="linkedin" value=""></li>
-
                 <li><i class="fas fa-globe fa-2x" aria-hidden="true"></i><input type="text" placeholder="Website URL" name="website" value=""></li>
-
                 <li><i class="fab fa-facebook fa-2x" aria-hidden="true"></i><input type="text" placeholder="Facebook URL" name="facebook" value=""></li>
+                <li><i class="fab fa-github fa-2x" aria-hidden="true"></i><input type="text" placeholder="GitHub URL" name="github" value=""></li>
             </ul>
             <button class="home  main-btn" name="submit_2" type="submit">Add Social Media Links</a></button>
         </form>

@@ -72,8 +72,9 @@ class DashboardController
         $this->linkedinURL = $_POST['linkedin'];
         $this->websiteURL = $_POST['website'];
         $this->facebookURL = $_POST['facebook'];
+        $this->githubURL = $_POST['github'];
 
-        $queryLinks = "INSERT into social_media (student_id, twitter, linkedin, website, facebook) VALUES ('$this->newAdditionID', '$this->twitterURL', '$this->linkedinURL', '$this->websiteURL', '$this->facebookURL')";
+        $queryLinks = "INSERT into social_media (student_id, twitter, linkedin, website, facebook, github) VALUES ('$this->newAdditionID', '$this->twitterURL', '$this->linkedinURL', '$this->websiteURL', '$this->facebookURL', ' $this->githubURL')";
         $addLinks = $this->databaseManager->dbconnection->query($queryLinks);
 
         if (!$addLinks) {

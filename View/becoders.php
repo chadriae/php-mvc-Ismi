@@ -8,29 +8,33 @@ $profile = $_GET['profile'];
 $jobs = $this->getExperience($profile);
 $schools = $this->getEducation($profile);
 $users = $this->getInfo($profile);
+$socialmedia = $this->getSocialMedia($profile);
 ?>
 <section>
     <div class="container5">
         <a class="text-login" href="index.php?page=info">BACK TO PROFILE</a>
         <div class="">
-        <br>
+            <br>
             <div class="">
                 <img class="info-img" src="./assets/images/<?= $this->getImages($profile); ?>" alt="">
                 <h1 class="info-name"><?= $users[0]['first_name'] ?> <?= $users[0]['last_name'] ?></h1>
                 <p class="info-job"><?= $users[0]['current_job'] ?> at<span><?= $users[0]['current_company'] ?></span></p>
                 <p><span><?= $users[0]['current_location'] ?></span></p><br>
                 <div class="">
-                    <a href="" target="_blank" rel="noopener noreferrer">
+                    <a href="<?= $socialmedia[0]['website'] ?>" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-globe fa-2x" aria-hidden="true"></i>
                     </a>
-                    <a href="" target="_blank" rel="noopener noreferrer">
+                    <a href="<?= $socialmedia[0]['twitter'] ?>" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
                     </a>
-                    <a href="" target="_blank" rel="noopener noreferrer">
+                    <a href="<?= $socialmedia[0]['facebook'] ?>" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-facebook fa-2x" aria-hidden="true"></i>
                     </a>
-                    <a href="" target="_blank" rel="noopener noreferrer">
+                    <a href="<?= $socialmedia[0]['linkedin'] ?>" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <a href="<?= $socialmedia[0]['github'] ?>" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github fa-2x" aria-hidden="true"></i>
                     </a>
                 </div><br>
             </div>

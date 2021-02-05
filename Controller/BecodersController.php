@@ -58,4 +58,17 @@ class BecodersController
             echo "Connection Error - " . $error->getMessage();
         }
     }
+
+    public function getSocialMedia($id)
+    {
+        try {
+            $query = "SELECT * FROM social_media WHERE student_id = $id;";
+            $sth = $this->databaseManager->dbconnection->prepare($query);
+            $sth->execute();
+            $result = $sth->fetchAll();
+            return $result;
+        } catch (PDOException $error) {
+            echo "Connection Error - " . $error->getMessage();
+        }
+    }
 }

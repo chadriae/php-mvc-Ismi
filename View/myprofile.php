@@ -31,6 +31,9 @@ $socialMedia = $this->getSocialMedia($_SESSION['student-id']);
                     <a href="<?php echo $socialMedia['linkedin'] ?>" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
                     </a>
+                    <a href="<?php echo $socialMedia['github'] ?>" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                    </a>
                 </div><br>
             </div>
             <div class="info-bio-skill">
