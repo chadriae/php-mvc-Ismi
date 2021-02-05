@@ -10,7 +10,6 @@ class AddeducationController
     {
         if (isset($_POST['submit'])) {
             $this->addEducation();
-            print_r($this->newAdditionToDate);
         }
         require 'View/addeducation.php';
     }
@@ -43,7 +42,7 @@ class AddeducationController
             if (!$addNewUser) {
                 var_dump($this->databaseManager->dbconnection->error);
             } else {
-                header("location: index.php?page=addexperience&error=none");
+                header("location: index.php?page=addeducation&error=none");
             }
         }
     }

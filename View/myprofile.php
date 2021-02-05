@@ -73,8 +73,8 @@ $socialMedia = $this->getSocialMedia($_SESSION['student-id']);
                                 }
                                 ?>
                             </time></p>
-                        <p class="small mg"><?= $job['company'] ?></p>
-                        <p class="small mg text-login"> Job description: <br> <?= $job['job_description'] ?></p>
+                        <p class="small mg"><?= $job['company'] ?>, <?= $job['job_location'] ?></p>
+                        <p class="small mg text-login"> Job description: <?= $job['job_description'] ?></p>
                     </div>
                     <br>
                 <?php endforeach; ?>
