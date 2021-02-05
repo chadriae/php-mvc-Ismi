@@ -64,7 +64,15 @@ $socialMedia = $this->getSocialMedia($_SESSION['student-id']);
                 <?php foreach ($jobs as $job) : ?>
                     <div>
                         <h3 class=" small mg text-login"><?= $job['job_title'] ?></h3>
-                        <p class="small mg"><time><?= $job['from_date'] ?></time> - <time><?= $job['to_date'] ?></time></p>
+                        <p class="small mg"><time><?= $job['from_date'] ?></time> - <time>
+                                <?php
+                                if ($job['current_job'] == '0') {
+                                    echo $job['to_date'];
+                                } else {
+                                    echo 'current';
+                                }
+                                ?>
+                            </time></p>
                         <p class="small mg"><?= $job['company'] ?></p>
                         <p class="small mg text-login"> Job description: <br> <?= $job['job_description'] ?></p>
                     </div>
@@ -76,7 +84,15 @@ $socialMedia = $this->getSocialMedia($_SESSION['student-id']);
                 <?php foreach ($schools as $school) : ?>
                     <div>
                         <h3 class="small mg"><?= $school['school'] ?></h3>
-                        <p class="small mg"><time><?= $school['from_date'] ?> - <?= $school['to_date'] ?></time></p>
+                        <p class="small mg"><time><?= $school['from_date'] ?> -
+                                <?php
+                                if ($school['current_education'] == '0') {
+                                    echo $school['to_date'];
+                                } else {
+                                    echo 'current';
+                                }
+                                ?>
+                            </time></p>
                         <p class="small mg text-login">Degree: <?= $school['degree'] ?></p>
                         <p class="small mg">Field Of Study: <?= $school['fieldofstudy'] ?></p>
                         <p class="small mg">Description: <?= $school['education_description'] ?></p>
