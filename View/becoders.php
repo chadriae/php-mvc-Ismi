@@ -11,12 +11,13 @@ $users = $this->getInfo($profile);
 ?>
 <section>
     <div class="container5">
-        <a class="text-login" href="index.php?page=info">Back to profiles</a>
+        <a class="text-login" href="index.php?page=info">BACK TO PROFILE</a>
         <div class="">
+        <br>
             <div class="">
                 <img class="info-img" src="./assets/images/<?= $this->getImages($profile); ?>" alt="">
-                <h1 class="info-name"><?= $users[0]['first_name'] ?> <?= $users[0]['last_name'] ?></h1><br>
-                <p class="info-job"><?= $users[0]['current_job'] ?> at<span><?= $users[0]['current_company'] ?></span></p><br>
+                <h1 class="info-name"><?= $users[0]['first_name'] ?> <?= $users[0]['last_name'] ?></h1>
+                <p class="info-job"><?= $users[0]['current_job'] ?> at<span><?= $users[0]['current_company'] ?></span></p>
                 <p><span><?= $users[0]['current_location'] ?></span></p><br>
                 <div class="">
                     <a href="" target="_blank" rel="noopener noreferrer">
@@ -36,10 +37,10 @@ $users = $this->getInfo($profile);
             <div class="info-bio-skill">
                 <h2 class="">
                     About myself
-                </h2><br>
-                <p>
+                </h2>
+                <h3 class="text-login">
                     <?= $users[0]['bio'] ?>
-                </p>
+                </h3>
                 <h2 class="">Skill Set</h2>
                 <div class="skills">
                     <?php
@@ -54,7 +55,7 @@ $users = $this->getInfo($profile);
             </div>
         </div>
     </div>
-    <div class="container6">
+    <div class="container6 ">
         <div class="info-container">
             <div class="info-left">
                 <h2 class="text-form mg">Experience</h2>
