@@ -47,6 +47,12 @@ class DashboardController
             $queryImage = "INSERT INTO profilepic (student_id, profile_pic) VALUES ('$this->newAdditionID', '$this->newAdditionImage ');";
             $addNewPicture = $this->databaseManager->dbconnection->query("$queryImage");
 
+            if (!$addNewAddition) {
+                var_dump($this->databaseManager->dbconnection->error);
+            } else {
+                header("location: index.php?page=dashboard&error=nonedata");
+            }
+
             if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
                 $this->message = "<p class='successMessage'>Image uploaded successfully.</p>";
                 return $this->message;
@@ -55,12 +61,7 @@ class DashboardController
                 return $this->message;
             }
 
-            if (!$addNewAddition || !$addNewPicture) {
-                var_dump($this->databaseManager->dbconnection->error);
-            } else {
-                header("location: index.php?page=dashboard&error=nonedata");
-            }
-            // return $addNewAddition;
+            return $addNewPicture;
         }
     }
 

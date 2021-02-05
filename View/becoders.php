@@ -75,7 +75,7 @@ $socialmedia = $this->getSocialMedia($profile);
                                 }
                                 ?>
                             </time></p>
-                        <p class="small mg"><?= $job['company'] ?></p>
+                        <p class="small mg"><?= $job['company'] ?>, <?= $job['job_location'] ?></p>
                         <p class="small mg text-login">Description : <?= $job['job_description'] ?></p>
                     </div>
                     <br>

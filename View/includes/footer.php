@@ -7,7 +7,7 @@
     </footer>
     </section>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script src="./zoo.js"></script>
+    <script src="./script/zoo.js"></script>
     </body>
 
 

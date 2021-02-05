@@ -31,7 +31,14 @@ $schools = $this->getEducation($_SESSION['student-id']);
                     <tr>
                         <td class="small center "><?= $job['company'] ?></td>
                         <td class="small center "><?= $job['job_title'] ?></td>
-                        <td class="small center "><?= $job['from_date'] ?> - <?= $job['to_date'] ?></td>
+                        <td class="small center "><?= $job['from_date'] ?> -
+                            <?php
+                            if ($job['current_job'] == '0') {
+                                echo $job['to_date'];
+                            } else {
+                                echo 'current';
+                            }
+                            ?>
                         <td class="small center "><?= $job['job_location'] ?></td>
                     </tr>
                 <?php endforeach; ?>
@@ -54,7 +61,15 @@ $schools = $this->getEducation($_SESSION['student-id']);
                         <td class="small center"><?= $school['school'] ?></td>
                         <td class="small center"><?= $school['fieldofstudy'] ?></td>
                         <td class="small center"><?= $school['degree'] ?></td>
-                        <td class="small center"><?= $school['from_date'] ?> - <?= $school['to_date'] ?></td>
+                        <td class="small center"><?= $school['from_date'] ?> -
+                            <?php
+                            if ($school['current_education'] == '0') {
+                                echo $school['to_date'];
+                            } else {
+                                echo 'current';
+                            }
+                            ?>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

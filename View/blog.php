@@ -19,12 +19,11 @@ $posts = $this->getPosts();
     <br>
     <p>
         <form method="post">
-            <textarea name="text" cols="80" rows="10" placeholder="Create a post" required="">
-                </textarea>
+            <textarea name="text" cols="80" rows="10" placeholder="Create a post" required=""></textarea>
+            <input class="home main-btn z white small" type="submit" value="SUBMIT" name="submit"></input>
         </form>
-
     </p>
-    <input class="home main-btn z white small" type="submit" value="SUBMIT" name="submit">
+
     <div class="box-post">
         <?php foreach ($posts as $post) : ?>
             <div class="container9 mg">

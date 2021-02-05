@@ -16,14 +16,14 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="register.css">
-    <link rel="stylesheet" href="dashboard.css">
-    <link rel="stylesheet" href="becoders.css">
-    <link rel="stylesheet" href="sucess.css">
-    <link rel="stylesheet" href="myprofile.css">
-    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/register.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="./styles/becoders.css">
+    <link rel="stylesheet" href="./styles/sucess.css">
+    <link rel="stylesheet" href="./styles/myprofile.css">
+    <link rel="stylesheet" href="./styles/blog.css">
     <title>BeConnect</title>
 </head>
 
