@@ -52,19 +52,21 @@ if (!empty($_SESSION)) {
             <small class="small">Upload your profile picture</small><br>
             <input class="log" type="file" name="image" accept="image/*" value=" file"></input><br><br>
             <!-- //buttons -->
-            <button class="home  main-btn" type="submit" name="submit_1" value="Submit">Submit</button>
-            <button class="home  main-btn" type="reset" name="reset" value="Reset">Reset</button>
-            <button class="home  main-btn"><a href="index.php?page=succes">Back to dashboard</a></button>
+            <button class="home  main-btn small white" type="submit" name="submit_1" value="Submit">SUBMIT</button>
+            <button class="home  main-btn  small white" type="reset" name="reset" value="Reset">RESET</button>
+            <button class=" home main-btn small white"><a href="index.php?page=succes">BACK TO DASHBOARD</a></button>
         </form>
         <form method="POST" enctype="multipart/form-data" id="form_2">
-            <ul>
-                <li><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><input type="text" placeholder="Twitter URL" name="twitter" value=""></li>
-                <li><i class="fab fa-linkedin-in fa-2x"></i><input type="text" placeholder="Linkedin URL" name="linkedin" value=""></li>
-                <li><i class="fas fa-globe fa-2x" aria-hidden="true"></i><input type="text" placeholder="Website URL" name="website" value=""></li>
-                <li><i class="fab fa-facebook fa-2x" aria-hidden="true"></i><input type="text" placeholder="Facebook URL" name="facebook" value=""></li>
-                <li><i class="fab fa-github fa-2x" aria-hidden="true"></i><input type="text" placeholder="GitHub URL" name="github" value=""></li>
+            <ul >
+                <li><i class="fab fa-twitter fa-2x " aria-hidden="true"></i><input class= "log " type="text" placeholder="Twitter URL" name="twitter" value=""></li>
+                <li><i class="fab fa-linkedin-in fa-2x"></i><input class="log" type="text" placeholder="Linkedin URL" name="linkedin" value=""></li>
+                <li><i class="fas fa-globe fa-2x" aria-hidden="true"></i><input  class="log "type="text" placeholder="Website URL" name="website" value=""></li>
+                <li><i class="fab fa-facebook fa-2x" aria-hidden="true"></i><input class="log" type="text" placeholder="Facebook URL" name="facebook" value=""></li>
+                <li><i class="fab fa-github fa-2x" aria-hidden="true"></i><input class ="log" type="text" placeholder="GitHub URL" name="github" value=""></li>
             </ul>
-            <button class="home  main-btn" name="submit_2" type="submit">Add Social Media Links</a></button>
+            <button class="home  main-btn small white" name="submit_2" type="submit" onclick="myFunction()">ADD SOCIAL MEDIA LINKS</a></button>
+
+          
         </form>
     </div>
 </section>

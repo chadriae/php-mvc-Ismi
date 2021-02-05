@@ -10,7 +10,12 @@ $students = $this->getInfo();
     <?php foreach ($students as $user) : ?>
         <div class="infoContainer">
             <div class="info">
-                <img class="profile" src="./assets/images/<?= $this->getImages($user['student_id']); ?>" alt="">
+
+
+                <div class="info-pic">
+                    <img class="profile" src="./assets/images/<?= $this->getImages($user['student_id']); ?>" alt="">
+
+                </div>
                 <div>
                     <h2><?= $user['first_name'] ?> <?= $user['last_name'] ?></h2>
                     <p><?= $user['current_job'] ?><span> at <?= $user['current_company'] ?></span></p>

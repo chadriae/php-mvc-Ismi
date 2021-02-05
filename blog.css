@@ -39,3 +39,21 @@
 .white:hover{
     color:var(--SecondaryColor);
 }
+.info-pic{
+    
+    max-width: 150px;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    height: 200px;
+}
+.profile{
+    border-radius: 50%;
+    border: 5px solid  rgb(238, 231, 231);
+    margin-left: 5rem;
+}
+
+
