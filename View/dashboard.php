@@ -4,7 +4,17 @@ if (!empty($_SESSION)) {
 } else {
     require 'includes/header.php';
 }
+$this->returnStudentID($_SESSION['username']);
 // print_r($_SESSION);
+if (isset($_POST['submit_1'])) {
+    $this->addToStudent($_SESSION['student-id']);
+
+    $this->updateUser($_SESSION['student-id']);
+    $this->addPicture();
+}
+if (isset($_POST['submit_2'])) {
+    $this->addSocialMedia();
+}
 ?>
 <section>
     <div class="container4">
@@ -57,16 +67,16 @@ if (!empty($_SESSION)) {
             <button class=" home main-btn small white"><a href="index.php?page=succes">BACK TO DASHBOARD</a></button>
         </form>
         <form method="POST" enctype="multipart/form-data" id="form_2">
-            <ul >
-                <li><i class="fab fa-twitter fa-2x " aria-hidden="true"></i><input class= "log " type="text" placeholder="Twitter URL" name="twitter" value=""></li>
+            <ul>
+                <li><i class="fab fa-twitter fa-2x " aria-hidden="true"></i><input class="log " type="text" placeholder="Twitter URL" name="twitter" value=""></li>
                 <li><i class="fab fa-linkedin-in fa-2x"></i><input class="log" type="text" placeholder="Linkedin URL" name="linkedin" value=""></li>
-                <li><i class="fas fa-globe fa-2x" aria-hidden="true"></i><input  class="log "type="text" placeholder="Website URL" name="website" value=""></li>
+                <li><i class="fas fa-globe fa-2x" aria-hidden="true"></i><input class="log " type="text" placeholder="Website URL" name="website" value=""></li>
                 <li><i class="fab fa-facebook fa-2x" aria-hidden="true"></i><input class="log" type="text" placeholder="Facebook URL" name="facebook" value=""></li>
-                <li><i class="fab fa-github fa-2x" aria-hidden="true"></i><input class ="log" type="text" placeholder="GitHub URL" name="github" value=""></li>
+                <li><i class="fab fa-github fa-2x" aria-hidden="true"></i><input class="log" type="text" placeholder="GitHub URL" name="github" value=""></li>
             </ul>
             <button class="home  main-btn small white" name="submit_2" type="submit" onclick="myFunction()">ADD SOCIAL MEDIA LINKS</a></button>
 
-          
+
         </form>
     </div>
 </section>

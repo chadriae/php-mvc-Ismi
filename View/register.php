@@ -3,7 +3,23 @@ if (!empty($_SESSION)) {
     require 'includes/header-logged-in.php';
 } else {
     require 'includes/header.php';
-} ?>
+}
+if (isset($_POST['submit'])) {
+    $this->newAdditionFirstName = $_POST['first-name'];
+    $this->newAdditionUserName = $_POST['username'];
+    $this->newAdditionEmail = $_POST['email'];
+    $this->newAdditionPwd = $_POST['pwd'];
+    $this->newAdditionPwdRepeat = $_POST['pwdrepeat'];
+
+    $this->hashedPwd = password_hash($this->newAdditionPwd, PASSWORD_DEFAULT);
+
+    $this->registerSucces();
+    $this->createUser();
+    $this->addToStudent($_SESSION['student-id']);
+
+    $this->returnStudentID($this->newAdditionUserName);
+}
+?>
 <div class="container3">
     <div class="test1 test">
         <h1 class="text-form">SIGN UP </h1>

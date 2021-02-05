@@ -11,15 +11,7 @@ class LoginController
 
     public function render()
     {
-        if ($_GET['page'] === 'login') {
-            require 'View/login.php';
-        }
-        if (isset($_POST['submit'])) {
-            $this->userName = $_POST['name'];
-            $this->pwd = $_POST['pwd'];
-
-            $this->loginUser($this->userName, $this->pwd);
-        }
+        require 'View/login.php';
     }
 
     public function __construct(DatabaseManager $databaseManager)
@@ -30,7 +22,6 @@ class LoginController
     public function loginUser($userName, $pwd)
     {
         try {
-
             $query = "SELECT * FROM login WHERE username = :username";
             $statement = $this->databaseManager->dbconnection->prepare($query);
             $statement->execute(array('username' => $userName));

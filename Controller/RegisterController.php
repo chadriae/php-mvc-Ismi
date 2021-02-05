@@ -13,21 +13,7 @@ class RegisterController
 
     public function render()
     {
-        if ($_GET['page'] == 'register') {
-            require 'View/register.php';
-        }
-        if (isset($_POST['submit'])) {
-            $this->newAdditionFirstName = $_POST['first-name'];
-            $this->newAdditionUserName = $_POST['username'];
-            $this->newAdditionEmail = $_POST['email'];
-            $this->newAdditionPwd = $_POST['pwd'];
-            $this->newAdditionPwdRepeat = $_POST['pwdrepeat'];
-
-            $this->hashedPwd = password_hash($this->newAdditionPwd, PASSWORD_DEFAULT);
-
-            $this->registerSucces();
-            $this->createUser();
-        }
+        require 'View/register.php';
     }
 
 
@@ -59,12 +45,40 @@ class RegisterController
     {
         if (!empty($_POST['first-name']) || !empty($_POST['username']) || !empty($_POST['email']) || !empty($_POST['pwd']) || !empty($_POST['pwdrepeat'])) {
 
-            $addNewUser = $this->databaseManager->dbconnection->query("INSERT INTO login (first_name, username, email, pwd) VALUES ('$this->newAdditionFirstName', '$this->newAdditionUserName', '$this->newAdditionEmail', '$this->hashedPwd')");
-
+            $query = "INSERT INTO login (first_name, username, email, pwd) VALUES ('$this->newAdditionFirstName', '$this->newAdditionUserName', '$this->newAdditionEmail', '$this->hashedPwd');";
+            $addNewUser = $this->databaseManager->dbconnection->query($query);
             if (!$addNewUser) {
                 var_dump($this->databaseManager->dbconnection->error);
             }
         }
+        $_SESSION['username'] = $_POST['username'];
+        $_SESSION['first-name'] = $_POST['first-name'];
+    }
+
+    // public function addToStudent($id)
+    // {
+    //     $query = "INSERT INTO student(student_id) VALUES ($id);";
+    //     $addNewUser = $this->databaseManager->dbconnection->query($query);
+    //     if (!$addNewUser) {
+    //         var_dump($this->databaseManager->dbconnection->error);
+    //     }
+    // }
+
+    public function returnStudentID($userName)
+    {
+        try {
+            $query = "SELECT * FROM login WHERE username = :username";
+            $statement = $this->databaseManager->dbconnection->prepare($query);
+            $statement->execute(array('username' => $userName));
+            $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $count = count($rows);
+            if ($count == 1) {
+                $_SESSION["student-id"] = $rows[0]['student_id'];
+            }
+        } catch (PDOException $error) {
+            echo "Connection Error - " . $error->getMessage();
+        }
+        return $_SESSION["student-id"];
     }
 
     public function invalidUsername($username)
@@ -93,6 +107,8 @@ class RegisterController
             return false;
         }
     }
+
+
 
     // public function usernameExists($username, $email)
     // {

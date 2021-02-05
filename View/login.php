@@ -6,7 +6,13 @@ if (!empty($_SESSION)) {
     require 'includes/header-logged-in.php';
 } else {
     require 'includes/header.php';
-} // print_r($_SESSION);
+}
+if (isset($_POST['submit'])) {
+    $this->userName = $_POST['name'];
+    $this->pwd = $_POST['pwd'];
+    $this->loginUser($this->userName, $this->pwd);
+}
+// print_r($_SESSION);
 ?>
 <div class="container3">
     <div class="test1 test">
