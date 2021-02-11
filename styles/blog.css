@@ -48,7 +48,7 @@
     align-items: center;
 }
 .info{
-    height: 200px;
+    min-height: 200px;
 }
 .profile{
     border-radius: 50%;
