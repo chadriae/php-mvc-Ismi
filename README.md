@@ -53,4 +53,4 @@ We were offered a MVC boilerplate to start. Then we could link all the different
 
 ## Live website
 
-Check out the live website over (here)[https://be-connect.herokuapp.com/] and go wild!
+Check out the live website over [here](https://be-connect.herokuapp.com/) and go wild!
