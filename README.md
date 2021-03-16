@@ -42,6 +42,8 @@ We were offered a MVC boilerplate to start. Then we could link all the different
 - Sequel Ace as a DB Manager
 - MAMP and XAMMP for local server
 - GitHub
+- Heroku for deployment
+- remotemysql.com for online database
 
 ### Languages
 
