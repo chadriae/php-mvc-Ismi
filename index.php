@@ -11,8 +11,6 @@ $query_builder = TRUE;
 // Connect to DB
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
-declare(strict_types=1);
-
 session_start();
 
 ini_set('display_errors', "1");
