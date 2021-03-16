@@ -1,0 +1,13 @@
+.container4{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+}
+
+.small{
+    font-family: var(--PrimaryFont);
+}
+

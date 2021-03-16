@@ -1,0 +1,59 @@
+
+.container9{
+    background-color:white;
+    border-radius: 10px;
+}
+
+.z{
+    display:block;
+    width: 10%;
+}
+
+.black:hover{
+    color:var(--SecondaryColor);
+
+}
+
+.red{
+    background-color:firebrick;
+    border:1px solid firebrick;
+    outline: none;
+    border-radius: 5px;
+    font-family: var(--PrimaryFont);
+    font-size:1rem;
+    color:white;
+}
+
+.red:hover{
+    border:2px solid black;
+}
+
+.fa-user-minus{
+    color:white;
+}
+
+.white{
+    color:white;
+}
+
+.white:hover{
+    color:var(--SecondaryColor);
+}
+.info-pic{
+    
+    max-width: 150px;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    min-height: 200px;
+}
+.profile{
+    border-radius: 50%;
+    border: 5px solid  rgb(238, 231, 231);
+    margin-left: 5rem;
+}
+
+

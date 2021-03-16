@@ -1,0 +1,21 @@
+
+.space{
+    margin-right:4rem;
+
+}
+
+thead {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:#429991;
+    color: white;
+  }
+
+.box{
+    border:1px solid rgb(128, 153, 173);
+}
+
+.center{
+    text-align: center;
+}

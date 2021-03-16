@@ -8,7 +8,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--favicon !-->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -16,10 +15,6 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <!-- end favicon !-->
-    <!-- animate css !-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- animate css !-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/login.css">
@@ -36,20 +31,34 @@
     <section>
         <header>
             <nav>
-                <div class="left-nav ">
+                <div class="left-nav">
                     <li><a class="ismi" href="index.php"><img class="" src="./assets/img/test.png" style="width:100px" alt=""></a></li>
                 </div>
                 <div class="right-nav">
                     <ul class=nav-list>
                         <li><a class="ismi" href="index.php?page=info">Developers</a></li>
                         <!--     <li><a class="ismi" href="index.php?page=info">Profiles</a></li>  -->
-                        <li><a class="ismi" href="index.php?page=register">Register </a></li>
-                        <li><a class="ismi" href="index.php?page=login">Login</a></li>
-                        <div id="myDIV">
-                            <!--       <li><a class="ismi" href="index.php"><i class="fas fa-sign-out-alt" aria-hidden="true">Sign out</i></a>
-                            </li> -->
-                        </div>
+                        <li><a class="ismi" href="index.php?page=blog">Community </a></li>
+                        <li><a class="ismi" href="index.php?page=succes"><i class="fas fa-user" aria-hidden="true"></i><?= $_SESSION['username'] ?>'s dashboard</a></li>
+                        <form method="post" action="index.php">
+                            <div id="myDIV">
+                                <!-- FIX SIGN OUT BUTTON -->
+                                <!--         <input type="submit" name="signout" action="index.php"></input> -->
+                                <!--  <i class="fas fa-sign-out-alt" aria-hidden="true"></i>-->
+                                <li>
+                                    <input class="ismi" id="signout" type="submit" name="signout" action="index.php" value="Sign Out"></input>
+                                </li>
+                            </div>
+                        </form>
                     </ul>
                 </div>
+
             </nav>
         </header>
+        <?php
+        if (isset($_POST["signout"])) {
+            session_destroy();
+            $_SESSION = "";
+            header("Refresh:0");
+        }
+        ?>

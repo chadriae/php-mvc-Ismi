@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;600;700;900&display=swap');
+/* -- Setting some variables to color and fonts ,enz-- */
+:root{
+    --PrimaryColor :rgb(72, 136, 161);
+    --SecondaryColor :rgb(43, 84, 126);
+    --ThreeColor:rgb(0, 94, 128);
+    --FourColor:rgb(86, 114, 156) ;
+    --FiveColor:rgb(250, 239, 239);
+    --ZesColor:rgba(181, 186, 238, 0.753);
+    --PrimaryFont : 'Roboto Mono', monospace;
+
+}
+/* Login form */
+.container3{
+    width: 80%;
+    margin: 0 auto;
+    height: 80vh;
+    display: flex;
+}
+
+.log {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #427F99;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: var(--PrimaryFont);
+  }
+
+.logtext{
+      width:70%;
+  }  
+
+img.photo{
+    width: 40rem;
+    height: auto;
+    filter: grayscale(30%);
+}
+
+.text-login{
+    font-size:1rem;
+    color:var(--SecondaryColor);
+    font-family: var(--PrimaryFont);
+    letter-spacing: 0.5;
+    border:none;
+}
+
+.btn-primary{  
+    color: rgb(233, 217, 217);
+    font-size: 1rem;
+    font-family: var(--PrimaryFont);
+    background-color:var(--SecondaryColor);
+    padding:0.5rem ;
+    cursor: pointer;   
+    }
+    
+.text-primary{
+      margin: .8rem;
+    }
+
+.btn-primary:hover{
+  border: 2px solid #5f6d6e;
+  background-color: rgba(365,365,365,0.5);
+  cursor: pointer;
+  color: #445068;
+  opacity: .8;
+  transition: .3s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.stof{
+    color: var(--SecondaryColor);
+    margin-bottom: 10px ;
+    margin-left:1rem;
+}
+
+
+
+
+
