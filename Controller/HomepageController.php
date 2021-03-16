@@ -1,5 +1,6 @@
 <?php
-declare(strict_types = 1);
+
+declare(strict_types=1);
 
 class HomepageController
 {
@@ -14,7 +15,5 @@ class HomepageController
 
         //load the view
         require 'View/homepage.php';
-        
-        
     }
 }

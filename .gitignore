@@ -353,6 +353,6 @@ MigrationBackup/
 .ionide/
 
 # Hide config file for link to database
-config.php
+.config.php
 .vscode
 .DS_Store
