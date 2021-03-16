@@ -14,6 +14,6 @@ class HomepageController
         // then the view will actually display them.
 
         //load the view
-        require 'View/index.php';
+        require 'View/homepage.php';
     }
 }
