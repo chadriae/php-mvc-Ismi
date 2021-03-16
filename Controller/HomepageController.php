@@ -1,5 +1,6 @@
 <?php
-declare(strict_types = 1);
+
+declare(strict_types=1);
 
 class HomepageController
 {
@@ -13,8 +14,6 @@ class HomepageController
         // then the view will actually display them.
 
         //load the view
-        require 'View/homepage.php';
-        
-        
+        require 'View/index.php';
     }
 }
