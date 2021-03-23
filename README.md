@@ -4,6 +4,7 @@
 
 We wanted to work out a social media website for all the BeCode alumni where everyone can access the profiles. You are able to register a profile, add data and see others profiles. When you're logged in, you are able to add info about yourself (education, job experience, profile picture, ...) and you can communicate your experience or just add something fun in the BeConnect blog!
 
+
 ## Working out the project :question:
 
 These concepts we wanted to work out for our project:
@@ -41,6 +42,8 @@ We were offered a MVC boilerplate to start. Then we could link all the different
 - Sequel Ace as a DB Manager
 - MAMP and XAMMP for local server
 - GitHub
+- Heroku for deployment
+- remotemysql.com for online database
 
 ### Languages
 
@@ -50,3 +53,7 @@ We were offered a MVC boilerplate to start. Then we could link all the different
 - mysql
 - vanilla Javascript
 - git
+
+## Live website :pushpin:
+
+> Check out the live website over [here](https://be-connect.herokuapp.com/) and go wild!
