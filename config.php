@@ -1,5 +1,6 @@
 <?php
-require_once '.env.php';
+include '.env.example.php';
+include '.env.php';
 
 $config = [
     'host' => $env['host'],
