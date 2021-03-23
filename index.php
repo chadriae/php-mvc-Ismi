@@ -6,6 +6,7 @@ ini_set('display_errors', "1");
 ini_set('display_startup_errors', "1");
 error_reporting(E_ALL);
 
+
 //include all your model files here
 require 'Model/User.php';
 //include all your controllers here
@@ -24,8 +25,9 @@ require 'Controller/MyProfileController.php';
 // Database connections
 require_once 'Controller/DatabaseManager.php';
 require_once 'config.php';
-$databaseManager = new DatabaseManager($config['host'], $config['name'], $config['password'], $config['dbname'], $config['port']);
+$databaseManager = new DatabaseManager($config['DB_HOST'], $config['DB_USERNAME'], $config['DB_PASSWORD'], $config['DB_DATABASE'], $config['DB_PORT']);
 $databaseManager->connect();
+
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
 
