@@ -10,7 +10,7 @@ $schools = $this->getEducation($profile);
 $users = $this->getInfo($profile);
 $socialmedia = $this->getSocialMedia($profile);
 
-$image = $this->getImages($_SESSION['student-id']);
+$image = $this->getImages($profile);
 $image_name = $image['profile_pic'];
 ?>
 <section>
