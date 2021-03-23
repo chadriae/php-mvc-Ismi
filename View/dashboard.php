@@ -59,8 +59,6 @@ if (isset($_POST['submit_2'])) {
             <input class="log" type="text" id="github" name="github" placeholder="Github Username"></input><br>
             <small class="small">Tell us a little bit about yourself </small><br>
             <textarea class="small" name="bio" id="textarea" cols="30" rows="10" placeholder="A short Bio about yourself"></textarea><br>
-            <small class="small">Upload your profile picture</small><br>
-            <input class="log" type="file" name="image" accept="image/*" value=" file"></input><br><br>
             <!-- //buttons -->
             <button class="home  main-btn small white" type="submit" name="submit_1" value="Submit">SUBMIT</button>
             <button class="home  main-btn  small white" type="reset" name="reset" value="Reset">RESET</button>
@@ -75,9 +73,17 @@ if (isset($_POST['submit_2'])) {
                 <li><i class="fab fa-github fa-2x" aria-hidden="true"></i><input class="log" type="text" placeholder="GitHub URL" name="github" value=""></li>
             </ul>
             <button class="home  main-btn small white" name="submit_2" type="submit" onclick="myFunction()">ADD SOCIAL MEDIA LINKS</a></button>
-
-
         </form>
+        <br>
+        <form method="POST" enctype="multipart/form-data" id="form_3">
+            <ul>
+                <small class="small">Upload your profile picture</small><br>
+                <input class="log" type="file" name="image" accept="image/*" value=" file"></input><br><br>
+            </ul>
+            <button class="home  main-btn small white" type="submit" name="submit_1" value="Submit">SUBMIT PICTURE</button>
+        </form>
+
+
     </div>
 </section>
 <?php require 'includes/footer.php' ?>

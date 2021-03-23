@@ -9,6 +9,9 @@ $jobs = $this->getExperience($profile);
 $schools = $this->getEducation($profile);
 $users = $this->getInfo($profile);
 $socialmedia = $this->getSocialMedia($profile);
+
+$image = $this->getImages($_SESSION['student-id']);
+$image_name = $image['profile_pic'];
 ?>
 <section>
     <div class="container5">
@@ -16,7 +19,7 @@ $socialmedia = $this->getSocialMedia($profile);
         <div class="">
             <br>
             <div class="">
-                <img class="info-img" src="./assets/images/<?= $this->getImages($profile); ?>" alt="">
+                <img class="info-img" src="./assets/images/<?php echo $image_name; ?>" alt="">
                 <h1 class="info-name"><?= $users[0]['first_name'] ?> <?= $users[0]['last_name'] ?></h1>
                 <p class="info-job"><?= $users[0]['current_job'] ?> at<span><?= $users[0]['current_company'] ?></span></p>
                 <p><span><?= $users[0]['current_location'] ?></span></p><br>

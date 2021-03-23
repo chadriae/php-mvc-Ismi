@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
             <h1 class="text-form">SIGN IN </h1>
             <p class="text-login"><i class="fas fa-user"></i> Sign in to your account </p>
             <form method="post">
-                <input class="log logtext" type="text" placeholder="Email Address or username" name="name" required="" value=""><br>
+                <input class="log logtext" type="text" placeholder="username" name="name" required="" value=""><br>
                 <input class="log logtext" type="password" class="login" placeholder="Password" name="pwd" required="" value=""><br>
                 <input name="submit" type="submit" class=" home main-btn white small" value="LOGIN">
             </form>

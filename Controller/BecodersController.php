@@ -47,13 +47,11 @@ class BecodersController
     public function getImages($id)
     {
         try {
-            $query = "SELECT profile_pic FROM profilepic WHERE student_id = $id;";
+            $query = "SELECT profile_pic FROM profilepic WHERE student_id = $id ORDER BY picture_id DESC LIMIT 1;";
             $statement = $this->databaseManager->dbconnection->prepare($query);
             $statement->execute();
             $images = $statement->fetch(\PDO::FETCH_ASSOC);
-            foreach ($images as $image) {
-                return $image;
-            }
+            return $images;
         } catch (PDOException $error) {
             echo "Connection Error - " . $error->getMessage();
         }

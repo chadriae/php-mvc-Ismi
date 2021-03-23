@@ -8,13 +8,16 @@ $jobs = $this->getExperience($_SESSION['student-id']);
 $schools = $this->getEducation($_SESSION['student-id']);
 $users = $this->getInfo($_SESSION['student-id']);
 $socialMedia = $this->getSocialMedia($_SESSION['student-id']);
+
+$image = $this->getImages($_SESSION['student-id']);
+$image_name = $image['profile_pic'];
 ?>
 <section>
     <div class="container5">
         <a href="index.php?page=succes">Back to my dashboard</a>
         <div class="">
             <div class="">
-                <img class="info-img" src="./assets/images/<?= $this->getImages($_SESSION['student-id']); ?>" alt="">
+                <img class="info-img" src="./assets/images/<?php echo $image_name; ?>" alt="">
                 <h1 class="info-name "><?= $_SESSION['first-name'] ?> <?= $_SESSION['last-name'] ?></h1><br>
                 <p class="info-job"><?= $_SESSION['job'] ?> at<span><?= $_SESSION['company'] ?></span></p><br>
                 <p><span><?= $_SESSION['location'] ?></span></p><br>
