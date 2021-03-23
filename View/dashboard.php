@@ -29,11 +29,15 @@ if (isset($_POST['submit_2'])) {
             if ($_GET['error'] == "nonelinks") {
                 echo '<p class="successMessage">Social Media links successfully submitted.<p>';
             }
+            if ($_GET['error'] == "nonepicture") {
+                echo '<p class="successMessage">Profile picture successfully updated.<p>';
+            }
         } ?>
         <h2 class="small">Hello <?= $_SESSION["username"] ?></h2><br>
-        <form method="POST" enctype="multipart/form-data" id="form_1">
+
+        <form method="POST" enctype="multipart/form-data" id="form_1" action="index.php?page=dashboard">
             <small class="small">Give us your full name first</small><br>
-            <input class="log" type="text" id="first-name" name="first-name" value="<?= $_SESSION['first-name'] ?>" placeholder="First Name"></input>
+            <input class="log" type="text" id="first-name" name="first-name" placeholder="First Name"></input>
             <input class="log" type="text" id="last-name" name="last-name" placeholder="Last Name"></input><br>
             <small class="small">Give us an idea on where you are in your career </small><br>
             <select class="log" name="career" id="career">
@@ -59,12 +63,12 @@ if (isset($_POST['submit_2'])) {
             <input class="log" type="text" id="github" name="github" placeholder="Github Username"></input><br>
             <small class="small">Tell us a little bit about yourself </small><br>
             <textarea class="small" name="bio" id="textarea" cols="30" rows="10" placeholder="A short Bio about yourself"></textarea><br>
-            <!-- //buttons -->
-            <button class="home  main-btn small white" type="submit" name="submit_1" value="Submit">SUBMIT</button>
+            <input class="home  main-btn small white" type="submit" name="submit_1" value="SUBMIT"></input>
             <button class="home  main-btn  small white" type="reset" name="reset" value="Reset">RESET</button>
             <button class=" home main-btn small white"><a href="index.php?page=succes">BACK TO DASHBOARD</a></button>
         </form>
-        <form method="POST" enctype="multipart/form-data" id="form_2">
+
+        <form method="POST" enctype="multipart/form-data" id="form_2" action="index.php?page=dashboard">
             <ul>
                 <li><i class="fab fa-twitter fa-2x " aria-hidden="true"></i><input class="log " type="text" placeholder="Twitter URL" name="twitter" value=""></li>
                 <li><i class="fab fa-linkedin-in fa-2x"></i><input class="log" type="text" placeholder="Linkedin URL" name="linkedin" value=""></li>
@@ -72,15 +76,16 @@ if (isset($_POST['submit_2'])) {
                 <li><i class="fab fa-facebook fa-2x" aria-hidden="true"></i><input class="log" type="text" placeholder="Facebook URL" name="facebook" value=""></li>
                 <li><i class="fab fa-github fa-2x" aria-hidden="true"></i><input class="log" type="text" placeholder="GitHub URL" name="github" value=""></li>
             </ul>
-            <button class="home  main-btn small white" name="submit_2" type="submit" onclick="myFunction()">ADD SOCIAL MEDIA LINKS</a></button>
+            <input class="home  main-btn small white" type="submit" name="submit_2" value="ADD SOCIAL MEDIA LINKS"></input>
         </form>
+
         <br>
         <form method="POST" enctype="multipart/form-data" id="form_3">
             <ul>
                 <small class="small">Upload your profile picture</small><br>
                 <input class="log" type="file" name="image" accept="image/*" value=" file"></input><br><br>
             </ul>
-            <button class="home  main-btn small white" type="submit" name="submit_1" value="Submit">SUBMIT PICTURE</button>
+            <input class="home main-btn small white" type="submit" name="submit_3" value="SUBMIT PICTURE" />
         </form>
 
 

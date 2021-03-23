@@ -21,16 +21,10 @@ class MyProfileController
     {
         try {
             $query = "SELECT * FROM student WHERE student_id = $id;";
-            $sth = $this->databaseManager->dbconnection->prepare($query);
-            $sth->execute();
-            $result = $sth->fetchAll();
-            $_SESSION["last-name"] = $result[0]['last_name'];
-            $_SESSION["job"] = $result[0]['current_job'];
-            $_SESSION["company"] = $result[0]['current_company'];
-            $_SESSION["location"] = $result[0]['current_location'];
-            $_SESSION["bio"] = $result[0]['bio'];
-            $_SESSION["skills"] = $result[0]['skills'];
-            return $result;
+            $result = $this->databaseManager->dbconnection->prepare($query);
+            $result->execute();
+            $info = $result->fetch(\PDO::FETCH_ASSOC);
+            return $info;
         } catch (PDOException $error) {
             echo "Connection Error - " . $error->getMessage();
         }
@@ -65,10 +59,6 @@ class MyProfileController
 
     public function getSocialMedia($id)
     {
-        // $query = "SELECT * from social_media where student_id = $id;";
-        // $socialMedia = $this->databaseManager->dbconnection->query($query);
-        // return $socialMedia;
-
         try {
             $query = "SELECT * from social_media where student_id = $id;";
             $statement = $this->databaseManager->dbconnection->prepare($query);

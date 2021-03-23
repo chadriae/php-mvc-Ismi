@@ -18,9 +18,9 @@ $image_name = $image['profile_pic'];
         <div class="">
             <div class="">
                 <img class="info-img" src="./assets/images/<?php echo $image_name; ?>" alt="">
-                <h1 class="info-name "><?= $_SESSION['first-name'] ?> <?= $_SESSION['last-name'] ?></h1><br>
-                <p class="info-job"><?= $_SESSION['job'] ?> at<span><?= $_SESSION['company'] ?></span></p><br>
-                <p><span><?= $_SESSION['location'] ?></span></p><br>
+                <h1 class="info-name "><?= $users['first_name'] ?> <?= $users['last_name'] ?></h1><br>
+                <p class="info-job"><?= $users['current_job'] ?> at<span><?= $users['current_company'] ?></span></p><br>
+                <p><span><?= $users['current_location'] ?></span></p><br>
                 <div class="">
                     <a href="<?php echo $socialMedia['website'] ?>" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-globe fa-2x" aria-hidden="true"></i>
@@ -44,12 +44,12 @@ $image_name = $image['profile_pic'];
                     About myself
                 </h2><br>
                 <p>
-                    <?= $_SESSION['bio'] ?>
+                    <?= $users['bio'] ?>
                 </p>
                 <h2 class="">Skill Set</h2>
                 <div class="skills">
                     <?php
-                    $userSkills = $_SESSION["skills"];
+                    $userSkills = $users['skills'];
                     $userSkills = preg_replace('/\.$/', '', $userSkills);
                     $userSkillsArray = explode(', ', $userSkills);
                     ?>
@@ -104,76 +104,6 @@ $image_name = $image['profile_pic'];
                 <?php endforeach; ?>
             </div>
         </div>
-    </div>
-    <!-- <div class="container4">
-        <h2 class="small text-form">Github Repos</h2>
-        <div class="info-repos">
-
-
-            <div>
-                <h4 class="small mg"><a href="" target="_blank" rel="noopener noreferrer">Stoffel</a></h4>
-
-            </div>
-            <div>
-                <ul>
-                    <li class="small">Stars: 0</li>
-                    <li class="small">Watchers: 0</li>
-                    <li class="small">Forks: 0</li>
-                </ul>
-            </div>
-        </div>
-        <div class="info-repos">
-            <div>
-                <h4 class="small mg"><a href="" target="_blank" rel="noopener noreferrer">Stoffel</a></h4>
-                <p class="small mg">Portfolilio page </p>
-            </div>
-            <div>
-                <ul>
-                    <li class="small">Stars: 0</li>
-                    <li class="small">Watchers: 0</li>
-                    <li class="small">Forks: 0</li>
-                </ul>
-            </div>
-        </div>
-        <div class="info-repos">
-            <div>
-                <h4 class="small mg"><a href="" target="_blank" rel="noopener noreferrer">Beconnect</a></h4>
-                <p class="small mg">Social network for developers</p>
-            </div>
-            <div>
-                <ul>
-                    <li class="small ">Stars: 0</li>
-                    <li class="small">Watchers: 0</li>
-                    <li class="small">Forks: 0</li>
-                </ul>
-            </div>
-        </div>
-        <div class="info-repos">
-            <div>
-                <h4 class="small mg"><a href="" target="_blank" rel="noopener noreferrer">curriculum</a></h4>
-                <p class="small mg">Overview of the HackYourFuture program.</p>
-            </div>
-            <div>
-                <ul>
-                    <li class="small">Stars: 1</li>
-                    <li class="small">Watchers: 1</li>
-                    <li class="small">Forks: 1</li>
-                </ul>
-            </div>
-        </div>
-        <div class="info-repos">
-            <div>
-                <h4 class="small mg"><a href="" target="_blank" rel="noopener noreferrer">Fixie</a></h4>
-                <p class="small mg">logistics system. </p>
-            </div>
-            <div>
-                <ul>
-                    <li class="small">Stars: 0</li>
-                    <li class="small">Watchers: 0</li>
-                    <li class="small">Forks: 0</li>
-                </ul>
-            </div>
-        </div> -->
     </div>
 </section>
 <?php require 'includes/footer.php' ?>

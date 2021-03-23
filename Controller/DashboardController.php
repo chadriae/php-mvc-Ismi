@@ -44,48 +44,73 @@ class DashboardController
 
     public function updateUser($id)
     {
-        if (!empty($_POST['first-name']) || !empty($_POST['last-name']) || !empty($_POST['career']) || !empty($_POST['company']) || !empty($_POST['website']) || !empty($_POST['location']) || !empty($_POST['skills']) || !empty($_POST['github']) || !empty($_POST['bio'])) {
-            $this->newAdditionFirstName = ucfirst($_POST['first-name']);
-            $this->newAdditionLastName = ucfirst($_POST['last-name']);
-            $this->newAdditionCareer = $_POST['career'];
-            $this->newAdditionCompany = ucfirst($_POST['company']);
-            $this->newAdditionWebsite = $_POST['website'];
-            $this->newAdditionLocation = ucfirst($_POST['location']);
-            $this->newAdditionSkills = $_POST['skills'];
-            $this->newAdditionGitHub = $_POST['github'];
-            $this->newAdditionBio = $_POST['bio'];
+        if (isset($_POST['submit_1'])) {
+            if (!empty($_POST['first-name']) || !empty($_POST['last-name']) || !empty($_POST['career']) || !empty($_POST['company']) || !empty($_POST['website']) || !empty($_POST['location']) || !empty($_POST['skills']) || !empty($_POST['github']) || !empty($_POST['bio'])) {
+                $this->newAdditionFirstName = ucfirst($_POST['first-name']);
+                $this->newAdditionLastName = ucfirst($_POST['last-name']);
+                $this->newAdditionCareer = $_POST['career'];
+                $this->newAdditionCompany = ucfirst($_POST['company']);
+                $this->newAdditionWebsite = $_POST['website'];
+                $this->newAdditionLocation = ucfirst($_POST['location']);
+                $this->newAdditionSkills = $_POST['skills'];
+                $this->newAdditionGitHub = $_POST['github'];
+                $this->newAdditionBio = $_POST['bio'];
 
-            if ($this->returnEmpty($id) == 1) {
-                $query = "INSERT INTO student (student_id, first_name, last_name, current_job, current_company, website, current_location, skills, github, bio) VALUES ('$id', '$this->newAdditionFirstName', '$this->newAdditionLastName', '$this->newAdditionCareer', '$this->newAdditionCompany', '$this->newAdditionWebsite', '$this->newAdditionLocation', '$this->newAdditionSkills', '$this->newAdditionGitHub', '$this->newAdditionBio');";
-            } else {
-                $query = "UPDATE student SET first_name = '$this->newAdditionFirstName', last_name = '$this->newAdditionLastName', current_job = '$this->newAdditionCareer', current_company = '$this->newAdditionCompany', website = '$this->newAdditionWebsite', current_location = '$this->newAdditionLocation', skills = '$this->newAdditionSkills', github = '$this->newAdditionGitHub', bio = '$this->newAdditionBio' WHERE student_id = '$id';";
+                if ($this->returnEmpty($id) == 1) {
+                    $query = "INSERT INTO student (student_id, first_name, last_name, current_job, current_company, website, current_location, skills, github, bio) VALUES ('$id', '$this->newAdditionFirstName', '$this->newAdditionLastName', '$this->newAdditionCareer', '$this->newAdditionCompany', '$this->newAdditionWebsite', '$this->newAdditionLocation', '$this->newAdditionSkills', '$this->newAdditionGitHub', '$this->newAdditionBio');";
+                } else {
+                    $query = "UPDATE student SET first_name = '$this->newAdditionFirstName', last_name = '$this->newAdditionLastName', current_job = '$this->newAdditionCareer', current_company = '$this->newAdditionCompany', website = '$this->newAdditionWebsite', current_location = '$this->newAdditionLocation', skills = '$this->newAdditionSkills', github = '$this->newAdditionGitHub', bio = '$this->newAdditionBio' WHERE student_id = '$id';";
+                }
+                $addNewAddition = $this->databaseManager->dbconnection->query($query);
+
+                if (!$addNewAddition) {
+                    var_dump($this->databaseManager->dbconnection->error);
+                } else {
+                    header("location: index.php?page=dashboard&error=nonedata");
+                }
             }
-            $addNewAddition = $this->databaseManager->dbconnection->query($query);
+        }
+    }
 
-            if (!$addNewAddition) {
+    public function addSocialMedia()
+    {
+        if (isset($_POST['submit_2'])) {
+            $this->newAdditionID = $_SESSION['student-id'];
+            $this->twitterURL = $_POST['twitter'];
+            $this->linkedinURL = $_POST['linkedin'];
+            $this->websiteURL = $_POST['website'];
+            $this->facebookURL = $_POST['facebook'];
+            $this->githubURL = $_POST['github'];
+
+            $queryLinks = "INSERT into social_media (student_id, twitter, linkedin, website, facebook, github) VALUES ('$this->newAdditionID', '$this->twitterURL', '$this->linkedinURL', '$this->websiteURL', '$this->facebookURL', ' $this->githubURL')";
+            $addLinks = $this->databaseManager->dbconnection->query($queryLinks);
+
+            if (!$addLinks) {
                 var_dump($this->databaseManager->dbconnection->error);
             } else {
-                header("location: index.php?page=dashboard&error=nonedata");
+                header("location: index.php?page=dashboard&error=nonelinks");
             }
         }
     }
 
     public function addPicture()
     {
-        $this->newAdditionImage = $_FILES['image']['name'];
-        $this->newAdditionID = $_SESSION['student-id'];
-        // adding image to db
-        $target = "./assets/images/" . basename($_FILES['image']['name']);
-        $queryImage = "INSERT INTO profilepic (student_id, profile_pic) VALUES ('$this->newAdditionID', '$this->newAdditionImage ');";
-        $addNewPicture = $this->databaseManager->dbconnection->query("$queryImage");
-        if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-            $this->message = "<p class='successMessage'>Image uploaded successfully.</p>";
-            return $this->message;
-        } else {
-            $this->message = "<p class='errorMessage'>There was a problem uploading image.</p>";
-            return $this->message;
+        if (isset($_POST['submit_3'])) {
+            $this->newAdditionID = $_SESSION['student-id'];
+            $this->newAdditionImage = $_FILES['image']['name'];
+            // adding image to db
+            $target = "./assets/images/" . basename($_FILES['image']['name']);
+            $queryImage = "INSERT INTO profilepic (student_id, profile_pic) VALUES ('$this->newAdditionID', '$this->newAdditionImage ');";
+            $addNewPicture = $this->databaseManager->dbconnection->query("$queryImage");
+
+            if (move_uploaded_file($_FILES['image']['tmp_name'], $target) || $addNewPicture) {
+                header("location: index.php?page=dashboard&error=nonelinks");
+                return $this->message;
+            } else {
+                $this->message = "<p class='errorMessage'>There was a problem uploading image.</p>";
+                return $this->message;
+            }
         }
-        return $addNewPicture;
     }
 
     public function returnStudentID($userName)
@@ -100,29 +125,5 @@ class DashboardController
         } catch (PDOException $error) {
             echo "Connection Error - " . $error->getMessage();
         }
-    }
-
-
-
-
-    public function addSocialMedia()
-    {
-        $this->newAdditionID = $_SESSION['student-id'];
-
-        $this->twitterURL = $_POST['twitter'];
-        $this->linkedinURL = $_POST['linkedin'];
-        $this->websiteURL = $_POST['website'];
-        $this->facebookURL = $_POST['facebook'];
-        $this->githubURL = $_POST['github'];
-
-        $queryLinks = "INSERT into social_media (student_id, twitter, linkedin, website, facebook, github) VALUES ('$this->newAdditionID', '$this->twitterURL', '$this->linkedinURL', '$this->websiteURL', '$this->facebookURL', ' $this->githubURL')";
-        $addLinks = $this->databaseManager->dbconnection->query($queryLinks);
-
-        if (!$addLinks) {
-            var_dump($this->databaseManager->dbconnection->error);
-        } else {
-            header("location: index.php?page=dashboard&error=nonelinks");
-        }
-        // return $addLinks;
     }
 }
